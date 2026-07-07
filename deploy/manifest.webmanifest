@@ -1,7 +1,7 @@
 {
-  "name": "Yantia — descubre tu paladar",
-  "short_name": "Yantia",
-  "description": "Cata ingredientes, encuentra recetas que encajan contigo, planifica tu semana y genera la lista de la compra.",
+  "name": "EatyBlinders — Descubre recetas sin prejuicios",
+  "short_name": "EatyBlinders",
+  "description": "App PWA de descubrimiento de recetas. Cata ingredientes estilo Tinder, encuentra recetas personalizadas, planifica tu semana y genera la lista de la compra.",
   "lang": "es",
   "start_url": "./",
   "scope": "./",

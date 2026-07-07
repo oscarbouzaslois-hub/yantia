@@ -6,7 +6,7 @@ import {
 } from "lucide-react";
 
 /* ============================================================
-   YANTIA — descubre tu paladar, cocina a tu manera
+   EATYBLINDERS — descubre recetas sin prejuicios
    Diseño: "mercado moderno" — tarjetas blancas sobre fondo
    marfil neutro, color por familia de alimento, tipografía Sora.
    ============================================================ */
@@ -857,7 +857,7 @@ function Descubrir({ st, setSt, onOpenFormas, onUnlock }) {
   return (
     <div style={{ padding: "8px 20px 20px", display: "flex", flexDirection: "column", height: "100%" }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 4 }}>
-        <h1 className="yt-display" style={{ fontSize: 26, fontWeight: 800, margin: 0 }}>La cata</h1>
+        <h1 className="yt-display" style={{ fontSize: 26, fontWeight: 800, margin: 0 }}>Descubre sin prejuicios</h1>
         <span style={{ fontSize: 13, fontWeight: 600, color: T.sub }}>{valorados}/{total} catados</span>
       </div>
       <div style={{ height: 6, borderRadius: 3, background: "#E9E5DD", marginBottom: 14 }}>
@@ -1688,7 +1688,7 @@ export default function App() {
   useEffect(() => {
     (async () => {
       try {
-        const r = await window.storage.get("yantia:v1");
+        const r = await window.storage.get("eatyblinders:v1");
         if (r?.value) {
           const s = JSON.parse(r.value);
           setSt({ ...estadoInicial(), ...s, compra: { ...estadoInicial().compra, ...(s.compra || {}) } });
@@ -1701,7 +1701,7 @@ export default function App() {
   // Guardar con debounce
   useEffect(() => {
     if (!cargado) return;
-    const t = setTimeout(() => { window.storage.set("yantia:v1", JSON.stringify(st)).catch(() => {}); }, 600);
+    const t = setTimeout(() => { window.storage.set("eatyblinders:v1", JSON.stringify(st)).catch(() => {}); }, 600);
     return () => clearTimeout(t);
   }, [st, cargado]);
 
@@ -1757,7 +1757,7 @@ export default function App() {
         <style>{GLOBAL_CSS}</style>
         <div className="yt-pop" style={{ textAlign: "center" }}>
           <div style={{ fontSize: 44 }}>🍳</div>
-          <div className="yt-display" style={{ fontWeight: 800, fontSize: 20, marginTop: 6 }}>Yantia</div>
+          <div className="yt-display" style={{ fontWeight: 800, fontSize: 20, marginTop: 6 }}>EatyBlinders</div>
         </div>
       </div>
     );
@@ -1772,7 +1772,7 @@ export default function App() {
           <div style={{ width: 34, height: 34, borderRadius: 11, background: T.brand, display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 4px 10px rgba(232,83,44,0.35)" }}>
             <Utensils size={17} color="#fff" />
           </div>
-          <span className="yt-display" style={{ fontWeight: 800, fontSize: 17, letterSpacing: -0.3 }}>Yantia</span>
+          <span className="yt-display" style={{ fontWeight: 800, fontSize: 17, letterSpacing: -0.3 }}>EatyBlinders</span>
         </header>
 
         <main style={{ flex: 1, minHeight: 0, position: "relative" }}>

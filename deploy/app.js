@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useMemo, useCallback } from "react"
 import { Heart, X, RotateCcw, Search, Flame, Clock, ChefHat, CalendarDays, ShoppingBasket, Star, Check, Plus, Timer, Play, Pause, Sparkles, Trash2, ChevronLeft, ChevronRight, Utensils, Dices, BookHeart, Compass, Award, Soup } from "lucide-react";
 
 /* ============================================================
-   YANTIA — descubre tu paladar, cocina a tu manera
+   EATYBLINDERS — descubre recetas sin prejuicios
    Diseño: "mercado moderno" — tarjetas blancas sobre fondo
    marfil neutro, color por familia de alimento, tipografía Sora.
    ============================================================ */
@@ -4664,7 +4664,7 @@ function Descubrir({
           fontWeight: 800,
           margin: 0
         },
-        children: "La cata"
+        children: "Descubre sin prejuicios"
       }), /*#__PURE__*/_jsxs("span", {
         style: {
           fontSize: 13,
@@ -7334,7 +7334,7 @@ export default function App() {
   useEffect(() => {
     (async () => {
       try {
-        const r = await window.storage.get("yantia:v1");
+        const r = await window.storage.get("eatyblinders:v1");
         if (r?.value) {
           const s = JSON.parse(r.value);
           setSt({
@@ -7355,7 +7355,7 @@ export default function App() {
   useEffect(() => {
     if (!cargado) return;
     const t = setTimeout(() => {
-      window.storage.set("yantia:v1", JSON.stringify(st)).catch(() => {});
+      window.storage.set("eatyblinders:v1", JSON.stringify(st)).catch(() => {});
     }, 600);
     return () => clearTimeout(t);
   }, [st, cargado]);
@@ -7482,7 +7482,7 @@ export default function App() {
             fontSize: 20,
             marginTop: 6
           },
-          children: "Yantia"
+          children: "EatyBlinders"
         })]
       })]
     });
@@ -7536,7 +7536,7 @@ export default function App() {
             fontSize: 17,
             letterSpacing: -0.3
           },
-          children: "Yantia"
+          children: "EatyBlinders"
         })]
       }), /*#__PURE__*/_jsxs("main", {
         style: {
