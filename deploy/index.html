@@ -31,13 +31,15 @@
       async get(k) { const v = localStorage.getItem(k); return v == null ? null : { key: k, value: v }; },
       async set(k, v) { localStorage.setItem(k, v); return { key: k, value: v }; },
     };
+    import React from "react";
     import { createRoot } from "react-dom/client";
     import App from "./app.js";
     try {
-      createRoot(document.getElementById("root")).render(App());
+      const element = React.createElement(App);
+      createRoot(document.getElementById("root")).render(element);
     } catch (e) {
       console.error("Error rendering app:", e);
-      document.getElementById("root").innerHTML = `<pre style="color:red">Error: ${e.message}</pre>`;
+      document.getElementById("root").innerHTML = `<pre style="color:red">Error: ${e.message}\n${e.stack}</pre>`;
     }
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", () => navigator.serviceWorker.register("./sw.js").catch(() => {}));
