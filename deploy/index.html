@@ -25,7 +25,7 @@
   <style>html,body{margin:0;height:100%;background:#F5F3EE}#root{height:100%}</style>
 </head>
 <body>
-  <div id="root"></div>
+  <div id="root">Cargando...</div>
   <script type="module">
     window.storage = {
       async get(k) { const v = localStorage.getItem(k); return v == null ? null : { key: k, value: v }; },
@@ -33,22 +33,31 @@
     };
     (async () => {
       try {
+        console.log("Step 1: Starting");
         const React = await import("react");
+        console.log("Step 2: React imported");
         const { createRoot } = await import("react-dom/client");
-        const { default: App } = await import("./app.js");
+        console.log("Step 3: ReactDOM imported");
+        const mod = await import("./app.js");
+        console.log("Step 4: app.js imported", mod);
+        const App = mod.default;
+        console.log("Step 5: App component:", App);
         const root = createRoot(document.getElementById("root"));
+        console.log("Step 6: Root created");
         if (App) {
           const element = React.createElement(App);
+          console.log("Step 7: Element created", element);
           root.render(element);
-          console.log("App rendered successfully");
+          console.log("Step 8: App rendered successfully");
         } else {
           throw new Error("App component not found");
         }
       } catch (e) {
         console.error("App error:", e);
         const errDiv = document.createElement("div");
-        errDiv.style.cssText = "padding:20px;color:red;font-family:monospace;white-space:pre-wrap";
-        errDiv.textContent = `${e.message}\n\n${e.stack}`;
+        errDiv.style.cssText = "padding:20px;color:red;font-family:monospace;white-space:pre-wrap;font-size:14px";
+        errDiv.textContent = `ERROR: ${e.message}\n\n${e.stack}`;
+        document.getElementById("root").textContent = "";
         document.getElementById("root").appendChild(errDiv);
       }
     })();
