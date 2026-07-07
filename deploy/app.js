@@ -6,7 +6,7 @@ import { Heart, X, RotateCcw, Search, Flame, Clock, ChefHat, CalendarDays, Shopp
    Diseño: "mercado moderno" — tarjetas blancas sobre fondo
    marfil neutro, color por familia de alimento, tipografía Sora.
    ============================================================ */
-import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
+import { jsxDEV as _jsxDEV, Fragment as _Fragment } from "react/jsx-dev-runtime";
 const CAT = {
   verdura: {
     label: "Verduras",
@@ -2205,6 +2205,310 @@ const INGS = [
   p: 0,
   cb: 67,
   g: 0.1
+},
+// ---- NUEVOS PARA AIR FRYER ----
+{
+  id: "salsa_bbq",
+  n: "Salsa BBQ",
+  c: "condimento",
+  img: "bbq-sauce.jpg",
+  e: "🍯",
+  kcal: 141,
+  p: 0,
+  cb: 35,
+  g: 0.5
+}, {
+  id: "salsa_buffalo",
+  n: "Salsa Buffalo",
+  c: "condimento",
+  img: "hot-sauce.jpg",
+  e: "🌶️",
+  kcal: 45,
+  p: 0,
+  cb: 4,
+  g: 1.5
+}, {
+  id: "mayonesa",
+  n: "Mayonesa",
+  c: "condimento",
+  img: "mayonnaise.jpg",
+  e: "🟡",
+  kcal: 717,
+  p: 1,
+  cb: 0.6,
+  g: 80
+}, {
+  id: "mostaza",
+  n: "Mostaza",
+  c: "condimento",
+  img: "mustard.jpg",
+  e: "🟡",
+  kcal: 66,
+  p: 4,
+  cb: 3,
+  g: 3.3,
+  f: ["suave (en salsas)", "fuerte", "amarilla"]
+}, {
+  id: "panko",
+  n: "Pan rallado Panko",
+  c: "cereal",
+  img: "panko-breadcrumbs.jpg",
+  e: "🍞",
+  kcal: 350,
+  p: 10,
+  cb: 75,
+  g: 1
+}, {
+  id: "pan_rallado",
+  n: "Pan rallado",
+  c: "cereal",
+  img: "breadcrumbs.jpg",
+  e: "🍞",
+  kcal: 330,
+  p: 11,
+  cb: 70,
+  g: 2
+}, {
+  id: "wontons",
+  n: "Hojas wonton",
+  c: "cereal",
+  img: "wonton-wrappers.jpg",
+  e: "🟩",
+  kcal: 180,
+  p: 5,
+  cb: 35,
+  g: 1
+}, {
+  id: "pollo_alitas",
+  n: "Alitas de pollo",
+  c: "carne",
+  img: "chicken-wings.jpg",
+  e: "🍗",
+  kcal: 290,
+  p: 28,
+  cb: 0,
+  g: 19
+}, {
+  id: "salmon_filetes",
+  n: "Filetes de salmón",
+  c: "pescado",
+  img: "salmon-fillet.jpg",
+  e: "🐟",
+  kcal: 208,
+  p: 20,
+  cb: 0,
+  g: 13
+}, {
+  id: "atun_filetes",
+  n: "Filetes de atún",
+  c: "pescado",
+  img: "tuna-fillet.jpg",
+  e: "🐟",
+  kcal: 132,
+  p: 30,
+  cb: 0,
+  g: 1
+}, {
+  id: "cangrejo",
+  n: "Carne de cangrejo",
+  c: "pescado",
+  img: "crab-meat.jpg",
+  e: "🦀",
+  kcal: 79,
+  p: 17,
+  cb: 0.3,
+  g: 1.1
+}, {
+  id: "tilapia",
+  n: "Tilapia filetes",
+  c: "pescado",
+  img: "tilapia-fillet.jpg",
+  e: "🐟",
+  kcal: 96,
+  p: 20,
+  cb: 0,
+  g: 1.7
+}, {
+  id: "bacalao",
+  n: "Bacalao filetes",
+  c: "pescado",
+  img: "cod-fillet.jpg",
+  e: "🐟",
+  kcal: 82,
+  p: 18,
+  cb: 0,
+  g: 0.7
+}, {
+  id: "cebolla_morada",
+  n: "Cebolla morada",
+  c: "verdura",
+  img: "red-onion.jpg",
+  e: "🧅",
+  kcal: 40,
+  p: 1.1,
+  cb: 9,
+  g: 0.1
+}, {
+  id: "trucha",
+  n: "Trucha filetes",
+  c: "pescado",
+  img: "trout-fillet.jpg",
+  e: "🐟",
+  kcal: 165,
+  p: 23,
+  cb: 0,
+  g: 7.5
+}, {
+  id: "calamar",
+  n: "Calamar/Sepia",
+  c: "pescado",
+  img: "squid.jpg",
+  e: "🦑",
+  kcal: 92,
+  p: 16,
+  cb: 3,
+  g: 1.4
+}, {
+  id: "espinaca_congelada",
+  n: "Espinaca congelada",
+  c: "verdura",
+  img: "frozen-spinach.jpg",
+  e: "🥬",
+  kcal: 23,
+  p: 2.9,
+  cb: 3.6,
+  g: 0.4
+}, /* Extras para air fryer */
+{
+  id: "spray_aceite",
+  n: "Spray de aceite",
+  c: "condimento",
+  img: "cooking-spray.jpg",
+  e: "💨",
+  kcal: 120,
+  p: 0,
+  cb: 0,
+  g: 14
+}, {
+  id: "ajo_polvo",
+  n: "Ajo en polvo",
+  c: "hierba",
+  img: "garlic-powder.jpg",
+  e: "🧄",
+  kcal: 331,
+  p: 13,
+  cb: 73,
+  g: 0.7
+}, {
+  id: "pimienta_cayena",
+  n: "Pimienta de cayena",
+  c: "hierba",
+  img: "cayenne-pepper.jpg",
+  e: "🌶️",
+  kcal: 318,
+  p: 12,
+  cb: 56,
+  g: 17
+}, {
+  id: "harina_garbanzo",
+  n: "Harina de garbanzo",
+  c: "cereal",
+  img: "chickpea-flour.jpg",
+  e: "🟡",
+  kcal: 364,
+  p: 20,
+  cb: 58,
+  g: 6.5
+}, {
+  id: "jalapeno",
+  n: "Jalapeño",
+  c: "verdura",
+  img: "jalapeno-pepper.jpg",
+  e: "🌶️",
+  kcal: 29,
+  p: 0.9,
+  cb: 7,
+  g: 0.4
+}, {
+  id: "hojas_filo",
+  n: "Hojas de filo",
+  c: "cereal",
+  img: "phyllo-sheets.jpg",
+  e: "📄",
+  kcal: 263,
+  p: 8,
+  cb: 50,
+  g: 4.5
+}, {
+  id: "tortillas_maiz",
+  n: "Tortillas de maíz",
+  c: "cereal",
+  img: "corn-tortillas.jpg",
+  e: "🌽",
+  kcal: 155,
+  p: 4.2,
+  cb: 30,
+  g: 2
+}, {
+  id: "tortillas_trigo",
+  n: "Tortillas de trigo",
+  c: "cereal",
+  img: "wheat-tortillas.jpg",
+  e: "🌾",
+  kcal: 180,
+  p: 6,
+  cb: 32,
+  g: 3.8
+}, {
+  id: "maizena",
+  n: "Maicena",
+  c: "cereal",
+  img: "cornstarch.jpg",
+  e: "🟡",
+  kcal: 381,
+  p: 0.3,
+  cb: 91,
+  g: 0.1
+}, {
+  id: "cerdo_filete",
+  n: "Filete de cerdo",
+  c: "carne",
+  img: "pork-fillet.jpg",
+  e: "🥩",
+  kcal: 157,
+  p: 27,
+  cb: 0,
+  g: 5
+}, {
+  id: "cerdo_chuleta",
+  n: "Chuleta de cerdo",
+  c: "carne",
+  img: "pork-chop.jpg",
+  e: "🥩",
+  kcal: 180,
+  p: 26,
+  cb: 0,
+  g: 8
+}, {
+  id: "camaron_grande",
+  n: "Camarones grandes",
+  c: "pescado",
+  img: "large-shrimp.jpg",
+  e: "🦐",
+  kcal: 99,
+  p: 24,
+  cb: 0,
+  g: 0.3
+}, {
+  id: "costillas_cortas",
+  n: "Costillas cortas",
+  c: "carne",
+  img: "short-ribs.jpg",
+  e: "🍖",
+  kcal: 290,
+  p: 25,
+  cb: 0,
+  g: 21
 }];
 
 /* Recetario. dif: 1 fácil · 2 media · 3 elaborada. min: tiempo total.
@@ -2597,7 +2901,9 @@ const RECETAS = [{
     t: "Aparte, dora ajos laminados en una sartén con aceite, con vino, laurel y romero."
   }, {
     t: "Vierte la salsa sobre el pollo asado y sirve."
-  }]
+  }],
+  airFryerTemp: 360,
+  airFryerTime: 20
 }, {
   id: "arroz_cubana",
   n: "Arroz a la cubana",
@@ -2901,7 +3207,9 @@ const RECETAS = [{
     s: 540
   }, {
     t: "Sirve con un chorrito de limón fresco."
-  }]
+  }],
+  airFryerTemp: 360,
+  airFryerTime: 16
 }, {
   id: "merluza_verde",
   n: "Merluza en salsa verde",
@@ -3038,7 +3346,9 @@ const RECETAS = [{
     t: "Mientras, prepara la salsa de tomate en una cazuela con cebolla pochada."
   }, {
     t: "Sirve las albóndigas sobre la salsa de tomate con pan o arroz."
-  }]
+  }],
+  airFryerTemp: 340,
+  airFryerTime: 12
 }, {
   id: "pisto",
   n: "Pisto manchego con huevo",
@@ -3106,7 +3416,9 @@ const RECETAS = [{
     s: 900
   }, {
     t: "Sirve con un huevo frito (o escalfado) por persona encima."
-  }]
+  }],
+  airFryerTemp: 340,
+  airFryerTime: 20
 }, {
   id: "fajitas",
   n: "Fajitas de pollo",
@@ -3822,7 +4134,9 @@ const RECETAS = [{
     s: 780
   }, {
     t: "Termina con albahaca fresca y aceite en crudo."
-  }]
+  }],
+  airFryerTemp: 380,
+  airFryerTime: 12
 }, {
   id: "bizcocho",
   n: "Bizcocho de yogur",
@@ -4137,7 +4451,9 @@ const RECETAS = [{
   }, {
     t: "Rellena las barcas, cubre con mozzarella y gratina hasta dorar.",
     s: 420
-  }]
+  }],
+  airFryerTemp: 340,
+  airFryerTime: 20
 }, {
   id: "salteado_ternera",
   n: "Salteado de ternera con verduras",
@@ -4195,6 +4511,2080 @@ const RECETAS = [{
   }, {
     t: "Sirve con sésamo y pimienta recién molida."
   }]
+}, /* ============== 50 AIR FRYER RECIPES ============== */
+/* CARNES (15) */
+{
+  id: "pollo_wings_crispy",
+  n: "Alas de pollo crispy",
+  cat: "comida",
+  dif: 1,
+  min: 20,
+  rac: 4,
+  desc: "Alitas jugosas por dentro, crujientes por fuera. Lisas o con especias.",
+  e: "🍗",
+  nut: {
+    kcal: 280,
+    p: 35,
+    cb: 2,
+    g: 14
+  },
+  tags: ["airfryer", "rápida", "crispy", "pollo"],
+  ing: [{
+    id: "pollo_alitas",
+    q: "1 kg"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }, {
+    id: "pimienta",
+    q: "al gusto"
+  }, {
+    id: "pimenton",
+    q: "1 cda"
+  }, {
+    id: "ajo_polvo",
+    q: "1 cdta"
+  }, {
+    id: "spray_aceite",
+    q: "2 veces"
+  }],
+  pasos: [{
+    t: "Seca bien las alitas con papel absorbente."
+  }, {
+    t: "Mezcla sal, pimienta, pimentón y ajo en polvo. Espolvorea sobre las alitas."
+  }, {
+    t: "Pásalas por spray de aceite. Coloca en el airfryer a 200 °C.",
+    s: 1200
+  }, {
+    t: "Remueve a media cocción. Fríe 20 min total hasta que estén doradas y crujientes."
+  }],
+  airFryerTemp: 400,
+  airFryerTime: 20
+}, {
+  id: "pechuga_empanada",
+  n: "Pechuga de pollo empanada",
+  cat: "comida",
+  dif: 2,
+  min: 25,
+  rac: 2,
+  desc: "Filete tierno dentro, panko dorado fuera. Ideal con limón.",
+  e: "🍗",
+  nut: {
+    kcal: 320,
+    p: 38,
+    cb: 15,
+    g: 12
+  },
+  tags: ["airfryer", "empanado", "pollo"],
+  ing: [{
+    id: "pollo_pechuga",
+    q: "2 filetes"
+  }, {
+    id: "huevo",
+    q: "1 ud"
+  }, {
+    id: "panko",
+    q: "100 g"
+  }, {
+    id: "harina",
+    q: "50 g"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }, {
+    id: "pimienta",
+    q: "al gusto"
+  }, {
+    id: "limon",
+    q: "1 ud"
+  }, {
+    id: "spray_aceite",
+    q: "3 veces"
+  }],
+  pasos: [{
+    t: "Golpea los filetes para que queden del mismo grosor. Salpimienta."
+  }, {
+    t: "Pasa por harina, luego por huevo batido, y finalmente por panko."
+  }, {
+    t: "Rocía con spray de aceite. Coloca en airfryer a 180 °C.",
+    s: 1500
+  }, {
+    t: "Fríe 15 min dándole vuelta a los 8 min. Sirve con limón."
+  }],
+  airFryerTemp: 360,
+  airFryerTime: 15
+}, {
+  id: "muslos_rellenos_queso",
+  n: "Muslos de pollo rellenos de queso",
+  cat: "comida",
+  dif: 2,
+  min: 30,
+  rac: 4,
+  desc: "Queso fundido dentro, piel crujiente fuera. Adictivo.",
+  e: "🧀",
+  nut: {
+    kcal: 380,
+    p: 40,
+    cb: 1,
+    g: 22
+  },
+  tags: ["airfryer", "relleno", "pollo"],
+  ing: [{
+    id: "pollo_muslo",
+    q: "4 muslos"
+  }, {
+    id: "queso_fresco",
+    q: "150 g"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }, {
+    id: "pimienta",
+    q: "al gusto"
+  }, {
+    id: "romero",
+    q: "2 ramas"
+  }, {
+    id: "aove",
+    q: "2 cdas"
+  }],
+  pasos: [{
+    t: "Haz un corte profundo en cada muslo sin atravesarlo. Introduce queso y romero."
+  }, {
+    t: "Salpimienta. Rocía con aceite. Coloca en airfryer a 200 °C.",
+    s: 1800
+  }, {
+    t: "Fríe 25-30 min hasta que la piel esté dorada y crujiente."
+  }],
+  airFryerTemp: 400,
+  airFryerTime: 28
+}, {
+  id: "pollo_teriyaki",
+  n: "Pollo teriyaki en dados",
+  cat: "comida",
+  dif: 1,
+  min: 20,
+  rac: 4,
+  desc: "Trozos de pollo glaseados con salsa agridulce asiática.",
+  e: "🍗",
+  nut: {
+    kcal: 290,
+    p: 34,
+    cb: 12,
+    g: 10
+  },
+  tags: ["airfryer", "asiática", "rápida"],
+  ing: [{
+    id: "pollo_pechuga",
+    q: "600 g"
+  }, {
+    id: "salsa_soja",
+    q: "3 cdas"
+  }, {
+    id: "miel",
+    q: "2 cdas"
+  }, {
+    id: "vinagre",
+    q: "1 cda"
+  }, {
+    id: "jengibre",
+    q: "1 cdta",
+    forma: "en polvo"
+  }, {
+    id: "ajo",
+    q: "2 dientes",
+    forma: "crudo"
+  }, {
+    id: "agua",
+    q: "50 ml"
+  }, {
+    id: "maizena",
+    q: "1 cdta"
+  }],
+  pasos: [{
+    t: "Corta el pollo en dados. Mezcla soja, miel, vinagre, jengibre y ajo."
+  }, {
+    t: "Marida el pollo 10 min. Coloca en airfryer a 200 °C.",
+    s: 1200
+  }, {
+    t: "Fríe 15 min. Mientras, calienta la marinada con maicena para espesar."
+  }, {
+    t: "Vierte la salsa sobre el pollo cocido y sirve."
+  }],
+  airFryerTemp: 400,
+  airFryerTime: 15
+}, {
+  id: "chorizo_asado",
+  n: "Chorizo asado en rodajas",
+  cat: "aperitivo",
+  dif: 1,
+  min: 15,
+  rac: 4,
+  desc: "Rodajas caramelizadas de chorizo. Perfecto para acompañar o picar.",
+  e: "🌶️",
+  nut: {
+    kcal: 280,
+    p: 18,
+    cb: 2,
+    g: 23
+  },
+  tags: ["airfryer", "rápida", "aperitivo"],
+  ing: [{
+    id: "chorizo",
+    q: "250 g"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }],
+  pasos: [{
+    t: "Corta el chorizo en rodajas gruesas."
+  }, {
+    t: "Coloca en airfryer a 200 °C. Fríe 10 min removiendo a los 5."
+  }, {
+    t: "Sirve caliente como aperitivo o acompañamiento."
+  }],
+  airFryerTemp: 400,
+  airFryerTime: 10
+}, {
+  id: "albondigas_bbq",
+  n: "Albóndigas BBQ pequeñas",
+  cat: "aperitivo",
+  dif: 2,
+  min: 25,
+  rac: 6,
+  desc: "Mini albóndigas glaseadas con salsa barbecue. Ideal para picar.",
+  e: "🧆",
+  nut: {
+    kcal: 240,
+    p: 20,
+    cb: 10,
+    g: 13
+  },
+  tags: ["airfryer", "aperitivo", "bbq"],
+  ing: [{
+    id: "carne_picada",
+    q: "400 g"
+  }, {
+    id: "pan_rallado",
+    q: "50 g"
+  }, {
+    id: "huevo",
+    q: "1 ud"
+  }, {
+    id: "salsa_bbq",
+    q: "100 ml"
+  }, {
+    id: "ajo_polvo",
+    q: "1 cdta"
+  }, {
+    id: "cebolla",
+    q: "1 ud",
+    forma: "pochada"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }],
+  pasos: [{
+    t: "Mezcla carne, pan, huevo, ajo y cebolla. Forma bolitas pequeñas."
+  }, {
+    t: "Coloca en airfryer a 180 °C. Fríe 12 min removiendo a los 6."
+  }, {
+    t: "Calienta la salsa BBQ. Vierte sobre las albóndigas y sirve."
+  }],
+  airFryerTemp: 360,
+  airFryerTime: 12
+}, {
+  id: "filete_cerdo_especias",
+  n: "Filete de cerdo con especias",
+  cat: "comida",
+  dif: 1,
+  min: 20,
+  rac: 2,
+  desc: "Filete jugoso con costra de especias aromáticas.",
+  e: "🥩",
+  nut: {
+    kcal: 320,
+    p: 38,
+    cb: 2,
+    g: 17
+  },
+  tags: ["airfryer", "rápida", "cerdo"],
+  ing: [{
+    id: "cerdo_filete",
+    q: "2 filetes de 200g"
+  }, {
+    id: "pimenton",
+    q: "1 cdta"
+  }, {
+    id: "comino",
+    q: "1 cdta"
+  }, {
+    id: "ajo_polvo",
+    q: "1 cdta"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }, {
+    id: "pimienta",
+    q: "al gusto"
+  }, {
+    id: "aove",
+    q: "1 cda"
+  }, {
+    id: "limon",
+    q: "1 ud"
+  }],
+  pasos: [{
+    t: "Mezcla especias, sal y pimienta. Frota los filetes."
+  }, {
+    t: "Rocía con aceite. Coloca en airfryer a 200 °C.",
+    s: 1200
+  }, {
+    t: "Fríe 15 min. Sirve con limón y ensalada."
+  }],
+  airFryerTemp: 400,
+  airFryerTime: 15
+}, {
+  id: "chuletas_cerdo",
+  n: "Chuletas de cerdo glaseadas",
+  cat: "comida",
+  dif: 2,
+  min: 25,
+  rac: 2,
+  desc: "Chuletas tiernas con glaseado miel-mostaza.",
+  e: "🥩",
+  nut: {
+    kcal: 350,
+    p: 40,
+    cb: 8,
+    g: 18
+  },
+  tags: ["airfryer", "glaseada", "cerdo"],
+  ing: [{
+    id: "cerdo_chuleta",
+    q: "2 ud de 250g"
+  }, {
+    id: "miel",
+    q: "2 cdas"
+  }, {
+    id: "mostaza",
+    q: "1 cda"
+  }, {
+    id: "romero",
+    q: "2 ramas"
+  }, {
+    id: "aove",
+    q: "1 cda"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }, {
+    id: "pimienta",
+    q: "al gusto"
+  }],
+  pasos: [{
+    t: "Salpimienta las chuletas. Rocía con aceite. Coloca en airfryer a 200 °C.",
+    s: 1500
+  }, {
+    t: "Fríe 15 min. Mezcla miel y mostaza. Pinta las chuletas."
+  }, {
+    t: "Fríe 5 min más hasta que brille y esté pegajoso."
+  }],
+  airFryerTemp: 400,
+  airFryerTime: 20
+}, {
+  id: "ternera_rebozada",
+  n: "Ternera rebozada crujiente",
+  cat: "comida",
+  dif: 1,
+  min: 20,
+  rac: 2,
+  desc: "Filetes empanados que crujen al morder. Milanesa de lujo.",
+  e: "🥩",
+  nut: {
+    kcal: 310,
+    p: 36,
+    cb: 12,
+    g: 13
+  },
+  tags: ["airfryer", "empanada", "ternera"],
+  ing: [{
+    id: "ternera_filete",
+    q: "2 filetes de 200g"
+  }, {
+    id: "huevo",
+    q: "1 ud"
+  }, {
+    id: "pan_rallado",
+    q: "100 g"
+  }, {
+    id: "harina",
+    q: "50 g"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }, {
+    id: "pimienta",
+    q: "al gusto"
+  }, {
+    id: "limon",
+    q: "1 ud"
+  }, {
+    id: "spray_aceite",
+    q: "3 veces"
+  }],
+  pasos: [{
+    t: "Golpea los filetes. Pasa por harina, huevo y pan rallado."
+  }, {
+    t: "Rocía con spray. Coloca en airfryer a 200 °C.",
+    s: 1200
+  }, {
+    t: "Fríe 12 min dándole vuelta a los 6 min. Sirve con limón."
+  }],
+  airFryerTemp: 400,
+  airFryerTime: 12
+}, {
+  id: "solomillo_medallones",
+  n: "Solomillo en medallones",
+  cat: "comida",
+  dif: 1,
+  min: 18,
+  rac: 2,
+  desc: "Carne roja tierna y sabrosa con poco tiempo de cocción.",
+  e: "🥩",
+  nut: {
+    kcal: 280,
+    p: 40,
+    cb: 0,
+    g: 12
+  },
+  tags: ["airfryer", "rápida", "elegante"],
+  ing: [{
+    id: "solomillo",
+    q: "400 g"
+  }, {
+    id: "romero",
+    q: "2 ramas"
+  }, {
+    id: "aove",
+    q: "1 cda"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }, {
+    id: "pimienta",
+    q: "al gusto"
+  }, {
+    id: "ajo",
+    q: "2 dientes"
+  }],
+  pasos: [{
+    t: "Corta el solomillo en medallones gruesos. Salpimienta."
+  }, {
+    t: "Coloca en airfryer a 200 °C con ajo y romero.",
+    s: 1080
+  }, {
+    t: "Fríe 12-15 min según el punto deseado. Descansa antes de servir."
+  }],
+  airFryerTemp: 400,
+  airFryerTime: 14
+}, {
+  id: "carne_molida_especiada",
+  n: "Carne molida con especias",
+  cat: "comida",
+  dif: 1,
+  min: 20,
+  rac: 4,
+  desc: "Pequeñas porciones de carne molida con crocante exterior.",
+  e: "🍖",
+  nut: {
+    kcal: 280,
+    p: 32,
+    cb: 4,
+    g: 15
+  },
+  tags: ["airfryer", "rápida", "base versátil"],
+  ing: [{
+    id: "carne_picada",
+    q: "500 g"
+  }, {
+    id: "cebolla",
+    q: "1 ud",
+    forma: "pochada"
+  }, {
+    id: "ajo",
+    q: "2 dientes"
+  }, {
+    id: "comino",
+    q: "1 cdta"
+  }, {
+    id: "pimenton",
+    q: "1 cdta"
+  }, {
+    id: "pan_rallado",
+    q: "50 g"
+  }, {
+    id: "huevo",
+    q: "1 ud"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }],
+  pasos: [{
+    t: "Mezcla carne, cebolla, ajo, especias, pan y huevo."
+  }, {
+    t: "Forma pequeñas hamburguesas o albóndigas aplastadas."
+  }, {
+    t: "Coloca en airfryer a 200 °C. Fríe 12 min removiendo a los 6."
+  }],
+  airFryerTemp: 400,
+  airFryerTime: 12
+}, {
+  id: "nuggets_pollo_caseros",
+  n: "Nuggets de pollo caseros",
+  cat: "comida",
+  dif: 2,
+  min: 20,
+  rac: 4,
+  desc: "Trocitos de pollo crujientes. Apto para niños (y no tan niños).",
+  e: "🍗",
+  nut: {
+    kcal: 260,
+    p: 32,
+    cb: 10,
+    g: 11
+  },
+  tags: ["airfryer", "niños", "crispy"],
+  ing: [{
+    id: "pollo_pechuga",
+    q: "500 g"
+  }, {
+    id: "huevo",
+    q: "1 ud"
+  }, {
+    id: "panko",
+    q: "100 g"
+  }, {
+    id: "harina",
+    q: "50 g"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }, {
+    id: "pimienta",
+    q: "al gusto"
+  }, {
+    id: "spray_aceite",
+    q: "3 veces"
+  }],
+  pasos: [{
+    t: "Corta el pollo en trozos uniformes."
+  }, {
+    t: "Pasa por harina, huevo batido y panko. Rocía con spray."
+  }, {
+    t: "Coloca en airfryer a 200 °C. Fríe 15 min."
+  }],
+  airFryerTemp: 400,
+  airFryerTime: 15
+}, {
+  id: "alitas_buffalo",
+  n: "Alitas Buffalo picantes",
+  cat: "aperitivo",
+  dif: 1,
+  min: 20,
+  rac: 4,
+  desc: "Alitas bañadas en salsa picante. Para los que no le tienen miedo al picante.",
+  e: "🌶️",
+  nut: {
+    kcal: 260,
+    p: 33,
+    cb: 3,
+    g: 12
+  },
+  tags: ["airfryer", "picante", "alitas"],
+  ing: [{
+    id: "pollo_alitas",
+    q: "800 g"
+  }, {
+    id: "salsa_buffalo",
+    q: "100 ml"
+  }, {
+    id: "mantequilla",
+    q: "2 cdas"
+  }, {
+    id: "pimienta_cayena",
+    q: "1 cdta"
+  }, {
+    id: "ajo_polvo",
+    q: "1 cdta"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }, {
+    id: "spray_aceite",
+    q: "2 veces"
+  }],
+  pasos: [{
+    t: "Seca las alitas. Rocía con spray. Coloca en airfryer a 200 °C.",
+    s: 1200
+  }, {
+    t: "Fríe 18 min removiendo a los 9. Calienta salsa con mantequilla."
+  }, {
+    t: "Vierte la salsa sobre las alitas. Sirve con apio o zanahoria."
+  }],
+  airFryerTemp: 400,
+  airFryerTime: 18
+}, {
+  id: "costillas_glazeadas",
+  n: "Costillas cortas glaseadas",
+  cat: "comida",
+  dif: 2,
+  min: 35,
+  rac: 4,
+  desc: "Costillas tiernas dentro, glaseadas afuera. Mesón sin horno.",
+  e: "🍖",
+  nut: {
+    kcal: 420,
+    p: 35,
+    cb: 15,
+    g: 23
+  },
+  tags: ["airfryer", "glazeada", "costillas"],
+  ing: [{
+    id: "costillas_cortas",
+    q: "800 g"
+  }, {
+    id: "salsa_bbq",
+    q: "150 ml"
+  }, {
+    id: "miel",
+    q: "2 cdas"
+  }, {
+    id: "mostaza",
+    q: "1 cda"
+  }, {
+    id: "ajo",
+    q: "2 dientes"
+  }, {
+    id: "pimienta",
+    q: "al gusto"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }],
+  pasos: [{
+    t: "Salpimienta las costillas. Coloca en airfryer a 180 °C.",
+    s: 1800
+  }, {
+    t: "Fríe 25 min. Mezcla salsa BBQ, miel, mostaza y ajo."
+  }, {
+    t: "Pinta las costillas. Fríe 8 min más hasta que brille."
+  }],
+  airFryerTemp: 360,
+  airFryerTime: 33
+}, /* PESCADOS (8) */
+{
+  id: "bacalao_filetes",
+  n: "Filetes de bacalao crujientes",
+  cat: "cena",
+  dif: 1,
+  min: 15,
+  rac: 2,
+  desc: "Bacalao empanado que cruje. Clásico reinventado.",
+  e: "🐟",
+  nut: {
+    kcal: 220,
+    p: 32,
+    cb: 10,
+    g: 6
+  },
+  tags: ["airfryer", "pescado", "crispy"],
+  ing: [{
+    id: "bacalao",
+    q: "2 filetes de 180g"
+  }, {
+    id: "huevo",
+    q: "1 ud"
+  }, {
+    id: "panko",
+    q: "80 g"
+  }, {
+    id: "harina",
+    q: "40 g"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }, {
+    id: "pimienta",
+    q: "al gusto"
+  }, {
+    id: "limon",
+    q: "1 ud"
+  }, {
+    id: "spray_aceite",
+    q: "3 veces"
+  }],
+  pasos: [{
+    t: "Pasa los filetes por harina, huevo y panko. Rocía con spray."
+  }, {
+    t: "Coloca en airfryer a 200 °C. Fríe 12 min."
+  }, {
+    t: "Sirve con limón y ensalada."
+  }],
+  airFryerTemp: 400,
+  airFryerTime: 12
+}, {
+  id: "salmon_filetes_limón",
+  n: "Salmón a la mantequilla y limón",
+  cat: "cena",
+  dif: 1,
+  min: 15,
+  rac: 2,
+  desc: "Salmón jugoso con toque de cítrico.",
+  e: "🐟",
+  nut: {
+    kcal: 280,
+    p: 32,
+    cb: 1,
+    g: 15
+  },
+  tags: ["airfryer", "omega3", "rápida"],
+  ing: [{
+    id: "salmon_filetes",
+    q: "2 filetes de 180g"
+  }, {
+    id: "mantequilla",
+    q: "2 cdas"
+  }, {
+    id: "limon",
+    q: "1 ud"
+  }, {
+    id: "eneldo",
+    q: "1 cdta"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }, {
+    id: "pimienta",
+    q: "al gusto"
+  }],
+  pasos: [{
+    t: "Coloca los filetes en airfryer con puntitas de mantequilla."
+  }, {
+    t: "Fríe a 180 °C durante 12 min.",
+    s: 720
+  }, {
+    t: "Exprime limón, espolvorea eneldo y sirve."
+  }],
+  airFryerTemp: 360,
+  airFryerTime: 12
+}, {
+  id: "camarones_crujientes",
+  n: "Camarones empanados crujientes",
+  cat: "cena",
+  dif: 1,
+  min: 12,
+  rac: 2,
+  desc: "Camarones rebozados. Rápido y adictivo.",
+  e: "🦐",
+  nut: {
+    kcal: 200,
+    p: 24,
+    cb: 8,
+    g: 8
+  },
+  tags: ["airfryer", "rápida", "marisco"],
+  ing: [{
+    id: "camaron_grande",
+    q: "300 g"
+  }, {
+    id: "huevo",
+    q: "1 ud"
+  }, {
+    id: "panko",
+    q: "80 g"
+  }, {
+    id: "harina",
+    q: "40 g"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }, {
+    id: "pimienta",
+    q: "al gusto"
+  }, {
+    id: "limon",
+    q: "1 ud"
+  }, {
+    id: "spray_aceite",
+    q: "3 veces"
+  }],
+  pasos: [{
+    t: "Seca bien los camarones. Pasa por harina, huevo y panko."
+  }, {
+    t: "Rocía con spray. Coloca en airfryer a 200 °C.",
+    s: 720
+  }, {
+    t: "Fríe 10 min. Sirve con limón y salsa tártara."
+  }],
+  airFryerTemp: 400,
+  airFryerTime: 10
+}, {
+  id: "tilapia_especiada",
+  n: "Tilapia con especias tostadas",
+  cat: "cena",
+  dif: 1,
+  min: 15,
+  rac: 2,
+  desc: "Pescado blanco delicado con especias que le dan sabor.",
+  e: "🐟",
+  nut: {
+    kcal: 180,
+    p: 30,
+    cb: 2,
+    g: 6
+  },
+  tags: ["airfryer", "pescado blanco", "ligera"],
+  ing: [{
+    id: "tilapia",
+    q: "2 filetes"
+  }, {
+    id: "oregano",
+    q: "1 cdta"
+  }, {
+    id: "comino",
+    q: "1 cdta"
+  }, {
+    id: "paprika",
+    q: "1 cdta"
+  }, {
+    id: "limon",
+    q: "1 ud"
+  }, {
+    id: "aove",
+    q: "1 cda"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }],
+  pasos: [{
+    t: "Mezcla especias. Frota los filetes."
+  }, {
+    t: "Coloca en airfryer a 180 °C.",
+    s: 900
+  }, {
+    t: "Fríe 12 min. Sirve con limón."
+  }],
+  airFryerTemp: 360,
+  airFryerTime: 12
+}, {
+  id: "calamar_rebozado",
+  n: "Calamar rebozado crujiente",
+  cat: "cena",
+  dif: 1,
+  min: 12,
+  rac: 2,
+  desc: "Anillas de calamar crujientes por fuera, tiernas por dentro.",
+  e: "🦑",
+  nut: {
+    kcal: 210,
+    p: 22,
+    cb: 12,
+    g: 8
+  },
+  tags: ["airfryer", "marisco", "crispy"],
+  ing: [{
+    id: "calamar",
+    q: "300 g"
+  }, {
+    id: "harina",
+    q: "50 g"
+  }, {
+    id: "huevo",
+    q: "1 ud"
+  }, {
+    id: "pan_rallado",
+    q: "80 g"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }, {
+    id: "pimienta",
+    q: "al gusto"
+  }, {
+    id: "limon",
+    q: "1 ud"
+  }, {
+    id: "spray_aceite",
+    q: "3 veces"
+  }],
+  pasos: [{
+    t: "Limpia y corta el calamar en anillas. Pasa por harina, huevo y pan."
+  }, {
+    t: "Rocía con spray. Coloca en airfryer a 200 °C.",
+    s: 720
+  }, {
+    t: "Fríe 10 min. Sirve con limón."
+  }],
+  airFryerTemp: 400,
+  airFryerTime: 10
+}, {
+  id: "crab_cakes",
+  n: "Crab cakes caseras",
+  cat: "aperitivo",
+  dif: 2,
+  min: 20,
+  rac: 4,
+  desc: "Galletas de cangrejo. Lujo hecho fácil.",
+  e: "🦀",
+  nut: {
+    kcal: 280,
+    p: 20,
+    cb: 12,
+    g: 16
+  },
+  tags: ["airfryer", "marisco", "aperitivo"],
+  ing: [{
+    id: "cangrejo",
+    q: "300 g"
+  }, {
+    id: "pan_molde",
+    q: "2 rebanadas"
+  }, {
+    id: "huevo",
+    q: "1 ud"
+  }, {
+    id: "mayonesa",
+    q: "3 cdas"
+  }, {
+    id: "cebolleta",
+    q: "2 tallos"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }, {
+    id: "pimienta",
+    q: "al gusto"
+  }, {
+    id: "spray_aceite",
+    q: "3 veces"
+  }],
+  pasos: [{
+    t: "Mezcla cangrejo, pan remojado en leche, huevo, mayonesa y cebolleta."
+  }, {
+    t: "Forma hamburguesas pequeñas. Rocía con spray."
+  }, {
+    t: "Coloca en airfryer a 180 °C. Fríe 15 min."
+  }],
+  airFryerTemp: 360,
+  airFryerTime: 15
+}, {
+  id: "trucha_horno",
+  n: "Trucha al horno con hierbas",
+  cat: "cena",
+  dif: 1,
+  min: 18,
+  rac: 2,
+  desc: "Trucha entera jugosa con aromáticos dentro.",
+  e: "🐟",
+  nut: {
+    kcal: 240,
+    p: 28,
+    cb: 0,
+    g: 13
+  },
+  tags: ["airfryer", "pescado entero", "hierbas"],
+  ing: [{
+    id: "trucha",
+    q: "1 ud de 400g"
+  }, {
+    id: "limon",
+    q: "1 ud"
+  }, {
+    id: "romero",
+    q: "2 ramas"
+  }, {
+    id: "tomillo",
+    q: "2 ramas"
+  }, {
+    id: "aove",
+    q: "2 cdas"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }, {
+    id: "pimienta",
+    q: "al gusto"
+  }],
+  pasos: [{
+    t: "Limpia la trucha. Rellena con limón y hierbas."
+  }, {
+    t: "Rocía con aceite. Coloca en airfryer a 180 °C.",
+    s: 1080
+  }, {
+    t: "Fríe 15 min. La piel debe estar crujiente."
+  }],
+  airFryerTemp: 360,
+  airFryerTime: 15
+}, {
+  id: "atun_sellado",
+  n: "Atún sellado en dados",
+  cat: "cena",
+  dif: 1,
+  min: 8,
+  rac: 2,
+  desc: "Atún rojo poco hecho en el centro, sellado afuera. Para amantes del atún.",
+  e: "🐟",
+  nut: {
+    kcal: 200,
+    p: 35,
+    cb: 0,
+    g: 6
+  },
+  tags: ["airfryer", "atún rojo", "rápida"],
+  ing: [{
+    id: "atun_filetes",
+    q: "2 filetes de 150g"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }, {
+    id: "pimienta",
+    q: "al gusto"
+  }, {
+    id: "sesamo",
+    q: "1 cda"
+  }, {
+    id: "aove",
+    q: "1 cda"
+  }],
+  pasos: [{
+    t: "Salpimienta los filetes. Espolvorea sésamo."
+  }, {
+    t: "Coloca en airfryer a 200 °C.",
+    s: 480
+  }, {
+    t: "Fríe 5-6 min. Debe estar rosado en el centro. Sirve con limón."
+  }],
+  airFryerTemp: 400,
+  airFryerTime: 6
+}, /* VEGETALES (15) */
+{
+  id: "patatas_chips",
+  n: "Patatas chips caseras",
+  cat: "aperitivo",
+  dif: 1,
+  min: 25,
+  rac: 4,
+  desc: "Chips crujientes y saladas. Adictivas y sin conservantes.",
+  e: "🥔",
+  nut: {
+    kcal: 180,
+    p: 2,
+    cb: 22,
+    g: 9
+  },
+  tags: ["airfryer", "aperitivo", "crips"],
+  ing: [{
+    id: "patata",
+    q: "400 g"
+  }, {
+    id: "spray_aceite",
+    q: "3 veces"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }, {
+    id: "pimienta",
+    q: "al gusto"
+  }],
+  pasos: [{
+    t: "Corta las patatas en láminas muy finas con mandolina."
+  }, {
+    t: "Remoja en agua fría 30 min. Seca bien."
+  }, {
+    t: "Rocía con spray. Coloca en airfryer a 190 °C.",
+    s: 1500
+  }, {
+    t: "Fríe 20 min removiendo cada 5 min hasta que estén crujientes."
+  }],
+  airFryerTemp: 380,
+  airFryerTime: 20
+}, {
+  id: "batatas_fritas",
+  n: "Batatas fritas wedges",
+  cat: "aperitivo",
+  dif: 1,
+  min: 20,
+  rac: 4,
+  desc: "Batatas caramelizadas por fuera, tiernas por dentro.",
+  e: "🍠",
+  nut: {
+    kcal: 140,
+    p: 2,
+    cb: 22,
+    g: 5
+  },
+  tags: ["airfryer", "aperitivo", "batata"],
+  ing: [{
+    id: "boniato",
+    q: "500 g"
+  }, {
+    id: "comino",
+    q: "1 cdta"
+  }, {
+    id: "pimenton",
+    q: "1 cdta"
+  }, {
+    id: "spray_aceite",
+    q: "3 veces"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }],
+  pasos: [{
+    t: "Corta las batatas en wedges. Rocía con spray y especias."
+  }, {
+    t: "Coloca en airfryer a 200 °C.",
+    s: 1200
+  }, {
+    t: "Fríe 15 min removiendo a los 8 min."
+  }],
+  airFryerTemp: 400,
+  airFryerTime: 15
+}, {
+  id: "vegetales_asados",
+  n: "Vegetales mixtos asados",
+  cat: "cena",
+  dif: 1,
+  min: 20,
+  rac: 4,
+  desc: "Mix de verduras caramelizadas. Acompañamiento versátil.",
+  e: "🥦",
+  nut: {
+    kcal: 120,
+    p: 4,
+    cb: 16,
+    g: 5
+  },
+  tags: ["airfryer", "vegetales", "asados"],
+  ing: [{
+    id: "brocoli",
+    q: "200 g"
+  }, {
+    id: "coliflor",
+    q: "200 g"
+  }, {
+    id: "calabacin",
+    q: "1 ud"
+  }, {
+    id: "pimiento_rojo",
+    q: "1 ud"
+  }, {
+    id: "aove",
+    q: "2 cdas"
+  }, {
+    id: "ajo",
+    q: "2 dientes"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }, {
+    id: "pimienta",
+    q: "al gusto"
+  }],
+  pasos: [{
+    t: "Corta todos los vegetales en trozos uniformes."
+  }, {
+    t: "Mezcla con aceite, ajo, sal y pimienta."
+  }, {
+    t: "Coloca en airfryer a 200 °C. Fríe 18 min removiendo cada 6 min."
+  }],
+  airFryerTemp: 400,
+  airFryerTime: 18
+}, {
+  id: "champiñones_rellenos",
+  n: "Champiñones rellenos de queso",
+  cat: "aperitivo",
+  dif: 2,
+  min: 20,
+  rac: 4,
+  desc: "Sombreretes de champiñón rellenos y gratinados.",
+  e: "🍄",
+  nut: {
+    kcal: 160,
+    p: 10,
+    cb: 6,
+    g: 11
+  },
+  tags: ["airfryer", "relleno", "champiñones"],
+  ing: [{
+    id: "champinon",
+    q: "8 uds grandes"
+  }, {
+    id: "queso_fresco",
+    q: "150 g"
+  }, {
+    id: "pan_rallado",
+    q: "50 g"
+  }, {
+    id: "perejil",
+    q: "2 cdas"
+  }, {
+    id: "ajo",
+    q: "2 dientes"
+  }, {
+    id: "aove",
+    q: "2 cdas"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }],
+  pasos: [{
+    t: "Limpia los champiñones. Retira los tallos."
+  }, {
+    t: "Mezcla queso, pan, perejil y ajo. Rellena."
+  }, {
+    t: "Coloca en airfryer a 180 °C. Fríe 15 min."
+  }],
+  airFryerTemp: 360,
+  airFryerTime: 15
+}, {
+  id: "coliflor_crujiente",
+  n: "Coliflor crujiente especiada",
+  cat: "cena",
+  dif: 1,
+  min: 20,
+  rac: 4,
+  desc: "Floretes de coliflor crujientes con especias.",
+  e: "🥦",
+  nut: {
+    kcal: 140,
+    p: 8,
+    cb: 14,
+    g: 6
+  },
+  tags: ["airfryer", "coliflor", "crispy"],
+  ing: [{
+    id: "coliflor",
+    q: "500 g"
+  }, {
+    id: "harina_garbanzo",
+    q: "50 g"
+  }, {
+    id: "agua",
+    q: "100 ml"
+  }, {
+    id: "pimenton",
+    q: "1 cda"
+  }, {
+    id: "ajo_polvo",
+    q: "1 cdta"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }, {
+    id: "spray_aceite",
+    q: "3 veces"
+  }],
+  pasos: [{
+    t: "Mezcla harina de garbanzos con agua, especias. Haz una pasta ligera."
+  }, {
+    t: "Pasa los floretes por la mezcla. Rocía con spray."
+  }, {
+    t: "Coloca en airfryer a 200 °C. Fríe 15 min."
+  }],
+  airFryerTemp: 400,
+  airFryerTime: 15
+}, {
+  id: "brocoli_crujiente",
+  n: "Brócoli crujiente al ajo",
+  cat: "cena",
+  dif: 1,
+  min: 18,
+  rac: 4,
+  desc: "Floretes crujientes con sabor a ajo tostado.",
+  e: "🥦",
+  nut: {
+    kcal: 120,
+    p: 8,
+    cb: 14,
+    g: 5
+  },
+  tags: ["airfryer", "brócoli", "ajo"],
+  ing: [{
+    id: "brocoli",
+    q: "600 g"
+  }, {
+    id: "ajo",
+    q: "4 dientes"
+  }, {
+    id: "aove",
+    q: "3 cdas"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }, {
+    id: "pimienta",
+    q: "al gusto"
+  }, {
+    id: "limon",
+    q: "1 ud"
+  }],
+  pasos: [{
+    t: "Corta el brócoli en floretes. Mezcla con aceite y ajo laminado."
+  }, {
+    t: "Coloca en airfryer a 200 °C.",
+    s: 1080
+  }, {
+    t: "Fríe 15 min removiendo a los 8. Exprime limón al final."
+  }],
+  airFryerTemp: 400,
+  airFryerTime: 15
+}, {
+  id: "berenjenas_fritas",
+  n: "Berenjenas fritas crujientes",
+  cat: "aperitivo",
+  dif: 1,
+  min: 20,
+  rac: 4,
+  desc: "Rodajas de berenjena rebozadas. Crispy y sabrosas.",
+  e: "🍆",
+  nut: {
+    kcal: 180,
+    p: 5,
+    cb: 14,
+    g: 11
+  },
+  tags: ["airfryer", "berenjena", "crispy"],
+  ing: [{
+    id: "berenjena",
+    q: "2 uds"
+  }, {
+    id: "huevo",
+    q: "1 ud"
+  }, {
+    id: "panko",
+    q: "100 g"
+  }, {
+    id: "harina",
+    q: "50 g"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }, {
+    id: "pimienta",
+    q: "al gusto"
+  }, {
+    id: "spray_aceite",
+    q: "3 veces"
+  }, {
+    id: "tomate_frito",
+    q: "50 g"
+  }],
+  pasos: [{
+    t: "Corta la berenjena en rodajas. Salpimienta."
+  }, {
+    t: "Pasa por harina, huevo y panko. Rocía con spray."
+  }, {
+    t: "Coloca en airfryer a 200 °C. Fríe 15 min. Sirve con tomate frito."
+  }],
+  airFryerTemp: 400,
+  airFryerTime: 15
+}, {
+  id: "huevos_rellenos",
+  n: "Huevos rellenos caseros",
+  cat: "aperitivo",
+  dif: 2,
+  min: 20,
+  rac: 4,
+  desc: "Mitades de huevo con relleno cremoso. Clásico irresistible.",
+  e: "🥚",
+  nut: {
+    kcal: 160,
+    p: 12,
+    cb: 3,
+    g: 12
+  },
+  tags: ["airfryer", "aperitivo", "huevo"],
+  ing: [{
+    id: "huevo",
+    q: "6 uds"
+  }, {
+    id: "mayonesa",
+    q: "4 cdas"
+  }, {
+    id: "mostaza",
+    q: "1 cda"
+  }, {
+    id: "cebolleta",
+    q: "1 tallo"
+  }, {
+    id: "pimenton",
+    q: "1 cdta"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }, {
+    id: "pimienta",
+    q: "al gusto"
+  }],
+  pasos: [{
+    t: "Hierve los huevos 10 min. Pela y corta por la mitad."
+  }, {
+    t: "Extrae las yemas. Mezcla con mayonesa, mostaza y cebolleta."
+  }, {
+    t: "Rellena las mitades. Sirve frío con pimentón."
+  }],
+  airFryerTemp: 0,
+  airFryerTime: 0
+}, {
+  id: "croquetas_verduras",
+  n: "Croquetas de verduras",
+  cat: "aperitivo",
+  dif: 2,
+  min: 30,
+  rac: 6,
+  desc: "Croquetas cremosas dentro, crujientes fuera. Versión ligera.",
+  e: "🍗",
+  nut: {
+    kcal: 200,
+    p: 8,
+    cb: 18,
+    g: 11
+  },
+  tags: ["airfryer", "croquetas", "verduras"],
+  ing: [{
+    id: "brocoli",
+    q: "200 g"
+  }, {
+    id: "calabacin",
+    q: "150 g"
+  }, {
+    id: "zanahoria",
+    q: "100 g"
+  }, {
+    id: "harina",
+    q: "50 g"
+  }, {
+    id: "leche",
+    q: "200 ml"
+  }, {
+    id: "queso_fresco",
+    q: "100 g"
+  }, {
+    id: "huevo",
+    q: "2 uds"
+  }, {
+    id: "pan_rallado",
+    q: "100 g"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }, {
+    id: "spray_aceite",
+    q: "3 veces"
+  }],
+  pasos: [{
+    t: "Cuece y pica las verduras. Haz béchamel. Mezcla."
+  }, {
+    t: "Enfrían. Forma cilindros. Pasa por huevo y pan."
+  }, {
+    t: "Coloca en airfryer a 200 °C. Fríe 15 min."
+  }],
+  airFryerTemp: 400,
+  airFryerTime: 15
+}, {
+  id: "calabacin_frito",
+  n: "Calabacín frito al limón",
+  cat: "aperitivo",
+  dif: 1,
+  min: 15,
+  rac: 4,
+  desc: "Rodajas crujientes con acidez cítrica.",
+  e: "🥒",
+  nut: {
+    kcal: 120,
+    p: 3,
+    cb: 12,
+    g: 6
+  },
+  tags: ["airfryer", "calabacín", "crispy"],
+  ing: [{
+    id: "calabacin",
+    q: "3 uds"
+  }, {
+    id: "harina",
+    q: "50 g"
+  }, {
+    id: "huevo",
+    q: "1 ud"
+  }, {
+    id: "pan_rallado",
+    q: "80 g"
+  }, {
+    id: "limon",
+    q: "1 ud"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }, {
+    id: "spray_aceite",
+    q: "3 veces"
+  }],
+  pasos: [{
+    t: "Corta el calabacín en rodajas. Pasa por harina, huevo y pan."
+  }, {
+    t: "Rocía con spray. Coloca en airfryer a 200 °C.",
+    s: 900
+  }, {
+    t: "Fríe 12 min. Sirve con limón exprimido."
+  }],
+  airFryerTemp: 400,
+  airFryerTime: 12
+}, {
+  id: "esparragos_crujientes",
+  n: "Espárragos crujientes",
+  cat: "cena",
+  dif: 1,
+  min: 12,
+  rac: 2,
+  desc: "Espárragos verdes sellados con punta crujiente.",
+  e: "🌿",
+  nut: {
+    kcal: 80,
+    p: 6,
+    cb: 8,
+    g: 4
+  },
+  tags: ["airfryer", "espárrago", "ligera"],
+  ing: [{
+    id: "esparrago_verde",
+    q: "300 g"
+  }, {
+    id: "aove",
+    q: "1 cda"
+  }, {
+    id: "ajo",
+    q: "2 dientes"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }, {
+    id: "pimienta",
+    q: "al gusto"
+  }],
+  pasos: [{
+    t: "Limpia los espárragos. Mezcla con aceite y ajo laminado."
+  }, {
+    t: "Coloca en airfryer a 190 °C.",
+    s: 720
+  }, {
+    t: "Fríe 10 min. Sirve caliente."
+  }],
+  airFryerTemp: 380,
+  airFryerTime: 10
+}, {
+  id: "croquetas_queso",
+  n: "Croquetas de queso",
+  cat: "aperitivo",
+  dif: 2,
+  min: 30,
+  rac: 6,
+  desc: "Croquetas 100% queso fundido. Para los queseros.",
+  e: "🧀",
+  nut: {
+    kcal: 240,
+    p: 10,
+    cb: 16,
+    g: 14
+  },
+  tags: ["airfryer", "queso", "croquetas"],
+  ing: [{
+    id: "queso_fresco",
+    q: "250 g"
+  }, {
+    id: "harina",
+    q: "60 g"
+  }, {
+    id: "leche",
+    q: "200 ml"
+  }, {
+    id: "huevo",
+    q: "2 uds"
+  }, {
+    id: "pan_rallado",
+    q: "100 g"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }, {
+    id: "pimienta",
+    q: "al gusto"
+  }, {
+    id: "spray_aceite",
+    q: "3 veces"
+  }],
+  pasos: [{
+    t: "Haz béchamel. Añade queso rallado. Enfrían bien."
+  }, {
+    t: "Forma cilindros. Pasa por huevo y pan."
+  }, {
+    t: "Coloca en airfryer a 200 °C. Fríe 14 min."
+  }],
+  airFryerTemp: 400,
+  airFryerTime: 14
+}, {
+  id: "palitos_queso",
+  n: "Palitos de queso frito",
+  cat: "aperitivo",
+  dif: 1,
+  min: 15,
+  rac: 4,
+  desc: "Tiras de queso fundido dentro, crujiente fuera.",
+  e: "🧀",
+  nut: {
+    kcal: 220,
+    p: 12,
+    cb: 10,
+    g: 14
+  },
+  tags: ["airfryer", "queso", "rápida"],
+  ing: [{
+    id: "queso_fresco",
+    q: "200 g"
+  }, {
+    id: "harina",
+    q: "50 g"
+  }, {
+    id: "huevo",
+    q: "1 ud"
+  }, {
+    id: "pan_rallado",
+    q: "80 g"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }, {
+    id: "spray_aceite",
+    q: "3 veces"
+  }],
+  pasos: [{
+    t: "Corta el queso en palitos gruesos. Pasa por harina, huevo y pan."
+  }, {
+    t: "Rocía con spray. Coloca en airfryer a 200 °C.",
+    s: 900
+  }, {
+    t: "Fríe 8 min. Sirve caliente."
+  }],
+  airFryerTemp: 400,
+  airFryerTime: 8
+}, /* APERITIVOS (12) */
+{
+  id: "dedos_mozzarella",
+  n: "Dedos de mozzarella frito",
+  cat: "aperitivo",
+  dif: 1,
+  min: 15,
+  rac: 4,
+  desc: "Queso fundido dentro, rebozado crujiente fuera.",
+  e: "🧀",
+  nut: {
+    kcal: 240,
+    p: 14,
+    cb: 12,
+    g: 14
+  },
+  tags: ["airfryer", "queso", "rápida"],
+  ing: [{
+    id: "mozzarella",
+    q: "200 g"
+  }, {
+    id: "harina",
+    q: "50 g"
+  }, {
+    id: "huevo",
+    q: "1 ud"
+  }, {
+    id: "panko",
+    q: "80 g"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }, {
+    id: "spray_aceite",
+    q: "3 veces"
+  }],
+  pasos: [{
+    t: "Corta la mozzarella en dedos. Congela 1 hora."
+  }, {
+    t: "Pasa por harina, huevo y panko. Rocía con spray."
+  }, {
+    t: "Coloca en airfryer a 200 °C. Fríe 6 min."
+  }],
+  airFryerTemp: 400,
+  airFryerTime: 6
+}, {
+  id: "wontons_crujientes",
+  n: "Wontons crujientes",
+  cat: "aperitivo",
+  dif: 2,
+  min: 20,
+  rac: 4,
+  desc: "Hojas wonton fritas. Versátiles: rellena como quieras.",
+  e: "🟩",
+  nut: {
+    kcal: 180,
+    p: 6,
+    cb: 18,
+    g: 9
+  },
+  tags: ["airfryer", "wonton", "asiática"],
+  ing: [{
+    id: "wontons",
+    q: "20 hojas"
+  }, {
+    id: "carne_picada",
+    q: "200 g"
+  }, {
+    id: "cebolleta",
+    q: "2 tallos"
+  }, {
+    id: "salsa_soja",
+    q: "2 cdas"
+  }, {
+    id: "spray_aceite",
+    q: "3 veces"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }],
+  pasos: [{
+    t: "Rellena cada hoja con carne y cebolleta. Dobla en triángulo."
+  }, {
+    t: "Rocía con spray. Coloca en airfryer a 200 °C.",
+    s: 1200
+  }, {
+    t: "Fríe 10 min hasta que doren. Sirve con salsa de soja."
+  }],
+  airFryerTemp: 400,
+  airFryerTime: 10
+}, {
+  id: "empanadas_carne",
+  n: "Empanadas de carne",
+  cat: "aperitivo",
+  dif: 2,
+  min: 30,
+  rac: 6,
+  desc: "Empanadas caseras crujientes rellenas de carne.",
+  e: "🥟",
+  nut: {
+    kcal: 260,
+    p: 12,
+    cb: 24,
+    g: 12
+  },
+  tags: ["airfryer", "empanada", "carne"],
+  ing: [{
+    id: "harina",
+    q: "300 g"
+  }, {
+    id: "carne_picada",
+    q: "300 g"
+  }, {
+    id: "cebolla",
+    q: "1 ud"
+  }, {
+    id: "ajo",
+    q: "2 dientes"
+  }, {
+    id: "huevo",
+    q: "1 ud"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }, {
+    id: "agua",
+    q: "100 ml"
+  }, {
+    id: "spray_aceite",
+    q: "3 veces"
+  }],
+  pasos: [{
+    t: "Masa: mezcla harina, sal, agua y 1 huevo. Reposa 30 min."
+  }, {
+    t: "Relleno: sofríe cebolla y ajo, añade carne. Cocina 10 min."
+  }, {
+    t: "Estira masa, corta círculos, rellena, dobla. Rocía con spray."
+  }, {
+    t: "Coloca en airfryer a 180 °C. Fríe 15 min."
+  }],
+  airFryerTemp: 360,
+  airFryerTime: 15
+}, {
+  id: "samosas_vegetales",
+  n: "Samosas vegetales",
+  cat: "aperitivo",
+  dif: 2,
+  min: 25,
+  rac: 6,
+  desc: "Triángulos crujientes con relleno de verdura especiada.",
+  e: "🟩",
+  nut: {
+    kcal: 200,
+    p: 6,
+    cb: 20,
+    g: 10
+  },
+  tags: ["airfryer", "samosa", "vegetariana"],
+  ing: [{
+    id: "hojas_filo",
+    q: "12 hojas"
+  }, {
+    id: "papa_cocida",
+    q: "200 g"
+  }, {
+    id: "guisantes",
+    q: "100 g"
+  }, {
+    id: "cebolla",
+    q: "1 ud"
+  }, {
+    id: "comino",
+    q: "1 cdta"
+  }, {
+    id: "cilantro",
+    q: "2 cdas"
+  }, {
+    id: "spray_aceite",
+    q: "3 veces"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }],
+  pasos: [{
+    t: "Relleno: mezcla papa, guisantes, cebolla salteada, comino y cilantro."
+  }, {
+    t: "Coloca 1 hoja de filo, rellena, dobla en triángulo."
+  }, {
+    t: "Rocía con spray. Coloca en airfryer a 190 °C.",
+    s: 1200
+  }, {
+    t: "Fríe 12 min hasta dorar."
+  }],
+  airFryerTemp: 380,
+  airFryerTime: 12
+}, {
+  id: "tostadas_crujientes",
+  n: "Tostadas caseras crujientes",
+  cat: "aperitivo",
+  dif: 1,
+  min: 15,
+  rac: 4,
+  desc: "Base crujiente para toppings. Hecha sin horno.",
+  e: "🍞",
+  nut: {
+    kcal: 140,
+    p: 4,
+    cb: 20,
+    g: 4
+  },
+  tags: ["airfryer", "tostada", "base"],
+  ing: [{
+    id: "pan_molde",
+    q: "6 rebanadas"
+  }, {
+    id: "aove",
+    q: "1 cda"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }, {
+    id: "ajo",
+    q: "1 diente"
+  }],
+  pasos: [{
+    t: "Corta el pan en tiras. Mezcla aceite con ajo machacado."
+  }, {
+    t: "Pinta las tiras. Coloca en airfryer a 190 °C.",
+    s: 900
+  }, {
+    t: "Fríe 8 min hasta que estén crujientes."
+  }],
+  airFryerTemp: 380,
+  airFryerTime: 8
+}, {
+  id: "palitas_jamon",
+  n: "Palitas de jamón crujiente",
+  cat: "aperitivo",
+  dif: 1,
+  min: 12,
+  rac: 4,
+  desc: "Tiras de jamón caramelizadas. Aperitivo proteico.",
+  e: "🥓",
+  nut: {
+    kcal: 150,
+    p: 20,
+    cb: 0,
+    g: 7
+  },
+  tags: ["airfryer", "jamón", "rápida"],
+  ing: [{
+    id: "jamon_serrano",
+    q: "200 g"
+  }, {
+    id: "pimienta",
+    q: "al gusto"
+  }],
+  pasos: [{
+    t: "Corta el jamón en palitas gruesas."
+  }, {
+    t: "Coloca en airfryer a 200 °C.",
+    s: 720
+  }, {
+    t: "Fríe 8 min. Sirve crujiente."
+  }],
+  airFryerTemp: 400,
+  airFryerTime: 8
+}, {
+  id: "aros_calamar",
+  n: "Aros de calamar rebozados",
+  cat: "aperitivo",
+  dif: 1,
+  min: 15,
+  rac: 4,
+  desc: "Anillas de calamar crujientes. Clásico mejorado.",
+  e: "🦑",
+  nut: {
+    kcal: 210,
+    p: 22,
+    cb: 12,
+    g: 8
+  },
+  tags: ["airfryer", "calamar", "crispy"],
+  ing: [{
+    id: "calamar",
+    q: "300 g"
+  }, {
+    id: "harina",
+    q: "50 g"
+  }, {
+    id: "huevo",
+    q: "1 ud"
+  }, {
+    id: "pan_rallado",
+    q: "80 g"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }, {
+    id: "pimienta",
+    q: "al gusto"
+  }, {
+    id: "limon",
+    q: "1 ud"
+  }, {
+    id: "spray_aceite",
+    q: "3 veces"
+  }],
+  pasos: [{
+    t: "Corta el calamar en aros. Pasa por harina, huevo y pan."
+  }, {
+    t: "Rocía con spray. Coloca en airfryer a 200 °C.",
+    s: 720
+  }, {
+    t: "Fríe 10 min. Sirve con limón."
+  }],
+  airFryerTemp: 400,
+  airFryerTime: 10
+}, {
+  id: "huevos_bbq",
+  n: "Huevos rellenos BBQ",
+  cat: "aperitivo",
+  dif: 2,
+  min: 20,
+  rac: 4,
+  desc: "Huevos rellenos con toque ahumado BBQ.",
+  e: "🥚",
+  nut: {
+    kcal: 170,
+    p: 12,
+    cb: 4,
+    g: 12
+  },
+  tags: ["airfryer", "huevo", "bbq"],
+  ing: [{
+    id: "huevo",
+    q: "6 uds"
+  }, {
+    id: "mayonesa",
+    q: "4 cdas"
+  }, {
+    id: "salsa_bbq",
+    q: "2 cdas"
+  }, {
+    id: "cebolleta",
+    q: "1 tallo"
+  }, {
+    id: "pimenton_ahumado",
+    q: "1 cdta"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }],
+  pasos: [{
+    t: "Hierve los huevos 10 min. Pela y corta por la mitad."
+  }, {
+    t: "Extrae las yemas. Mezcla con mayonesa, BBQ y cebolleta."
+  }, {
+    t: "Rellena. Sirve frío con pimentón ahumado."
+  }],
+  airFryerTemp: 0,
+  airFryerTime: 0
+}, {
+  id: "nachos_queso",
+  n: "Nachos caseros con queso",
+  cat: "aperitivo",
+  dif: 1,
+  min: 15,
+  rac: 4,
+  desc: "Tortillas crujientes con cobertura fundida.",
+  e: "🧀",
+  nut: {
+    kcal: 280,
+    p: 12,
+    cb: 20,
+    g: 16
+  },
+  tags: ["airfryer", "nachos", "queso"],
+  ing: [{
+    id: "tortillas_maiz",
+    q: "100 g"
+  }, {
+    id: "queso_fresco",
+    q: "150 g"
+  }, {
+    id: "jalapeno",
+    q: "2 uds"
+  }, {
+    id: "sal",
+    q: "al gusto"
+  }, {
+    id: "spray_aceite",
+    q: "2 veces"
+  }],
+  pasos: [{
+    t: "Corta las tortillas en triángulos. Rocía con spray."
+  }, {
+    t: "Coloca en airfryer a 190 °C.",
+    s: 900
+  }, {
+    t: "Fríe 6 min. Cubre con queso rallado. Fríe 3 min más."
+  }, {
+    t: "Sirve con jalapeños frescos y salsa."
+  }],
+  airFryerTemp: 380,
+  airFryerTime: 9
 }];
 
 /* ---------- Lógica pura (preferencias, matching, lista de la compra) ---------- */
@@ -4457,7 +6847,7 @@ function IngImg({
   const src = ext === 0 ? slug : alt;
   const cat = CAT[ing.c];
   if (ext >= 2 || !slug) {
-    return /*#__PURE__*/_jsx("div", {
+    return /*#__PURE__*/_jsxDEV("div", {
       "aria-hidden": true,
       style: {
         width: size,
@@ -4470,7 +6860,7 @@ function IngImg({
         alignItems: "center",
         justifyContent: "center"
       },
-      children: /*#__PURE__*/_jsx("div", {
+      children: /*#__PURE__*/_jsxDEV("div", {
         style: {
           width: size * 0.72,
           height: size * 0.72,
@@ -4483,10 +6873,10 @@ function IngImg({
           fontSize: size * 0.4
         },
         children: ing.e
-      })
-    });
+      }, void 0, false)
+    }, void 0, false);
   }
-  return /*#__PURE__*/_jsx("div", {
+  return /*#__PURE__*/_jsxDEV("div", {
     style: {
       width: size,
       height: size,
@@ -4499,7 +6889,7 @@ function IngImg({
       alignItems: "center",
       justifyContent: "center"
     },
-    children: /*#__PURE__*/_jsx("img", {
+    children: /*#__PURE__*/_jsxDEV("img", {
       src: `https://img.spoonacular.com/ingredients_250x250/${src}`,
       alt: ing.n,
       onError: () => setExt(e => e + 1),
@@ -4510,8 +6900,8 @@ function IngImg({
         objectFit: "contain",
         mixBlendMode: "multiply"
       }
-    })
-  });
+    }, void 0, false)
+  }, void 0, false);
 }
 function Chip({
   children,
@@ -4519,7 +6909,7 @@ function Chip({
   bg = "#F1EEE8",
   style
 }) {
-  return /*#__PURE__*/_jsx("span", {
+  return /*#__PURE__*/_jsxDEV("span", {
     style: {
       display: "inline-flex",
       alignItems: "center",
@@ -4534,7 +6924,7 @@ function Chip({
       ...style
     },
     children: children
-  });
+  }, void 0, false);
 }
 function BtnPrimario({
   children,
@@ -4542,7 +6932,7 @@ function BtnPrimario({
   style,
   disabled
 }) {
-  return /*#__PURE__*/_jsx("button", {
+  return /*#__PURE__*/_jsxDEV("button", {
     onClick: onClick,
     disabled: disabled,
     style: {
@@ -4561,7 +6951,7 @@ function BtnPrimario({
       ...style
     },
     children: children
-  });
+  }, void 0, false);
 }
 
 /* ---------------- DESCUBRIR: la cata de mercado ---------------- */
@@ -4643,21 +7033,21 @@ function Descubrir({
   };
   const dx = drag?.x || 0;
   const cat = ing ? CAT[ing.c] : null;
-  return /*#__PURE__*/_jsxs("div", {
+  return /*#__PURE__*/_jsxDEV("div", {
     style: {
       padding: "8px 20px 20px",
       display: "flex",
       flexDirection: "column",
       height: "100%"
     },
-    children: [/*#__PURE__*/_jsxs("div", {
+    children: [/*#__PURE__*/_jsxDEV("div", {
       style: {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "baseline",
         marginBottom: 4
       },
-      children: [/*#__PURE__*/_jsx("h1", {
+      children: [/*#__PURE__*/_jsxDEV("h1", {
         className: "yt-display",
         style: {
           fontSize: 26,
@@ -4665,22 +7055,22 @@ function Descubrir({
           margin: 0
         },
         children: "Descubre sin prejuicios"
-      }), /*#__PURE__*/_jsxs("span", {
+      }, void 0, false), /*#__PURE__*/_jsxDEV("span", {
         style: {
           fontSize: 13,
           fontWeight: 600,
           color: T.sub
         },
         children: [valorados, "/", total, " catados"]
-      })]
-    }), /*#__PURE__*/_jsx("div", {
+      }, void 0, true)]
+    }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
       style: {
         height: 6,
         borderRadius: 3,
         background: "#E9E5DD",
         marginBottom: 14
       },
-      children: /*#__PURE__*/_jsx("div", {
+      children: /*#__PURE__*/_jsxDEV("div", {
         style: {
           height: 6,
           borderRadius: 3,
@@ -4688,8 +7078,8 @@ function Descubrir({
           background: T.brand,
           transition: "width .3s"
         }
-      })
-    }), !ing ? /*#__PURE__*/_jsxs("div", {
+      }, void 0, false)
+    }, void 0, false), !ing ? /*#__PURE__*/_jsxDEV("div", {
       className: "yt-pop",
       style: {
         flex: 1,
@@ -4700,44 +7090,44 @@ function Descubrir({
         textAlign: "center",
         gap: 10
       },
-      children: [/*#__PURE__*/_jsx("div", {
+      children: [/*#__PURE__*/_jsxDEV("div", {
         style: {
           fontSize: 56
         },
-        children: "\uD83C\uDFC6"
-      }), /*#__PURE__*/_jsx("h2", {
+        children: "🏆"
+      }, void 0, false), /*#__PURE__*/_jsxDEV("h2", {
         className: "yt-display",
         style: {
           margin: 0,
           fontSize: 22
         },
-        children: "\xA1Mercado completo!"
-      }), /*#__PURE__*/_jsxs("p", {
+        children: "¡Mercado completo!"
+      }, void 0, false), /*#__PURE__*/_jsxDEV("p", {
         style: {
           color: T.sub,
           margin: 0,
           maxWidth: 260
         },
         children: ["Has valorado los ", total, " ingredientes. Ajusta lo que quieras desde tu perfil."]
-      })]
-    }) : /*#__PURE__*/_jsxs(_Fragment, {
-      children: [/*#__PURE__*/_jsxs("div", {
+      }, void 0, true)]
+    }, void 0, true) : /*#__PURE__*/_jsxDEV(_Fragment, {
+      children: [/*#__PURE__*/_jsxDEV("div", {
         style: {
           flex: 1,
           position: "relative",
           minHeight: 340
         },
-        children: [deck[1] && /*#__PURE__*/_jsx("div", {
+        children: [deck[1] && /*#__PURE__*/_jsxDEV("div", {
           style: {
             position: "absolute",
             inset: 0,
             transform: "scale(0.95) translateY(12px)",
             opacity: 0.5
           },
-          children: /*#__PURE__*/_jsx(CartaIngrediente, {
+          children: /*#__PURE__*/_jsxDEV(CartaIngrediente, {
             ing: deck[1]
-          })
-        }), /*#__PURE__*/_jsx("div", {
+          }, void 0, false)
+        }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
           role: "group",
           "aria-label": `Ingrediente: ${ing.n}`,
           onPointerDown: onDown,
@@ -4752,12 +7142,12 @@ function Descubrir({
             transform: `translate(${dx}px, ${(drag?.y || 0) * 0.15}px) rotate(${dx / 22}deg)`,
             transition: drag ? "none" : "transform .25s ease"
           },
-          children: /*#__PURE__*/_jsx(CartaIngrediente, {
+          children: /*#__PURE__*/_jsxDEV(CartaIngrediente, {
             ing: ing,
             veredicto: dx > 40 ? "si" : dx < -40 ? "no" : null
-          })
-        })]
-      }), /*#__PURE__*/_jsxs("div", {
+          }, void 0, false)
+        }, void 0, false)]
+      }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
         style: {
           display: "flex",
           alignItems: "center",
@@ -4765,7 +7155,7 @@ function Descubrir({
           gap: 22,
           paddingTop: 16
         },
-        children: [/*#__PURE__*/_jsx("button", {
+        children: [/*#__PURE__*/_jsxDEV("button", {
           "aria-label": "No me gusta",
           onClick: () => decidir(false),
           style: {
@@ -4778,12 +7168,12 @@ function Descubrir({
             alignItems: "center",
             justifyContent: "center"
           },
-          children: /*#__PURE__*/_jsx(X, {
+          children: /*#__PURE__*/_jsxDEV(X, {
             size: 28,
             color: T.bad,
             strokeWidth: 2.6
-          })
-        }), /*#__PURE__*/_jsx("button", {
+          }, void 0, false)
+        }, void 0, false), /*#__PURE__*/_jsxDEV("button", {
           "aria-label": "Deshacer",
           onClick: deshacer,
           disabled: !(st.historial || []).length,
@@ -4798,11 +7188,11 @@ function Descubrir({
             justifyContent: "center",
             opacity: (st.historial || []).length ? 1 : 0.35
           },
-          children: /*#__PURE__*/_jsx(RotateCcw, {
+          children: /*#__PURE__*/_jsxDEV(RotateCcw, {
             size: 20,
             color: T.sub
-          })
-        }), /*#__PURE__*/_jsx("button", {
+          }, void 0, false)
+        }, void 0, false), /*#__PURE__*/_jsxDEV("button", {
           "aria-label": "Me gusta",
           onClick: () => decidir(true),
           style: {
@@ -4815,31 +7205,31 @@ function Descubrir({
             alignItems: "center",
             justifyContent: "center"
           },
-          children: /*#__PURE__*/_jsx(Heart, {
+          children: /*#__PURE__*/_jsxDEV(Heart, {
             size: 28,
             color: "#fff",
             strokeWidth: 2.4,
             fill: "#fff"
-          })
-        })]
-      }), cat && /*#__PURE__*/_jsx("p", {
+          }, void 0, false)
+        }, void 0, false)]
+      }, void 0, true), cat && /*#__PURE__*/_jsxDEV("p", {
         style: {
           textAlign: "center",
           fontSize: 12.5,
           color: T.sub,
           margin: "12px 0 0"
         },
-        children: "Desliza a la derecha si te gusta \xB7 a la izquierda si no"
-      })]
-    })]
-  });
+        children: "Desliza a la derecha si te gusta · a la izquierda si no"
+      }, void 0, false)]
+    }, void 0, true)]
+  }, void 0, true);
 }
 function CartaIngrediente({
   ing,
   veredicto
 }) {
   const cat = CAT[ing.c];
-  return /*#__PURE__*/_jsxs("div", {
+  return /*#__PURE__*/_jsxDEV("div", {
     style: {
       height: "100%",
       background: T.card,
@@ -4852,7 +7242,7 @@ function CartaIngrediente({
       position: "relative",
       userSelect: "none"
     },
-    children: [/*#__PURE__*/_jsxs("div", {
+    children: [/*#__PURE__*/_jsxDEV("div", {
       style: {
         background: `linear-gradient(160deg, ${cat.soft} 0%, #ffffff 85%)`,
         flex: 1,
@@ -4862,18 +7252,18 @@ function CartaIngrediente({
         position: "relative",
         minHeight: 0
       },
-      children: [/*#__PURE__*/_jsx("div", {
+      children: [/*#__PURE__*/_jsxDEV("div", {
         style: {
           position: "absolute",
           top: 14,
           left: 14
         },
-        children: /*#__PURE__*/_jsx(Chip, {
+        children: /*#__PURE__*/_jsxDEV(Chip, {
           color: cat.color,
           bg: "#ffffffE6",
           children: cat.label
-        })
-      }), veredicto === "si" && /*#__PURE__*/_jsx("div", {
+        }, void 0, false)
+      }, void 0, false), veredicto === "si" && /*#__PURE__*/_jsxDEV("div", {
         className: "yt-fade",
         style: {
           position: "absolute",
@@ -4889,7 +7279,7 @@ function CartaIngrediente({
           background: "#fff"
         },
         children: "ME GUSTA"
-      }), veredicto === "no" && /*#__PURE__*/_jsx("div", {
+      }, void 0, false), veredicto === "no" && /*#__PURE__*/_jsxDEV("div", {
         className: "yt-fade",
         style: {
           position: "absolute",
@@ -4905,16 +7295,16 @@ function CartaIngrediente({
           background: "#fff"
         },
         children: "PASO"
-      }), /*#__PURE__*/_jsx(IngImg, {
+      }, void 0, false), /*#__PURE__*/_jsxDEV(IngImg, {
         ing: ing,
         size: 190,
         round: 36
-      })]
-    }), /*#__PURE__*/_jsxs("div", {
+      }, void 0, false)]
+    }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
       style: {
         padding: "16px 20px 18px"
       },
-      children: [/*#__PURE__*/_jsx("h2", {
+      children: [/*#__PURE__*/_jsxDEV("h2", {
         className: "yt-display",
         style: {
           margin: "0 0 8px",
@@ -4922,28 +7312,28 @@ function CartaIngrediente({
           fontWeight: 800
         },
         children: ing.n
-      }), /*#__PURE__*/_jsxs("div", {
+      }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
         style: {
           display: "flex",
           gap: 6,
           flexWrap: "wrap"
         },
-        children: [/*#__PURE__*/_jsxs(Chip, {
-          children: [/*#__PURE__*/_jsx(Flame, {
+        children: [/*#__PURE__*/_jsxDEV(Chip, {
+          children: [/*#__PURE__*/_jsxDEV(Flame, {
             size: 13
-          }), " ", ing.kcal, " kcal/100g"]
-        }), ing.p >= 8 && /*#__PURE__*/_jsxs(Chip, {
+          }, void 0, false), " ", ing.kcal, " kcal/100g"]
+        }, void 0, true), ing.p >= 8 && /*#__PURE__*/_jsxDEV(Chip, {
           color: T.ok,
           bg: "#E4F5EC",
-          children: ["Prote\xEDna ", ing.p, "g"]
-        }), ing.f && /*#__PURE__*/_jsxs(Chip, {
+          children: ["Proteína ", ing.p, "g"]
+        }, void 0, true), ing.f && /*#__PURE__*/_jsxDEV(Chip, {
           color: T.brand,
           bg: T.brandSoft,
-          children: ["\u2726 ", ing.f.length, " formas de tomarlo"]
-        })]
-      })]
-    })]
-  });
+          children: ["✦ ", ing.f.length, " formas de tomarlo"]
+        }, void 0, true)]
+      }, void 0, true)]
+    }, void 0, true)]
+  }, void 0, true);
 }
 
 /* Hoja de matices: en qué formas sí y en cuáles no */
@@ -4961,24 +7351,24 @@ function FormasSheet({
     ...s,
     [f]: !s[f]
   }));
-  return /*#__PURE__*/_jsxs(Sheet, {
+  return /*#__PURE__*/_jsxDEV(Sheet, {
     onClose: onClose,
     title: like ? `¿De qué formas te gusta ${ing.n.toLowerCase()}?` : `¿Lo salvamos de alguna forma?`,
-    children: [/*#__PURE__*/_jsx("p", {
+    children: [/*#__PURE__*/_jsxDEV("p", {
       style: {
         margin: "0 0 14px",
         color: T.sub,
         fontSize: 14
       },
       children: like ? "Desmarca las que no vayan contigo." : `Has dicho que ${ing.n.toLowerCase()} no te va… pero quizá sí de alguna manera concreta:`
-    }), /*#__PURE__*/_jsx("div", {
+    }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
       style: {
         display: "flex",
         flexDirection: "column",
         gap: 8,
         marginBottom: 18
       },
-      children: ing.f.map(f => /*#__PURE__*/_jsxs("button", {
+      children: ing.f.map(f => /*#__PURE__*/_jsxDEV("button", {
         onClick: () => toggle(f),
         style: {
           display: "flex",
@@ -4993,20 +7383,20 @@ function FormasSheet({
           color: sel[f] ? "#14603D" : T.sub,
           textAlign: "left"
         },
-        children: [/*#__PURE__*/_jsx("span", {
+        children: [/*#__PURE__*/_jsxDEV("span", {
           children: f
-        }), sel[f] ? /*#__PURE__*/_jsx(Check, {
+        }, void 0, false), sel[f] ? /*#__PURE__*/_jsxDEV(Check, {
           size: 18,
           color: T.ok
-        }) : /*#__PURE__*/_jsx(X, {
+        }, void 0, false) : /*#__PURE__*/_jsxDEV(X, {
           size: 18,
           color: "#B7B2A9"
-        })]
-      }, f))
-    }), /*#__PURE__*/_jsx(BtnPrimario, {
+        }, void 0, false)]
+      }, f, true))
+    }, void 0, false), /*#__PURE__*/_jsxDEV(BtnPrimario, {
       onClick: () => onSave(ing.id, sel),
       children: "Guardar matices"
-    }), /*#__PURE__*/_jsx("button", {
+    }, void 0, false), /*#__PURE__*/_jsxDEV("button", {
       onClick: onClose,
       style: {
         width: "100%",
@@ -5016,15 +7406,15 @@ function FormasSheet({
         fontSize: 14
       },
       children: "Omitir"
-    })]
-  });
+    }, void 0, false)]
+  }, void 0, true);
 }
 function Sheet({
   children,
   onClose,
   title
 }) {
-  return /*#__PURE__*/_jsx("div", {
+  return /*#__PURE__*/_jsxDEV("div", {
     className: "yt-fade",
     onClick: onClose,
     style: {
@@ -5035,7 +7425,7 @@ function Sheet({
       display: "flex",
       alignItems: "flex-end"
     },
-    children: /*#__PURE__*/_jsxs("div", {
+    children: /*#__PURE__*/_jsxDEV("div", {
       className: "yt-up yt-scroll",
       onClick: e => e.stopPropagation(),
       role: "dialog",
@@ -5048,7 +7438,7 @@ function Sheet({
         maxHeight: "85%",
         overflowY: "auto"
       },
-      children: [/*#__PURE__*/_jsx("div", {
+      children: [/*#__PURE__*/_jsxDEV("div", {
         style: {
           width: 40,
           height: 4,
@@ -5056,7 +7446,7 @@ function Sheet({
           background: "#DDD8CF",
           margin: "6px auto 14px"
         }
-      }), title && /*#__PURE__*/_jsx("h3", {
+      }, void 0, false), title && /*#__PURE__*/_jsxDEV("h3", {
         className: "yt-display",
         style: {
           margin: "0 0 10px",
@@ -5064,9 +7454,9 @@ function Sheet({
           fontWeight: 800
         },
         children: title
-      }), children]
-    })
-  });
+      }, void 0, false), children]
+    }, void 0, true)
+  }, void 0, false);
 }
 
 /* ---------------- RECETAS ---------------- */
@@ -5074,7 +7464,7 @@ function TileReceta({
   r,
   size = 74
 }) {
-  return /*#__PURE__*/_jsx("div", {
+  return /*#__PURE__*/_jsxDEV("div", {
     "aria-hidden": true,
     style: {
       width: size,
@@ -5087,7 +7477,7 @@ function TileReceta({
       alignItems: "center",
       justifyContent: "center"
     },
-    children: /*#__PURE__*/_jsx("div", {
+    children: /*#__PURE__*/_jsxDEV("div", {
       style: {
         width: size * 0.7,
         height: size * 0.7,
@@ -5100,8 +7490,8 @@ function TileReceta({
         fontSize: size * 0.38
       },
       children: r.e
-    })
-  });
+    }, void 0, false)
+  }, void 0, false);
 }
 function badgeMatch(score) {
   if (score === null) return {
@@ -5136,6 +7526,7 @@ function Recetas({
   const [fTiempo, setFTiempo] = useState(0); // 0 todas, 20, 35
   const [fCat, setFCat] = useState("todas");
   const [soloFavs, setSoloFavs] = useState(false);
+  const [soloAirfryer, setSoloAirfryer] = useState(false);
   const lista = useMemo(() => {
     let l = RECETAS.map(r => ({
       r,
@@ -5159,9 +7550,12 @@ function Recetas({
     if (soloFavs) l = l.filter(({
       r
     }) => st.favs.includes(r.id));
+    if (soloAirfryer) l = l.filter(({
+      r
+    }) => r.airFryerTemp);
     l.sort((a, b) => (b.m.score ?? -1) - (a.m.score ?? -1));
     return l;
-  }, [q, fDif, fTiempo, fCat, soloFavs, st.prefs, st.favs]);
+  }, [q, fDif, fTiempo, fCat, soloFavs, soloAirfryer, st.prefs, st.favs]);
   const selChip = act => ({
     background: act ? T.ink : "#fff",
     color: act ? "#fff" : T.sub,
@@ -5172,21 +7566,21 @@ function Recetas({
     fontWeight: 600,
     whiteSpace: "nowrap"
   });
-  return /*#__PURE__*/_jsxs("div", {
+  return /*#__PURE__*/_jsxDEV("div", {
     style: {
       padding: "8px 0 20px",
       height: "100%",
       display: "flex",
       flexDirection: "column"
     },
-    children: [/*#__PURE__*/_jsxs("div", {
+    children: [/*#__PURE__*/_jsxDEV("div", {
       style: {
         padding: "0 20px",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between"
       },
-      children: [/*#__PURE__*/_jsx("h1", {
+      children: [/*#__PURE__*/_jsxDEV("h1", {
         className: "yt-display",
         style: {
           fontSize: 26,
@@ -5194,7 +7588,7 @@ function Recetas({
           margin: 0
         },
         children: "Recetas"
-      }), /*#__PURE__*/_jsxs("button", {
+      }, void 0, false), /*#__PURE__*/_jsxDEV("button", {
         onClick: sorprender,
         style: {
           display: "flex",
@@ -5207,15 +7601,15 @@ function Recetas({
           borderRadius: 999,
           padding: "9px 14px"
         },
-        children: [/*#__PURE__*/_jsx(Dices, {
+        children: [/*#__PURE__*/_jsxDEV(Dices, {
           size: 16
-        }), " Sorpr\xE9ndeme"]
-      })]
-    }), /*#__PURE__*/_jsx("div", {
+        }, void 0, false), " Sorpréndeme"]
+      }, void 0, true)]
+    }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
       style: {
         padding: "12px 20px 8px"
       },
-      children: /*#__PURE__*/_jsxs("div", {
+      children: /*#__PURE__*/_jsxDEV("div", {
         style: {
           display: "flex",
           alignItems: "center",
@@ -5225,13 +7619,13 @@ function Recetas({
           borderRadius: 14,
           padding: "10px 14px"
         },
-        children: [/*#__PURE__*/_jsx(Search, {
+        children: [/*#__PURE__*/_jsxDEV(Search, {
           size: 17,
           color: T.sub
-        }), /*#__PURE__*/_jsx("input", {
+        }, void 0, false), /*#__PURE__*/_jsxDEV("input", {
           value: q,
           onChange: e => setQ(e.target.value),
-          placeholder: "Busca por nombre o etiqueta\u2026",
+          placeholder: "Busca por nombre o etiqueta…",
           style: {
             border: "none",
             outline: "none",
@@ -5240,16 +7634,16 @@ function Recetas({
             background: "transparent",
             color: T.ink
           }
-        }), q && /*#__PURE__*/_jsx("button", {
+        }, void 0, false), q && /*#__PURE__*/_jsxDEV("button", {
           onClick: () => setQ(""),
-          "aria-label": "Borrar b\xFAsqueda",
-          children: /*#__PURE__*/_jsx(X, {
+          "aria-label": "Borrar búsqueda",
+          children: /*#__PURE__*/_jsxDEV(X, {
             size: 16,
             color: T.sub
-          })
-        })]
-      })
-    }), /*#__PURE__*/_jsxs("div", {
+          }, void 0, false)
+        }, void 0, false)]
+      }, void 0, true)
+    }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
       className: "yt-scroll",
       style: {
         display: "flex",
@@ -5257,24 +7651,28 @@ function Recetas({
         overflowX: "auto",
         padding: "4px 20px 10px"
       },
-      children: [/*#__PURE__*/_jsx("button", {
+      children: [/*#__PURE__*/_jsxDEV("button", {
         style: selChip(soloFavs),
         onClick: () => setSoloFavs(v => !v),
-        children: "\u2665 Favoritas"
-      }), [["todas", "Todo"], ["desayuno", "Desayuno"], ["comida", "Comida"], ["cena", "Cena"], ["postre", "Postre"], ["aperitivo", "Aperitivo"]].map(([v, l]) => /*#__PURE__*/_jsx("button", {
+        children: "♥ Favoritas"
+      }, void 0, false), /*#__PURE__*/_jsxDEV("button", {
+        style: selChip(soloAirfryer),
+        onClick: () => setSoloAirfryer(v => !v),
+        children: "🍟 Air Fryer"
+      }, void 0, false), [["todas", "Todo"], ["desayuno", "Desayuno"], ["comida", "Comida"], ["cena", "Cena"], ["postre", "Postre"], ["aperitivo", "Aperitivo"]].map(([v, l]) => /*#__PURE__*/_jsxDEV("button", {
         style: selChip(fCat === v),
         onClick: () => setFCat(v),
         children: l
-      }, v)), [1, 2, 3].map(d => /*#__PURE__*/_jsx("button", {
+      }, v, false)), [1, 2, 3].map(d => /*#__PURE__*/_jsxDEV("button", {
         style: selChip(fDif === d),
         onClick: () => setFDif(x => x === d ? 0 : d),
         children: DIF[d].l
-      }, d)), [[20, "≤ 20 min"], [35, "≤ 35 min"]].map(([v, l]) => /*#__PURE__*/_jsx("button", {
+      }, d, false)), [[20, "≤ 20 min"], [35, "≤ 35 min"]].map(([v, l]) => /*#__PURE__*/_jsxDEV("button", {
         style: selChip(fTiempo === v),
         onClick: () => setFTiempo(x => x === v ? 0 : v),
         children: l
-      }, v))]
-    }), /*#__PURE__*/_jsxs("div", {
+      }, v, false))]
+    }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
       className: "yt-scroll",
       style: {
         flex: 1,
@@ -5284,26 +7682,26 @@ function Recetas({
         flexDirection: "column",
         gap: 10
       },
-      children: [lista.length === 0 && /*#__PURE__*/_jsxs("div", {
+      children: [lista.length === 0 && /*#__PURE__*/_jsxDEV("div", {
         style: {
           textAlign: "center",
           color: T.sub,
           padding: "40px 20px"
         },
-        children: [/*#__PURE__*/_jsx("div", {
+        children: [/*#__PURE__*/_jsxDEV("div", {
           style: {
             fontSize: 40,
             marginBottom: 8
           },
-          children: "\uD83C\uDF7D\uFE0F"
-        }), "Ninguna receta encaja con esos filtros. Prueba a quitar alguno."]
-      }), lista.map(({
+          children: "🍽️"
+        }, void 0, false), "Ninguna receta encaja con esos filtros. Prueba a quitar alguno."]
+      }, void 0, true), lista.map(({
         r,
         m
       }) => {
         const b = badgeMatch(m.score);
         const probada = st.probadas[r.id];
-        return /*#__PURE__*/_jsxs("button", {
+        return /*#__PURE__*/_jsxDEV("button", {
           onClick: () => abrir(r.id),
           className: "yt-fade",
           style: {
@@ -5317,20 +7715,20 @@ function Recetas({
             textAlign: "left",
             boxShadow: "0 2px 8px rgba(36,31,46,0.04)"
           },
-          children: [/*#__PURE__*/_jsx(TileReceta, {
+          children: [/*#__PURE__*/_jsxDEV(TileReceta, {
             r: r
-          }), /*#__PURE__*/_jsxs("div", {
+          }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
             style: {
               flex: 1,
               minWidth: 0
             },
-            children: [/*#__PURE__*/_jsxs("div", {
+            children: [/*#__PURE__*/_jsxDEV("div", {
               style: {
                 display: "flex",
                 alignItems: "center",
                 gap: 6
               },
-              children: [/*#__PURE__*/_jsx("span", {
+              children: [/*#__PURE__*/_jsxDEV("span", {
                 className: "yt-display",
                 style: {
                   fontWeight: 700,
@@ -5340,25 +7738,25 @@ function Recetas({
                   whiteSpace: "nowrap"
                 },
                 children: r.n
-              }), st.favs.includes(r.id) && /*#__PURE__*/_jsx(Heart, {
+              }, void 0, false), st.favs.includes(r.id) && /*#__PURE__*/_jsxDEV(Heart, {
                 size: 14,
                 color: T.bad,
                 fill: T.bad,
                 style: {
                   flexShrink: 0
                 }
-              }), probada && /*#__PURE__*/_jsxs(Chip, {
+              }, void 0, false), probada && /*#__PURE__*/_jsxDEV(Chip, {
                 color: "#14603D",
                 bg: "#E4F5EC",
                 style: {
                   flexShrink: 0,
                   padding: "2px 8px"
                 },
-                children: [/*#__PURE__*/_jsx(Check, {
+                children: [/*#__PURE__*/_jsxDEV(Check, {
                   size: 11
-                }), " Probada"]
-              })]
-            }), /*#__PURE__*/_jsxs("div", {
+                }, void 0, false), " Probada"]
+              }, void 0, true)]
+            }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
               style: {
                 display: "flex",
                 gap: 10,
@@ -5367,32 +7765,32 @@ function Recetas({
                 margin: "4px 0 6px",
                 fontWeight: 500
               },
-              children: [/*#__PURE__*/_jsxs("span", {
+              children: [/*#__PURE__*/_jsxDEV("span", {
                 style: {
                   display: "inline-flex",
                   alignItems: "center",
                   gap: 3
                 },
-                children: [/*#__PURE__*/_jsx(Clock, {
+                children: [/*#__PURE__*/_jsxDEV(Clock, {
                   size: 12
-                }), " ", r.min, " min"]
-              }), /*#__PURE__*/_jsx("span", {
+                }, void 0, false), " ", r.min, " min"]
+              }, void 0, true), /*#__PURE__*/_jsxDEV("span", {
                 style: {
                   color: DIF[r.dif].c,
                   fontWeight: 700
                 },
                 children: DIF[r.dif].l
-              }), /*#__PURE__*/_jsxs("span", {
+              }, void 0, false), /*#__PURE__*/_jsxDEV("span", {
                 style: {
                   display: "inline-flex",
                   alignItems: "center",
                   gap: 3
                 },
-                children: [/*#__PURE__*/_jsx(Flame, {
+                children: [/*#__PURE__*/_jsxDEV(Flame, {
                   size: 12
-                }), " ", r.nut.kcal, " kcal/raci\xF3n"]
-              })]
-            }), /*#__PURE__*/_jsx(Chip, {
+                }, void 0, false), " ", r.nut.kcal, " kcal/ración"]
+              }, void 0, true)]
+            }, void 0, true), /*#__PURE__*/_jsxDEV(Chip, {
               color: b.col,
               bg: b.bg,
               style: {
@@ -5400,7 +7798,7 @@ function Recetas({
                 fontSize: 11.5
               },
               children: b.txt
-            }), m.conflictos.length > 0 && m.score !== null && /*#__PURE__*/_jsxs(Chip, {
+            }, void 0, false), m.conflictos.length > 0 && m.score !== null && /*#__PURE__*/_jsxDEV(Chip, {
               color: "#9C2B3D",
               bg: "#FBE6EA",
               style: {
@@ -5409,18 +7807,18 @@ function Recetas({
                 marginLeft: 4
               },
               children: ["lleva ", ING_MAP[m.conflictos[0]].n.toLowerCase(), m.conflictos.length > 1 ? ` +${m.conflictos.length - 1}` : ""]
-            })]
-          }), /*#__PURE__*/_jsx(ChevronRight, {
+            }, void 0, true)]
+          }, void 0, true), /*#__PURE__*/_jsxDEV(ChevronRight, {
             size: 18,
             color: "#C9C4BB",
             style: {
               flexShrink: 0
             }
-          })]
-        }, r.id);
+          }, void 0, false)]
+        }, r.id, true);
       })]
-    })]
-  });
+    }, void 0, true)]
+  }, void 0, true);
 }
 
 /* ---------------- DETALLE DE RECETA ---------------- */
@@ -5465,7 +7863,7 @@ function RecetaDetalle({
       probadas: p
     };
   });
-  return /*#__PURE__*/_jsxs("div", {
+  return /*#__PURE__*/_jsxDEV("div", {
     className: "yt-fade",
     style: {
       position: "absolute",
@@ -5475,25 +7873,25 @@ function RecetaDetalle({
       display: "flex",
       flexDirection: "column"
     },
-    children: [/*#__PURE__*/_jsxs("div", {
+    children: [/*#__PURE__*/_jsxDEV("div", {
       className: "yt-scroll",
       style: {
         flex: 1,
         overflowY: "auto"
       },
-      children: [/*#__PURE__*/_jsxs("div", {
+      children: [/*#__PURE__*/_jsxDEV("div", {
         style: {
           background: "linear-gradient(160deg, #FCEAE3, #FFF8F2 80%)",
           padding: "14px 20px 22px",
           position: "relative"
         },
-        children: [/*#__PURE__*/_jsxs("div", {
+        children: [/*#__PURE__*/_jsxDEV("div", {
           style: {
             display: "flex",
             justifyContent: "space-between",
             marginBottom: 14
           },
-          children: [/*#__PURE__*/_jsx("button", {
+          children: [/*#__PURE__*/_jsxDEV("button", {
             onClick: cerrar,
             "aria-label": "Volver",
             style: {
@@ -5506,10 +7904,10 @@ function RecetaDetalle({
               alignItems: "center",
               justifyContent: "center"
             },
-            children: /*#__PURE__*/_jsx(ChevronLeft, {
+            children: /*#__PURE__*/_jsxDEV(ChevronLeft, {
               size: 20
-            })
-          }), /*#__PURE__*/_jsx("button", {
+            }, void 0, false)
+          }, void 0, false), /*#__PURE__*/_jsxDEV("button", {
             onClick: toggleFav,
             "aria-label": fav ? "Quitar de favoritas" : "Guardar en favoritas",
             style: {
@@ -5522,23 +7920,23 @@ function RecetaDetalle({
               alignItems: "center",
               justifyContent: "center"
             },
-            children: /*#__PURE__*/_jsx(Heart, {
+            children: /*#__PURE__*/_jsxDEV(Heart, {
               size: 20,
               color: T.bad,
               fill: fav ? T.bad : "none"
-            })
-          })]
-        }), /*#__PURE__*/_jsxs("div", {
+            }, void 0, false)
+          }, void 0, false)]
+        }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
           style: {
             display: "flex",
             gap: 14,
             alignItems: "center"
           },
-          children: [/*#__PURE__*/_jsx(TileReceta, {
+          children: [/*#__PURE__*/_jsxDEV(TileReceta, {
             r: r,
             size: 92
-          }), /*#__PURE__*/_jsxs("div", {
-            children: [/*#__PURE__*/_jsx("h1", {
+          }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
+            children: [/*#__PURE__*/_jsxDEV("h1", {
               className: "yt-display",
               style: {
                 margin: "0 0 6px",
@@ -5547,66 +7945,66 @@ function RecetaDetalle({
                 lineHeight: 1.15
               },
               children: r.n
-            }), /*#__PURE__*/_jsxs("div", {
+            }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
               style: {
                 display: "flex",
                 gap: 6,
                 flexWrap: "wrap"
               },
-              children: [/*#__PURE__*/_jsx(Chip, {
+              children: [/*#__PURE__*/_jsxDEV(Chip, {
                 color: b.col,
                 bg: b.bg,
                 children: b.txt
-              }), probada && /*#__PURE__*/_jsxs(Chip, {
+              }, void 0, false), probada && /*#__PURE__*/_jsxDEV(Chip, {
                 color: "#14603D",
                 bg: "#E4F5EC",
-                children: [/*#__PURE__*/_jsx(Check, {
+                children: [/*#__PURE__*/_jsxDEV(Check, {
                   size: 12
-                }), " Probada"]
-              })]
-            })]
-          })]
-        }), /*#__PURE__*/_jsx("p", {
+                }, void 0, false), " Probada"]
+              }, void 0, true)]
+            }, void 0, true)]
+          }, void 0, true)]
+        }, void 0, true), /*#__PURE__*/_jsxDEV("p", {
           style: {
             color: "#7A5C4E",
             margin: "12px 0 0",
             fontSize: 14
           },
           children: r.desc
-        })]
-      }), /*#__PURE__*/_jsxs("div", {
+        }, void 0, false)]
+      }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
         style: {
           padding: "16px 20px 130px",
           display: "flex",
           flexDirection: "column",
           gap: 18
         },
-        children: [/*#__PURE__*/_jsxs("div", {
+        children: [/*#__PURE__*/_jsxDEV("div", {
           style: {
             display: "flex",
             gap: 6,
             flexWrap: "wrap"
           },
-          children: [/*#__PURE__*/_jsxs(Chip, {
-            children: [/*#__PURE__*/_jsx(Clock, {
+          children: [/*#__PURE__*/_jsxDEV(Chip, {
+            children: [/*#__PURE__*/_jsxDEV(Clock, {
               size: 13
-            }), " ", r.min, " min"]
-          }), /*#__PURE__*/_jsx(Chip, {
+            }, void 0, false), " ", r.min, " min"]
+          }, void 0, true), /*#__PURE__*/_jsxDEV(Chip, {
             color: DIF[r.dif].c,
             bg: "#fff",
             style: {
               border: `1.5px solid ${DIF[r.dif].c}44`
             },
             children: DIF[r.dif].l
-          }), r.tags.includes("batch cooking") && /*#__PURE__*/_jsx(Chip, {
+          }, void 0, false), r.tags.includes("batch cooking") && /*#__PURE__*/_jsxDEV(Chip, {
             color: "#E8B93B",
             bg: "#FFF9E6",
-            children: "\u2744\uFE0F Congelable"
-          }), r.tags.map(t => /*#__PURE__*/_jsx(Chip, {
+            children: "❄️ Congelable"
+          }, void 0, false), r.tags.map(t => /*#__PURE__*/_jsxDEV(Chip, {
             children: t
-          }, t))]
-        }), /*#__PURE__*/_jsxs("section", {
-          children: [/*#__PURE__*/_jsx("h2", {
+          }, t, false))]
+        }, void 0, true), /*#__PURE__*/_jsxDEV("section", {
+          children: [/*#__PURE__*/_jsxDEV("h2", {
             className: "yt-display",
             style: {
               fontSize: 16,
@@ -5614,12 +8012,12 @@ function RecetaDetalle({
               margin: "0 0 8px"
             },
             children: "Porciones"
-          }), /*#__PURE__*/_jsx("div", {
+          }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
             style: {
               display: "flex",
               gap: 8
             },
-            children: [1, 2, 4].map(n => /*#__PURE__*/_jsx("button", {
+            children: [1, 2, 4].map(n => /*#__PURE__*/_jsxDEV("button", {
               onClick: () => setPorciones(n),
               style: {
                 flex: 1,
@@ -5632,10 +8030,10 @@ function RecetaDetalle({
                 border: `1.5px solid ${porciones === n ? T.brand : T.line}`
               },
               children: n === 1 ? "1️⃣ Una" : n === 2 ? "2️⃣ Dos" : "4️⃣ Cuatro"
-            }, n))
-          })]
-        }), (r.thermomix || r.airfryer) && /*#__PURE__*/_jsxs("section", {
-          children: [/*#__PURE__*/_jsx("h2", {
+            }, n, false))
+          }, void 0, false)]
+        }, void 0, true), (r.thermomix || r.airfryer) && /*#__PURE__*/_jsxDEV("section", {
+          children: [/*#__PURE__*/_jsxDEV("h2", {
             className: "yt-display",
             style: {
               fontSize: 16,
@@ -5643,13 +8041,13 @@ function RecetaDetalle({
               margin: "0 0 8px"
             },
             children: "Instrucciones"
-          }), /*#__PURE__*/_jsxs("div", {
+          }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
             style: {
               display: "flex",
               gap: 8,
               flexWrap: "wrap"
             },
-            children: [/*#__PURE__*/_jsx("button", {
+            children: [/*#__PURE__*/_jsxDEV("button", {
               onClick: () => {
                 setUsaThermomix(false);
                 setUsaAirfryer(false);
@@ -5664,8 +8062,8 @@ function RecetaDetalle({
                 color: !usaThermomix && !usaAirfryer ? T.brand : "#A29D93",
                 border: `1.5px solid ${!usaThermomix && !usaAirfryer ? T.brand : T.line}`
               },
-              children: "\uD83C\uDF73 Cl\xE1sica"
-            }), r.thermomix && /*#__PURE__*/_jsx("button", {
+              children: "🍳 Clásica"
+            }, void 0, false), r.thermomix && /*#__PURE__*/_jsxDEV("button", {
               onClick: () => {
                 setUsaThermomix(true);
                 setUsaAirfryer(false);
@@ -5680,8 +8078,8 @@ function RecetaDetalle({
                 color: usaThermomix ? T.brand : "#A29D93",
                 border: `1.5px solid ${usaThermomix ? T.brand : T.line}`
               },
-              children: "\u2699\uFE0F Thermomix"
-            }), r.airfryer && /*#__PURE__*/_jsx("button", {
+              children: "⚙️ Thermomix"
+            }, void 0, false), r.airfryer && /*#__PURE__*/_jsxDEV("button", {
               onClick: () => {
                 setUsaAirfryer(true);
                 setUsaThermomix(false);
@@ -5696,25 +8094,108 @@ function RecetaDetalle({
                 color: usaAirfryer ? T.brand : "#A29D93",
                 border: `1.5px solid ${usaAirfryer ? T.brand : T.line}`
               },
-              children: "\uD83D\uDCA8 Airfryer"
-            })]
-          })]
-        }), /*#__PURE__*/_jsxs("section", {
-          children: [/*#__PURE__*/_jsx("h2", {
+              children: "💨 Airfryer"
+            }, void 0, false)]
+          }, void 0, true)]
+        }, void 0, true), r.airFryerTemp && /*#__PURE__*/_jsxDEV("section", {
+          children: [/*#__PURE__*/_jsxDEV("h2", {
             className: "yt-display",
             style: {
               fontSize: 16,
               fontWeight: 800,
               margin: "0 0 8px"
             },
-            children: "Por raci\xF3n"
-          }), /*#__PURE__*/_jsx("div", {
+            children: "📊 Conversor: Horno ↔ Air Fryer"
+          }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
+            style: {
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: 12
+            },
+            children: [/*#__PURE__*/_jsxDEV("div", {
+              style: {
+                background: "linear-gradient(135deg, #FCEAE3, #FFF8F2)",
+                borderRadius: 14,
+                padding: 14,
+                textAlign: "center",
+                border: `1.5px solid ${T.line}`
+              },
+              children: [/*#__PURE__*/_jsxDEV("div", {
+                style: {
+                  fontSize: 12,
+                  color: T.sub,
+                  fontWeight: 600,
+                  marginBottom: 8
+                },
+                children: "🔥 Horno tradición."
+              }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
+                className: "yt-display",
+                style: {
+                  fontSize: 20,
+                  fontWeight: 800,
+                  color: T.ink
+                },
+                children: "200°C"
+              }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
+                style: {
+                  fontSize: 12,
+                  color: T.sub,
+                  fontWeight: 600,
+                  marginTop: 6
+                },
+                children: ["~", r.min, " minutos"]
+              }, void 0, true)]
+            }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
+              style: {
+                background: "linear-gradient(135deg, #F0F9FC, #F8FCFE)",
+                borderRadius: 14,
+                padding: 14,
+                textAlign: "center",
+                border: `1.5px solid ${T.line}`
+              },
+              children: [/*#__PURE__*/_jsxDEV("div", {
+                style: {
+                  fontSize: 12,
+                  color: T.sub,
+                  fontWeight: 600,
+                  marginBottom: 8
+                },
+                children: "💨 Air Fryer"
+              }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
+                className: "yt-display",
+                style: {
+                  fontSize: 20,
+                  fontWeight: 800,
+                  color: "#3E7FD6"
+                },
+                children: [r.airFryerTemp, "°C"]
+              }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
+                style: {
+                  fontSize: 12,
+                  color: T.sub,
+                  fontWeight: 600,
+                  marginTop: 6
+                },
+                children: [r.airFryerTime, " minutos"]
+              }, void 0, true)]
+            }, void 0, true)]
+          }, void 0, true)]
+        }, void 0, true), /*#__PURE__*/_jsxDEV("section", {
+          children: [/*#__PURE__*/_jsxDEV("h2", {
+            className: "yt-display",
+            style: {
+              fontSize: 16,
+              fontWeight: 800,
+              margin: "0 0 8px"
+            },
+            children: "Por ración"
+          }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
             style: {
               display: "grid",
               gridTemplateColumns: "repeat(4, 1fr)",
               gap: 8
             },
-            children: [["kcal", r.nut.kcal, "🔥"], ["proteína", r.nut.p + " g", "💪"], ["carbohid.", r.nut.cb + " g", "🌾"], ["grasas", r.nut.g + " g", "🥑"]].map(([l, v, ic]) => /*#__PURE__*/_jsxs("div", {
+            children: [["kcal", r.nut.kcal, "🔥"], ["proteína", r.nut.p + " g", "💪"], ["carbohid.", r.nut.cb + " g", "🌾"], ["grasas", r.nut.g + " g", "🥑"]].map(([l, v, ic]) => /*#__PURE__*/_jsxDEV("div", {
               style: {
                 background: "#fff",
                 borderRadius: 16,
@@ -5722,19 +8203,19 @@ function RecetaDetalle({
                 padding: "10px 6px",
                 textAlign: "center"
               },
-              children: [/*#__PURE__*/_jsx("div", {
+              children: [/*#__PURE__*/_jsxDEV("div", {
                 style: {
                   fontSize: 15
                 },
                 children: ic
-              }), /*#__PURE__*/_jsx("div", {
+              }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
                 className: "yt-display",
                 style: {
                   fontWeight: 800,
                   fontSize: 15
                 },
                 children: v
-              }), /*#__PURE__*/_jsx("div", {
+              }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
                 style: {
                   fontSize: 10.5,
                   color: T.sub,
@@ -5743,11 +8224,11 @@ function RecetaDetalle({
                   letterSpacing: 0.4
                 },
                 children: l
-              })]
-            }, l))
-          })]
-        }), /*#__PURE__*/_jsxs("section", {
-          children: [/*#__PURE__*/_jsx("h2", {
+              }, void 0, false)]
+            }, l, true))
+          }, void 0, false)]
+        }, void 0, true), /*#__PURE__*/_jsxDEV("section", {
+          children: [/*#__PURE__*/_jsxDEV("h2", {
             className: "yt-display",
             style: {
               fontSize: 16,
@@ -5755,7 +8236,7 @@ function RecetaDetalle({
               margin: "0 0 8px"
             },
             children: "Ingredientes"
-          }), /*#__PURE__*/_jsx("div", {
+          }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
             style: {
               background: "#fff",
               borderRadius: T.radius,
@@ -5769,7 +8250,7 @@ function RecetaDetalle({
               // Multiplicar cantidad según porciones (porciones / raciones originales)
               const factor = porciones / (r.rac || 4);
               const cantidadAjustada = (it.q || "").replace(/\d+(?:\.\d+)?/g, n => (parseFloat(n) * factor).toFixed(n.includes('.') ? 1 : 0));
-              return /*#__PURE__*/_jsxs("div", {
+              return /*#__PURE__*/_jsxDEV("div", {
                 style: {
                   display: "flex",
                   alignItems: "center",
@@ -5777,36 +8258,36 @@ function RecetaDetalle({
                   padding: "10px 14px",
                   borderTop: i ? `1px solid ${T.line}` : "none"
                 },
-                children: [/*#__PURE__*/_jsx(IngImg, {
+                children: [/*#__PURE__*/_jsxDEV(IngImg, {
                   ing: ing,
                   size: 40,
                   round: 12
-                }), /*#__PURE__*/_jsxs("div", {
+                }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
                   style: {
                     flex: 1,
                     minWidth: 0
                   },
-                  children: [/*#__PURE__*/_jsx("div", {
+                  children: [/*#__PURE__*/_jsxDEV("div", {
                     style: {
                       fontWeight: 600,
                       fontSize: 14
                     },
                     children: ing.n
-                  }), /*#__PURE__*/_jsxs("div", {
+                  }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
                     style: {
                       fontSize: 12.5,
                       color: T.sub
                     },
                     children: [cantidadAjustada, it.forma ? ` · ${it.forma}` : ""]
-                  })]
-                }), v === true && st2 === "con_matices" && it.forma && /*#__PURE__*/_jsx(Chip, {
+                  }, void 0, true)]
+                }, void 0, true), v === true && st2 === "con_matices" && it.forma && /*#__PURE__*/_jsxDEV(Chip, {
                   color: "#14603D",
                   bg: "#E4F5EC",
                   style: {
                     fontSize: 11
                   },
-                  children: "en esta forma, s\xED \u2713"
-                }), v === true && !(st2 === "con_matices" && it.forma) && /*#__PURE__*/_jsx("span", {
+                  children: "en esta forma, sí ✓"
+                }, void 0, false), v === true && !(st2 === "con_matices" && it.forma) && /*#__PURE__*/_jsxDEV("span", {
                   title: "Te gusta",
                   style: {
                     width: 10,
@@ -5815,14 +8296,14 @@ function RecetaDetalle({
                     background: T.ok,
                     flexShrink: 0
                   }
-                }), v === false && /*#__PURE__*/_jsx(Chip, {
+                }, void 0, false), v === false && /*#__PURE__*/_jsxDEV(Chip, {
                   color: "#9C2B3D",
                   bg: "#FBE6EA",
                   style: {
                     fontSize: 11
                   },
                   children: "no te va"
-                }), v === null && /*#__PURE__*/_jsx("span", {
+                }, void 0, false), v === null && /*#__PURE__*/_jsxDEV("span", {
                   title: "Sin valorar",
                   style: {
                     width: 10,
@@ -5831,12 +8312,12 @@ function RecetaDetalle({
                     background: "#D8D4CC",
                     flexShrink: 0
                   }
-                })]
-              }, i);
+                }, void 0, false)]
+              }, i, true);
             })
-          })]
-        }), /*#__PURE__*/_jsxs("section", {
-          children: [/*#__PURE__*/_jsx("h2", {
+          }, void 0, false)]
+        }, void 0, true), /*#__PURE__*/_jsxDEV("section", {
+          children: [/*#__PURE__*/_jsxDEV("h2", {
             className: "yt-display",
             style: {
               fontSize: 16,
@@ -5844,13 +8325,13 @@ function RecetaDetalle({
               margin: "0 0 8px"
             },
             children: "Pasos"
-          }), /*#__PURE__*/_jsx("div", {
+          }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
             style: {
               display: "flex",
               flexDirection: "column",
               gap: 8
             },
-            children: (usaThermomix && r.thermomix ? r.thermomix : usaAirfryer && r.airfryer ? r.airfryer : r.pasos).map((p, i) => /*#__PURE__*/_jsxs("div", {
+            children: (usaThermomix && r.thermomix ? r.thermomix : usaAirfryer && r.airfryer ? r.airfryer : r.pasos).map((p, i) => /*#__PURE__*/_jsxDEV("div", {
               style: {
                 display: "flex",
                 gap: 10,
@@ -5859,7 +8340,7 @@ function RecetaDetalle({
                 border: `1px solid ${T.line}`,
                 padding: "12px 14px"
               },
-              children: [/*#__PURE__*/_jsx("div", {
+              children: [/*#__PURE__*/_jsxDEV("div", {
                 className: "yt-display",
                 style: {
                   fontWeight: 800,
@@ -5867,35 +8348,35 @@ function RecetaDetalle({
                   minWidth: 22
                 },
                 children: i + 1
-              }), /*#__PURE__*/_jsxs("div", {
+              }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
                 style: {
                   fontSize: 14,
                   lineHeight: 1.45
                 },
-                children: [p.t, p.s && /*#__PURE__*/_jsxs(Chip, {
+                children: [p.t, p.s && /*#__PURE__*/_jsxDEV(Chip, {
                   color: T.brand,
                   bg: T.brandSoft,
                   style: {
                     marginLeft: 6,
                     fontSize: 11
                   },
-                  children: [/*#__PURE__*/_jsx(Timer, {
+                  children: [/*#__PURE__*/_jsxDEV(Timer, {
                     size: 11
-                  }), " ", Math.round(p.s / 60) || 1, " min"]
-                })]
-              })]
-            }, i))
-          })]
-        }), /*#__PURE__*/_jsxs("section", {
-          children: [/*#__PURE__*/_jsx("h2", {
+                  }, void 0, false), " ", Math.round(p.s / 60) || 1, " min"]
+                }, void 0, true)]
+              }, void 0, true)]
+            }, i, true))
+          }, void 0, false)]
+        }, void 0, true), /*#__PURE__*/_jsxDEV("section", {
+          children: [/*#__PURE__*/_jsxDEV("h2", {
             className: "yt-display",
             style: {
               fontSize: 16,
               fontWeight: 800,
               margin: "0 0 8px"
             },
-            children: "\xBFLa has probado?"
-          }), /*#__PURE__*/_jsxs("div", {
+            children: "¿La has probado?"
+          }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
             style: {
               background: "#fff",
               borderRadius: T.radius,
@@ -5906,21 +8387,21 @@ function RecetaDetalle({
               gap: 8,
               justifyContent: "space-between"
             },
-            children: [/*#__PURE__*/_jsx("div", {
+            children: [/*#__PURE__*/_jsxDEV("div", {
               style: {
                 display: "flex",
                 gap: 4
               },
-              children: [1, 2, 3, 4, 5].map(n => /*#__PURE__*/_jsx("button", {
+              children: [1, 2, 3, 4, 5].map(n => /*#__PURE__*/_jsxDEV("button", {
                 "aria-label": `${n} estrellas`,
                 onClick: () => setRating(n),
-                children: /*#__PURE__*/_jsx(Star, {
+                children: /*#__PURE__*/_jsxDEV(Star, {
                   size: 26,
                   color: "#E8B93B",
                   fill: probada && probada.rating >= n ? "#E8B93B" : "none"
-                })
-              }, n))
-            }), probada ? /*#__PURE__*/_jsx("button", {
+                }, void 0, false)
+              }, n, false))
+            }, void 0, false), probada ? /*#__PURE__*/_jsxDEV("button", {
               onClick: quitarProbada,
               style: {
                 fontSize: 12.5,
@@ -5928,21 +8409,21 @@ function RecetaDetalle({
                 fontWeight: 600
               },
               children: "Quitar"
-            }) : /*#__PURE__*/_jsx("span", {
+            }, void 0, false) : /*#__PURE__*/_jsxDEV("span", {
               style: {
                 fontSize: 12.5,
                 color: T.sub
               },
-              children: "Punt\xFAa para marcarla"
-            })]
-          })]
-        }), /*#__PURE__*/_jsxs("div", {
+              children: "Puntúa para marcarla"
+            }, void 0, false)]
+          }, void 0, true)]
+        }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
           style: {
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
             gap: 8
           },
-          children: [/*#__PURE__*/_jsxs("button", {
+          children: [/*#__PURE__*/_jsxDEV("button", {
             onClick: () => addCompra(r),
             style: {
               background: "#fff",
@@ -5956,11 +8437,11 @@ function RecetaDetalle({
               justifyContent: "center",
               gap: 6
             },
-            children: [/*#__PURE__*/_jsx(ShoppingBasket, {
+            children: [/*#__PURE__*/_jsxDEV(ShoppingBasket, {
               size: 17,
               color: T.brand
-            }), " A la compra"]
-          }), /*#__PURE__*/_jsxs("button", {
+            }, void 0, false), " A la compra"]
+          }, void 0, true), /*#__PURE__*/_jsxDEV("button", {
             onClick: () => addPlan(r.id),
             style: {
               background: "#fff",
@@ -5974,14 +8455,14 @@ function RecetaDetalle({
               justifyContent: "center",
               gap: 6
             },
-            children: [/*#__PURE__*/_jsx(CalendarDays, {
+            children: [/*#__PURE__*/_jsxDEV(CalendarDays, {
               size: 17,
               color: T.brand
-            }), " Al plan"]
-          })]
-        })]
-      })]
-    }), /*#__PURE__*/_jsx("div", {
+            }, void 0, false), " Al plan"]
+          }, void 0, true)]
+        }, void 0, true)]
+      }, void 0, true)]
+    }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
       style: {
         position: "absolute",
         left: 0,
@@ -5990,14 +8471,14 @@ function RecetaDetalle({
         padding: "12px 20px 18px",
         background: "linear-gradient(transparent, #F5F3EE 40%)"
       },
-      children: /*#__PURE__*/_jsxs(BtnPrimario, {
+      children: /*#__PURE__*/_jsxDEV(BtnPrimario, {
         onClick: () => cocinar(r.id),
-        children: [/*#__PURE__*/_jsx(ChefHat, {
+        children: [/*#__PURE__*/_jsxDEV(ChefHat, {
           size: 19
-        }), " Modo cocina"]
-      })
-    })]
-  });
+        }, void 0, false), " Modo cocina"]
+      }, void 0, true)
+    }, void 0, false)]
+  }, void 0, true);
 }
 
 /* ---------------- MODO COCINA con temporizadores ---------------- */
@@ -6045,7 +8526,7 @@ function ModoCocina({
     return () => clearTimeout(t);
   }, [activo, resta]);
   const mmss = s => `${String(Math.floor(s / 60)).padStart(2, "0")}:${String(s % 60).padStart(2, "0")}`;
-  return /*#__PURE__*/_jsxs("div", {
+  return /*#__PURE__*/_jsxDEV("div", {
     style: {
       position: "absolute",
       inset: 0,
@@ -6056,14 +8537,14 @@ function ModoCocina({
       flexDirection: "column"
     },
     className: "yt-fade",
-    children: [/*#__PURE__*/_jsxs("div", {
+    children: [/*#__PURE__*/_jsxDEV("div", {
       style: {
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
         padding: "16px 20px"
       },
-      children: [/*#__PURE__*/_jsxs("button", {
+      children: [/*#__PURE__*/_jsxDEV("button", {
         onClick: cerrar,
         "aria-label": "Salir del modo cocina",
         style: {
@@ -6075,10 +8556,10 @@ function ModoCocina({
           fontSize: 14,
           opacity: 0.85
         },
-        children: [/*#__PURE__*/_jsx(X, {
+        children: [/*#__PURE__*/_jsxDEV(X, {
           size: 18
-        }), " Salir"]
-      }), /*#__PURE__*/_jsx("span", {
+        }, void 0, false), " Salir"]
+      }, void 0, true), /*#__PURE__*/_jsxDEV("span", {
         className: "yt-display",
         style: {
           fontWeight: 700,
@@ -6086,22 +8567,22 @@ function ModoCocina({
           opacity: 0.85
         },
         children: r.n
-      })]
-    }), /*#__PURE__*/_jsx("div", {
+      }, void 0, false)]
+    }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
       style: {
         display: "flex",
         gap: 4,
         padding: "0 20px 8px"
       },
-      children: r.pasos.map((_, i) => /*#__PURE__*/_jsx("div", {
+      children: r.pasos.map((_, i) => /*#__PURE__*/_jsxDEV("div", {
         style: {
           flex: 1,
           height: 4,
           borderRadius: 2,
           background: i < paso || fin ? T.brand : i === paso ? "#fff" : "#ffffff33"
         }
-      }, i))
-    }), fin ? /*#__PURE__*/_jsxs("div", {
+      }, i, false))
+    }, void 0, false), fin ? /*#__PURE__*/_jsxDEV("div", {
       className: "yt-pop",
       style: {
         flex: 1,
@@ -6113,44 +8594,44 @@ function ModoCocina({
         textAlign: "center",
         gap: 12
       },
-      children: [/*#__PURE__*/_jsx("div", {
+      children: [/*#__PURE__*/_jsxDEV("div", {
         style: {
           fontSize: 64
         },
-        children: "\uD83C\uDF89"
-      }), /*#__PURE__*/_jsx("h2", {
+        children: "🎉"
+      }, void 0, false), /*#__PURE__*/_jsxDEV("h2", {
         className: "yt-display",
         style: {
           margin: 0,
           fontSize: 26,
           fontWeight: 800
         },
-        children: "\xA1Al plato!"
-      }), /*#__PURE__*/_jsxs("p", {
+        children: "¡Al plato!"
+      }, void 0, false), /*#__PURE__*/_jsxDEV("p", {
         style: {
           opacity: 0.75,
           margin: 0
         },
-        children: ["Has terminado ", r.n.toLowerCase(), ". \xBFLa marcamos como probada?"]
-      }), /*#__PURE__*/_jsx("div", {
+        children: ["Has terminado ", r.n.toLowerCase(), ". ¿La marcamos como probada?"]
+      }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
         style: {
           display: "flex",
           gap: 8,
           marginTop: 10
         },
-        children: [1, 2, 3, 4, 5].map(n => /*#__PURE__*/_jsx("button", {
+        children: [1, 2, 3, 4, 5].map(n => /*#__PURE__*/_jsxDEV("button", {
           "aria-label": `${n} estrellas`,
           onClick: () => {
             marcarProbada(r.id, n);
             cerrar();
           },
-          children: /*#__PURE__*/_jsx(Star, {
+          children: /*#__PURE__*/_jsxDEV(Star, {
             size: 34,
             color: "#E8B93B",
             fill: "none"
-          })
-        }, n))
-      }), /*#__PURE__*/_jsx("button", {
+          }, void 0, false)
+        }, n, false))
+      }, void 0, false), /*#__PURE__*/_jsxDEV("button", {
         onClick: cerrar,
         style: {
           color: "#fff",
@@ -6160,9 +8641,9 @@ function ModoCocina({
           fontSize: 14
         },
         children: "Ahora no"
-      })]
-    }) : /*#__PURE__*/_jsxs(_Fragment, {
-      children: [/*#__PURE__*/_jsxs("div", {
+      }, void 0, false)]
+    }, void 0, true) : /*#__PURE__*/_jsxDEV(_Fragment, {
+      children: [/*#__PURE__*/_jsxDEV("div", {
         style: {
           flex: 1,
           display: "flex",
@@ -6171,7 +8652,7 @@ function ModoCocina({
           padding: "0 26px",
           gap: 22
         },
-        children: [/*#__PURE__*/_jsxs("span", {
+        children: [/*#__PURE__*/_jsxDEV("span", {
           className: "yt-display",
           style: {
             color: T.brand,
@@ -6180,7 +8661,7 @@ function ModoCocina({
             letterSpacing: 1
           },
           children: ["PASO ", paso + 1, " DE ", r.pasos.length]
-        }), /*#__PURE__*/_jsx("p", {
+        }, void 0, true), /*#__PURE__*/_jsxDEV("p", {
           className: "yt-display",
           style: {
             fontSize: 23,
@@ -6189,7 +8670,7 @@ function ModoCocina({
             margin: 0
           },
           children: p.t
-        }), p.s != null && /*#__PURE__*/_jsxs("div", {
+        }, void 0, false), p.s != null && /*#__PURE__*/_jsxDEV("div", {
           style: {
             background: "#ffffff12",
             borderRadius: 22,
@@ -6198,7 +8679,7 @@ function ModoCocina({
             alignItems: "center",
             gap: 16
           },
-          children: [/*#__PURE__*/_jsx("div", {
+          children: [/*#__PURE__*/_jsxDEV("div", {
             className: "yt-display",
             style: {
               fontSize: 42,
@@ -6207,13 +8688,13 @@ function ModoCocina({
               color: resta === 0 ? T.brand : "#fff"
             },
             children: mmss(Math.max(0, resta ?? p.s))
-          }), /*#__PURE__*/_jsxs("div", {
+          }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
             style: {
               display: "flex",
               gap: 8,
               marginLeft: "auto"
             },
-            children: [/*#__PURE__*/_jsx("button", {
+            children: [/*#__PURE__*/_jsxDEV("button", {
               "aria-label": activo ? "Pausar" : "Iniciar temporizador",
               onClick: () => setActivo(a => !a),
               style: {
@@ -6225,17 +8706,17 @@ function ModoCocina({
                 alignItems: "center",
                 justifyContent: "center"
               },
-              children: activo ? /*#__PURE__*/_jsx(Pause, {
+              children: activo ? /*#__PURE__*/_jsxDEV(Pause, {
                 size: 22,
                 color: "#fff"
-              }) : /*#__PURE__*/_jsx(Play, {
+              }, void 0, false) : /*#__PURE__*/_jsxDEV(Play, {
                 size: 22,
                 color: "#fff",
                 style: {
                   marginLeft: 3
                 }
-              })
-            }), /*#__PURE__*/_jsx("button", {
+              }, void 0, false)
+            }, void 0, false), /*#__PURE__*/_jsxDEV("button", {
               "aria-label": "Reiniciar",
               onClick: () => {
                 setResta(p.s);
@@ -6250,27 +8731,27 @@ function ModoCocina({
                 alignItems: "center",
                 justifyContent: "center"
               },
-              children: /*#__PURE__*/_jsx(RotateCcw, {
+              children: /*#__PURE__*/_jsxDEV(RotateCcw, {
                 size: 20,
                 color: "#fff"
-              })
-            })]
-          })]
-        }), resta === 0 && /*#__PURE__*/_jsx("p", {
+              }, void 0, false)
+            }, void 0, false)]
+          }, void 0, true)]
+        }, void 0, true), resta === 0 && /*#__PURE__*/_jsxDEV("p", {
           style: {
             color: T.brand,
             fontWeight: 700,
             margin: 0
           },
-          children: "\u23F0 \xA1Tiempo! Pasa al siguiente paso."
-        })]
-      }), /*#__PURE__*/_jsxs("div", {
+          children: "⏰ ¡Tiempo! Pasa al siguiente paso."
+        }, void 0, false)]
+      }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
         style: {
           display: "flex",
           gap: 10,
           padding: "16px 20px 24px"
         },
-        children: [/*#__PURE__*/_jsxs("button", {
+        children: [/*#__PURE__*/_jsxDEV("button", {
           onClick: () => setPaso(x => Math.max(0, x - 1)),
           disabled: paso === 0,
           style: {
@@ -6286,10 +8767,10 @@ function ModoCocina({
             justifyContent: "center",
             gap: 6
           },
-          children: [/*#__PURE__*/_jsx(ChevronLeft, {
+          children: [/*#__PURE__*/_jsxDEV(ChevronLeft, {
             size: 18
-          }), " Anterior"]
-        }), /*#__PURE__*/_jsxs("button", {
+          }, void 0, false), " Anterior"]
+        }, void 0, true), /*#__PURE__*/_jsxDEV("button", {
           onClick: () => setPaso(x => x + 1),
           style: {
             flex: 1.4,
@@ -6304,13 +8785,13 @@ function ModoCocina({
             gap: 6,
             boxShadow: "0 6px 16px rgba(232,83,44,0.45)"
           },
-          children: [paso === r.pasos.length - 1 ? "Terminar" : "Siguiente", " ", /*#__PURE__*/_jsx(ChevronRight, {
+          children: [paso === r.pasos.length - 1 ? "Terminar" : "Siguiente", " ", /*#__PURE__*/_jsxDEV(ChevronRight, {
             size: 18
-          })]
-        })]
-      })]
-    })]
-  });
+          }, void 0, false)]
+        }, void 0, true)]
+      }, void 0, true)]
+    }, void 0, true)]
+  }, void 0, true);
 }
 
 /* ---------------- PLAN SEMANAL ---------------- */
@@ -6357,21 +8838,21 @@ function Plan({
     return l;
   }, [picker, q, st.prefs]);
   const nSlots = Object.keys(st.plan).length;
-  return /*#__PURE__*/_jsxs("div", {
+  return /*#__PURE__*/_jsxDEV("div", {
     style: {
       padding: "8px 20px 20px",
       height: "100%",
       display: "flex",
       flexDirection: "column"
     },
-    children: [/*#__PURE__*/_jsxs("div", {
+    children: [/*#__PURE__*/_jsxDEV("div", {
       style: {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
         marginBottom: 4
       },
-      children: [/*#__PURE__*/_jsx("h1", {
+      children: [/*#__PURE__*/_jsxDEV("h1", {
         className: "yt-display",
         style: {
           fontSize: 26,
@@ -6379,7 +8860,7 @@ function Plan({
           margin: 0
         },
         children: "Tu semana"
-      }), nSlots > 0 && /*#__PURE__*/_jsxs("button", {
+      }, void 0, false), nSlots > 0 && /*#__PURE__*/_jsxDEV("button", {
         onClick: addSemanaCompra,
         style: {
           display: "flex",
@@ -6392,18 +8873,18 @@ function Plan({
           borderRadius: 999,
           padding: "9px 13px"
         },
-        children: [/*#__PURE__*/_jsx(ShoppingBasket, {
+        children: [/*#__PURE__*/_jsxDEV(ShoppingBasket, {
           size: 15
-        }), " Semana a la compra"]
-      })]
-    }), /*#__PURE__*/_jsxs("p", {
+        }, void 0, false), " Semana a la compra"]
+      }, void 0, true)]
+    }, void 0, true), /*#__PURE__*/_jsxDEV("p", {
       style: {
         color: T.sub,
         fontSize: 13.5,
         margin: "0 0 12px"
       },
       children: ["Toca un hueco para elegir plato. ", nSlots ? `${nSlots} de 14 planificados.` : ""]
-    }), /*#__PURE__*/_jsx("div", {
+    }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
       className: "yt-scroll",
       style: {
         flex: 1,
@@ -6418,36 +8899,36 @@ function Plan({
           const rec = RECETAS.find(r => r.id === st.plan[`${di}-${c.id}`]);
           return acc + (rec ? rec.nut.kcal : 0);
         }, 0);
-        return /*#__PURE__*/_jsxs("div", {
+        return /*#__PURE__*/_jsxDEV("div", {
           style: {
             background: "#fff",
             borderRadius: T.radius,
             border: `1px solid ${T.line}`,
             padding: 12
           },
-          children: [/*#__PURE__*/_jsxs("div", {
+          children: [/*#__PURE__*/_jsxDEV("div", {
             style: {
               display: "flex",
               justifyContent: "space-between",
               alignItems: "baseline",
               marginBottom: 8
             },
-            children: [/*#__PURE__*/_jsx("span", {
+            children: [/*#__PURE__*/_jsxDEV("span", {
               className: "yt-display",
               style: {
                 fontWeight: 800,
                 fontSize: 15
               },
               children: d
-            }), kcal > 0 && /*#__PURE__*/_jsxs("span", {
+            }, void 0, false), kcal > 0 && /*#__PURE__*/_jsxDEV("span", {
               style: {
                 fontSize: 12,
                 color: T.sub,
                 fontWeight: 600
               },
               children: [kcal, " kcal planificadas"]
-            })]
-          }), /*#__PURE__*/_jsx("div", {
+            }, void 0, true)]
+          }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
             style: {
               display: "grid",
               gridTemplateColumns: "1fr 1fr",
@@ -6456,14 +8937,14 @@ function Plan({
             children: COMIDAS_PLAN.map(c => {
               const key = `${di}-${c.id}`;
               const rec = RECETAS.find(r => r.id === st.plan[key]);
-              return rec ? /*#__PURE__*/_jsxs("div", {
+              return rec ? /*#__PURE__*/_jsxDEV("div", {
                 style: {
                   background: T.brandSoft,
                   borderRadius: 14,
                   padding: "9px 10px",
                   position: "relative"
                 },
-                children: [/*#__PURE__*/_jsx("div", {
+                children: [/*#__PURE__*/_jsxDEV("div", {
                   style: {
                     fontSize: 10.5,
                     fontWeight: 700,
@@ -6472,7 +8953,7 @@ function Plan({
                     letterSpacing: 0.5
                   },
                   children: c.l
-                }), /*#__PURE__*/_jsxs("button", {
+                }, void 0, false), /*#__PURE__*/_jsxDEV("button", {
                   onClick: () => abrirReceta(rec.id),
                   style: {
                     fontWeight: 700,
@@ -6483,7 +8964,7 @@ function Plan({
                     color: T.ink
                   },
                   children: [rec.e, " ", rec.n]
-                }), /*#__PURE__*/_jsx("button", {
+                }, void 0, true), /*#__PURE__*/_jsxDEV("button", {
                   "aria-label": `Quitar ${rec.n}`,
                   onClick: () => quitarSlot(key),
                   style: {
@@ -6491,12 +8972,12 @@ function Plan({
                     top: 6,
                     right: 6
                   },
-                  children: /*#__PURE__*/_jsx(X, {
+                  children: /*#__PURE__*/_jsxDEV(X, {
                     size: 13,
                     color: "#B08575"
-                  })
-                })]
-              }, c.id) : /*#__PURE__*/_jsxs("button", {
+                  }, void 0, false)
+                }, void 0, false)]
+              }, c.id, true) : /*#__PURE__*/_jsxDEV("button", {
                 onClick: () => {
                   setPicker({
                     dia: di,
@@ -6517,18 +8998,18 @@ function Plan({
                   gap: 5,
                   background: "#FBFAF7"
                 },
-                children: [/*#__PURE__*/_jsx(Plus, {
+                children: [/*#__PURE__*/_jsxDEV(Plus, {
                   size: 14
-                }), " ", c.l]
-              }, c.id);
+                }, void 0, false), " ", c.l]
+              }, c.id, true);
             })
-          })]
-        }, d);
+          }, void 0, false)]
+        }, d, true);
       })
-    }), picker && /*#__PURE__*/_jsxs(Sheet, {
+    }, void 0, false), picker && /*#__PURE__*/_jsxDEV(Sheet, {
       onClose: () => setPicker(null),
       title: `${COMIDAS_PLAN.find(c => c.id === picker.comida).l} del ${DIAS[picker.dia].toLowerCase()}`,
-      children: [/*#__PURE__*/_jsxs("div", {
+      children: [/*#__PURE__*/_jsxDEV("div", {
         style: {
           display: "flex",
           alignItems: "center",
@@ -6538,14 +9019,14 @@ function Plan({
           padding: "9px 12px",
           marginBottom: 10
         },
-        children: [/*#__PURE__*/_jsx(Search, {
+        children: [/*#__PURE__*/_jsxDEV(Search, {
           size: 16,
           color: T.sub
-        }), /*#__PURE__*/_jsx("input", {
+        }, void 0, false), /*#__PURE__*/_jsxDEV("input", {
           autoFocus: true,
           value: q,
           onChange: e => setQ(e.target.value),
-          placeholder: "Buscar receta\u2026",
+          placeholder: "Buscar receta…",
           style: {
             border: "none",
             outline: "none",
@@ -6553,8 +9034,8 @@ function Plan({
             fontSize: 14,
             background: "transparent"
           }
-        })]
-      }), /*#__PURE__*/_jsx("div", {
+        }, void 0, false)]
+      }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
         style: {
           display: "flex",
           flexDirection: "column",
@@ -6565,7 +9046,7 @@ function Plan({
           m
         }) => {
           const b = badgeMatch(m.score);
-          return /*#__PURE__*/_jsxs("button", {
+          return /*#__PURE__*/_jsxDEV("button", {
             onClick: () => {
               setSlot(`${picker.dia}-${picker.comida}`, r.id);
               setPicker(null);
@@ -6578,42 +9059,42 @@ function Plan({
               borderRadius: 12,
               textAlign: "left"
             },
-            children: [/*#__PURE__*/_jsx("span", {
+            children: [/*#__PURE__*/_jsxDEV("span", {
               style: {
                 fontSize: 22
               },
               children: r.e
-            }), /*#__PURE__*/_jsxs("div", {
+            }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
               style: {
                 flex: 1,
                 minWidth: 0
               },
-              children: [/*#__PURE__*/_jsx("div", {
+              children: [/*#__PURE__*/_jsxDEV("div", {
                 style: {
                   fontWeight: 700,
                   fontSize: 14
                 },
                 children: r.n
-              }), /*#__PURE__*/_jsxs("div", {
+              }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
                 style: {
                   fontSize: 12,
                   color: T.sub
                 },
-                children: [r.min, " min \xB7 ", DIF[r.dif].l, " \xB7 ", r.nut.kcal, " kcal"]
-              })]
-            }), m.score !== null && /*#__PURE__*/_jsxs(Chip, {
+                children: [r.min, " min · ", DIF[r.dif].l, " · ", r.nut.kcal, " kcal"]
+              }, void 0, true)]
+            }, void 0, true), m.score !== null && /*#__PURE__*/_jsxDEV(Chip, {
               color: b.col,
               bg: b.bg,
               style: {
                 fontSize: 11
               },
               children: [m.score, "%"]
-            })]
-          }, r.id);
+            }, void 0, true)]
+          }, r.id, true);
         })
-      })]
-    })]
-  });
+      }, void 0, false)]
+    }, void 0, true)]
+  }, void 0, true);
 }
 
 /* ---------------- LISTA DE LA COMPRA ---------------- */
@@ -6681,20 +9162,20 @@ function Compra({
   }));
   const total = grupos.length + st.compra.extras.length;
   const hechos = Object.values(st.compra.checked).filter(Boolean).length;
-  return /*#__PURE__*/_jsxs("div", {
+  return /*#__PURE__*/_jsxDEV("div", {
     style: {
       padding: "8px 20px 20px",
       height: "100%",
       display: "flex",
       flexDirection: "column"
     },
-    children: [/*#__PURE__*/_jsxs("div", {
+    children: [/*#__PURE__*/_jsxDEV("div", {
       style: {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center"
       },
-      children: [/*#__PURE__*/_jsx("h1", {
+      children: [/*#__PURE__*/_jsxDEV("h1", {
         className: "yt-display",
         style: {
           fontSize: 26,
@@ -6702,28 +9183,28 @@ function Compra({
           margin: 0
         },
         children: "La compra"
-      }), total > 0 && /*#__PURE__*/_jsxs("span", {
+      }, void 0, false), total > 0 && /*#__PURE__*/_jsxDEV("span", {
         style: {
           fontSize: 13,
           fontWeight: 700,
           color: T.sub
         },
         children: [hechos, "/", total, " en el carro"]
-      })]
-    }), /*#__PURE__*/_jsx("p", {
+      }, void 0, true)]
+    }, void 0, true), /*#__PURE__*/_jsxDEV("p", {
       style: {
         color: T.sub,
         fontSize: 13.5,
         margin: "2px 0 12px"
       },
       children: "Se genera sola desde tus recetas y tu plan semanal."
-    }), /*#__PURE__*/_jsxs("div", {
+    }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
       style: {
         display: "flex",
         gap: 8,
         marginBottom: 12
       },
-      children: [/*#__PURE__*/_jsxs("div", {
+      children: [/*#__PURE__*/_jsxDEV("div", {
         style: {
           flex: 1,
           display: "flex",
@@ -6734,14 +9215,14 @@ function Compra({
           borderRadius: 14,
           padding: "10px 12px"
         },
-        children: [/*#__PURE__*/_jsx(Plus, {
+        children: [/*#__PURE__*/_jsxDEV(Plus, {
           size: 16,
           color: T.sub
-        }), /*#__PURE__*/_jsx("input", {
+        }, void 0, false), /*#__PURE__*/_jsxDEV("input", {
           value: nuevo,
           onChange: e => setNuevo(e.target.value),
           onKeyDown: e => e.key === "Enter" && addExtra(),
-          placeholder: "A\xF1adir algo suelto (papel de cocina\u2026)",
+          placeholder: "Añadir algo suelto (papel de cocina…)",
           style: {
             border: "none",
             outline: "none",
@@ -6749,8 +9230,8 @@ function Compra({
             fontSize: 14,
             background: "transparent"
           }
-        })]
-      }), /*#__PURE__*/_jsx("button", {
+        }, void 0, false)]
+      }, void 0, true), /*#__PURE__*/_jsxDEV("button", {
         onClick: addExtra,
         style: {
           background: T.ink,
@@ -6760,9 +9241,9 @@ function Compra({
           fontWeight: 700,
           fontSize: 14
         },
-        children: "A\xF1adir"
-      })]
-    }), /*#__PURE__*/_jsxs("div", {
+        children: "Añadir"
+      }, void 0, false)]
+    }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
       className: "yt-scroll",
       style: {
         flex: 1,
@@ -6772,21 +9253,21 @@ function Compra({
         gap: 14,
         paddingBottom: 8
       },
-      children: [total === 0 && /*#__PURE__*/_jsxs("div", {
+      children: [total === 0 && /*#__PURE__*/_jsxDEV("div", {
         style: {
           textAlign: "center",
           color: T.sub,
           padding: "50px 24px"
         },
-        children: [/*#__PURE__*/_jsx("div", {
+        children: [/*#__PURE__*/_jsxDEV("div", {
           style: {
             fontSize: 44,
             marginBottom: 10
           },
-          children: "\uD83E\uDDFA"
-        }), "La cesta est\xE1 vac\xEDa. Abre una receta y toca \xABA la compra\xBB, o env\xEDa tu semana planificada desde el plan."]
-      }), Object.entries(porCat).map(([c, items]) => /*#__PURE__*/_jsxs("section", {
-        children: [/*#__PURE__*/_jsx("h2", {
+          children: "🧺"
+        }, void 0, false), "La cesta está vacía. Abre una receta y toca «A la compra», o envía tu semana planificada desde el plan."]
+      }, void 0, true), Object.entries(porCat).map(([c, items]) => /*#__PURE__*/_jsxDEV("section", {
+        children: [/*#__PURE__*/_jsxDEV("h2", {
           className: "yt-display",
           style: {
             fontSize: 13,
@@ -6797,7 +9278,7 @@ function Compra({
             margin: "0 0 6px"
           },
           children: CAT[c].label
-        }), /*#__PURE__*/_jsx("div", {
+        }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
           style: {
             background: "#fff",
             borderRadius: 18,
@@ -6808,7 +9289,7 @@ function Compra({
             const k = "i:" + g.ingId,
               done = !!st.compra.checked[k],
               ing = ING_MAP[g.ingId];
-            return /*#__PURE__*/_jsxs("button", {
+            return /*#__PURE__*/_jsxDEV("button", {
               onClick: () => toggle(k),
               style: {
                 display: "flex",
@@ -6819,7 +9300,7 @@ function Compra({
                 borderTop: i ? `1px solid ${T.line}` : "none",
                 textAlign: "left"
               },
-              children: [/*#__PURE__*/_jsx("span", {
+              children: [/*#__PURE__*/_jsxDEV("span", {
                 style: {
                   width: 22,
                   height: 22,
@@ -6831,17 +9312,17 @@ function Compra({
                   justifyContent: "center",
                   flexShrink: 0
                 },
-                children: done && /*#__PURE__*/_jsx(Check, {
+                children: done && /*#__PURE__*/_jsxDEV(Check, {
                   size: 14,
                   color: "#fff",
                   strokeWidth: 3
-                })
-              }), /*#__PURE__*/_jsx("span", {
+                }, void 0, false)
+              }, void 0, false), /*#__PURE__*/_jsxDEV("span", {
                 style: {
                   fontSize: 20
                 },
                 children: ing.e
-              }), /*#__PURE__*/_jsx("span", {
+              }, void 0, false), /*#__PURE__*/_jsxDEV("span", {
                 style: {
                   flex: 1,
                   fontWeight: 600,
@@ -6850,19 +9331,19 @@ function Compra({
                   color: done ? "#B7B2A9" : T.ink
                 },
                 children: ing.n
-              }), /*#__PURE__*/_jsx("span", {
+              }, void 0, false), /*#__PURE__*/_jsxDEV("span", {
                 style: {
                   fontSize: 12.5,
                   color: T.sub,
                   fontWeight: 600
                 },
                 children: g.texto
-              })]
-            }, g.ingId);
+              }, void 0, false)]
+            }, g.ingId, true);
           })
-        })]
-      }, c)), st.compra.extras.length > 0 && /*#__PURE__*/_jsxs("section", {
-        children: [/*#__PURE__*/_jsx("h2", {
+        }, void 0, false)]
+      }, c, true)), st.compra.extras.length > 0 && /*#__PURE__*/_jsxDEV("section", {
+        children: [/*#__PURE__*/_jsxDEV("h2", {
           className: "yt-display",
           style: {
             fontSize: 13,
@@ -6873,7 +9354,7 @@ function Compra({
             margin: "0 0 6px"
           },
           children: "Otros"
-        }), /*#__PURE__*/_jsx("div", {
+        }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
           style: {
             background: "#fff",
             borderRadius: 18,
@@ -6883,7 +9364,7 @@ function Compra({
           children: st.compra.extras.map((e, i) => {
             const k = "e:" + i + ":" + e,
               done = !!st.compra.checked[k];
-            return /*#__PURE__*/_jsxs("div", {
+            return /*#__PURE__*/_jsxDEV("div", {
               style: {
                 display: "flex",
                 alignItems: "center",
@@ -6891,7 +9372,7 @@ function Compra({
                 padding: "10px 13px",
                 borderTop: i ? `1px solid ${T.line}` : "none"
               },
-              children: [/*#__PURE__*/_jsx("button", {
+              children: [/*#__PURE__*/_jsxDEV("button", {
                 onClick: () => toggle(k),
                 style: {
                   width: 22,
@@ -6904,12 +9385,12 @@ function Compra({
                   justifyContent: "center",
                   flexShrink: 0
                 },
-                children: done && /*#__PURE__*/_jsx(Check, {
+                children: done && /*#__PURE__*/_jsxDEV(Check, {
                   size: 14,
                   color: "#fff",
                   strokeWidth: 3
-                })
-              }), /*#__PURE__*/_jsx("span", {
+                }, void 0, false)
+              }, void 0, false), /*#__PURE__*/_jsxDEV("span", {
                 style: {
                   flex: 1,
                   fontWeight: 600,
@@ -6918,23 +9399,23 @@ function Compra({
                   color: done ? "#B7B2A9" : T.ink
                 },
                 children: e
-              }), /*#__PURE__*/_jsx("button", {
+              }, void 0, false), /*#__PURE__*/_jsxDEV("button", {
                 "aria-label": `Eliminar ${e}`,
                 onClick: () => quitarExtra(i),
-                children: /*#__PURE__*/_jsx(Trash2, {
+                children: /*#__PURE__*/_jsxDEV(Trash2, {
                   size: 15,
                   color: "#C9C4BB"
-                })
-              })]
-            }, k);
+                }, void 0, false)
+              }, void 0, false)]
+            }, k, true);
           })
-        })]
-      }), total > 0 && /*#__PURE__*/_jsxs("div", {
+        }, void 0, false)]
+      }, void 0, true), total > 0 && /*#__PURE__*/_jsxDEV("div", {
         style: {
           display: "flex",
           gap: 8
         },
-        children: [/*#__PURE__*/_jsx("button", {
+        children: [/*#__PURE__*/_jsxDEV("button", {
           onClick: vaciarComprados,
           style: {
             flex: 1,
@@ -6947,7 +9428,7 @@ function Compra({
             color: T.sub
           },
           children: "Quitar lo comprado"
-        }), /*#__PURE__*/_jsx("button", {
+        }, void 0, false), /*#__PURE__*/_jsxDEV("button", {
           onClick: vaciarTodo,
           style: {
             flex: 1,
@@ -6960,10 +9441,10 @@ function Compra({
             color: T.bad
           },
           children: "Vaciar lista"
-        })]
-      })]
-    })]
-  });
+        }, void 0, false)]
+      }, void 0, true)]
+    }, void 0, true)]
+  }, void 0, true);
 }
 
 /* ---------------- PERFIL: estadísticas, gustos y logros ---------------- */
@@ -6982,14 +9463,14 @@ function Perfil({
   const mediaRating = probadasArr.length ? (probadasArr.reduce((a, [, v]) => a + (v.rating || 0), 0) / probadasArr.length).toFixed(1) : null;
   const valorados = INGS.filter(i => prefs[i.id] && prefs[i.id].like !== undefined).filter(i => !q.trim() || i.n.toLowerCase().includes(q.trim().toLowerCase()));
   const kcalSemana = Object.values(st.plan).reduce((a, id) => a + (RECETAS.find(r => r.id === id)?.nut.kcal || 0), 0);
-  return /*#__PURE__*/_jsxs("div", {
+  return /*#__PURE__*/_jsxDEV("div", {
     className: "yt-scroll",
     style: {
       padding: "8px 20px 20px",
       height: "100%",
       overflowY: "auto"
     },
-    children: [/*#__PURE__*/_jsx("h1", {
+    children: [/*#__PURE__*/_jsxDEV("h1", {
       className: "yt-display",
       style: {
         fontSize: 26,
@@ -6997,26 +9478,26 @@ function Perfil({
         margin: "0 0 12px"
       },
       children: "Tu cocina"
-    }), /*#__PURE__*/_jsx("div", {
+    }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
       style: {
         display: "grid",
         gridTemplateColumns: "1fr 1fr",
         gap: 8,
         marginBottom: 18
       },
-      children: [[nVal, "ingredientes catados", "🧭"], [nLike, "te gustan", "💚"], [probadasArr.length, "recetas probadas" + (mediaRating ? ` · ${mediaRating}★` : ""), "🍽️"], [st.favs.length, "favoritas guardadas", "❤️"]].map(([v, l, ic], i) => /*#__PURE__*/_jsxs("div", {
+      children: [[nVal, "ingredientes catados", "🧭"], [nLike, "te gustan", "💚"], [probadasArr.length, "recetas probadas" + (mediaRating ? ` · ${mediaRating}★` : ""), "🍽️"], [st.favs.length, "favoritas guardadas", "❤️"]].map(([v, l, ic], i) => /*#__PURE__*/_jsxDEV("div", {
         style: {
           background: "#fff",
           borderRadius: 18,
           border: `1px solid ${T.line}`,
           padding: "14px 14px"
         },
-        children: [/*#__PURE__*/_jsx("div", {
+        children: [/*#__PURE__*/_jsxDEV("div", {
           style: {
             fontSize: 18
           },
           children: ic
-        }), /*#__PURE__*/_jsx("div", {
+        }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
           className: "yt-display",
           style: {
             fontSize: 24,
@@ -7024,16 +9505,16 @@ function Perfil({
             margin: "2px 0"
           },
           children: v
-        }), /*#__PURE__*/_jsx("div", {
+        }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
           style: {
             fontSize: 12,
             color: T.sub,
             fontWeight: 600
           },
           children: l
-        })]
-      }, i))
-    }), kcalSemana > 0 && /*#__PURE__*/_jsxs("div", {
+        }, void 0, false)]
+      }, i, true))
+    }, void 0, false), kcalSemana > 0 && /*#__PURE__*/_jsxDEV("div", {
       style: {
         background: "#fff",
         borderRadius: 18,
@@ -7044,27 +9525,27 @@ function Perfil({
         alignItems: "center",
         gap: 10
       },
-      children: [/*#__PURE__*/_jsx(Soup, {
+      children: [/*#__PURE__*/_jsxDEV(Soup, {
         size: 20,
         color: T.brand
-      }), /*#__PURE__*/_jsxs("div", {
+      }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
         style: {
           fontSize: 13.5
         },
-        children: [/*#__PURE__*/_jsxs("b", {
+        children: [/*#__PURE__*/_jsxDEV("b", {
           children: [kcalSemana, " kcal"]
-        }), " planificadas esta semana ", /*#__PURE__*/_jsx("span", {
+        }, void 0, true), " planificadas esta semana ", /*#__PURE__*/_jsxDEV("span", {
           style: {
             color: T.sub
           },
-          children: "(por raci\xF3n, seg\xFAn tu plan)"
-        })]
-      })]
-    }), /*#__PURE__*/_jsxs("section", {
+          children: "(por ración, según tu plan)"
+        }, void 0, false)]
+      }, void 0, true)]
+    }, void 0, true), /*#__PURE__*/_jsxDEV("section", {
       style: {
         marginBottom: 18
       },
-      children: [/*#__PURE__*/_jsx("h2", {
+      children: [/*#__PURE__*/_jsxDEV("h2", {
         className: "yt-display",
         style: {
           fontSize: 16,
@@ -7072,13 +9553,13 @@ function Perfil({
           margin: "0 0 8px"
         },
         children: "Logros"
-      }), /*#__PURE__*/_jsx("div", {
+      }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
         style: {
           display: "grid",
           gridTemplateColumns: "repeat(2, 1fr)",
           gap: 8
         },
-        children: logros.map(l => /*#__PURE__*/_jsxs("div", {
+        children: logros.map(l => /*#__PURE__*/_jsxDEV("div", {
           style: {
             background: l.ok ? "#fff" : "#F1EEE8",
             borderRadius: 16,
@@ -7086,33 +9567,33 @@ function Perfil({
             padding: "11px 12px",
             opacity: l.ok ? 1 : 0.65
           },
-          children: [/*#__PURE__*/_jsx("div", {
+          children: [/*#__PURE__*/_jsxDEV("div", {
             style: {
               fontSize: 20,
               filter: l.ok ? "none" : "grayscale(1)"
             },
             children: l.icon
-          }), /*#__PURE__*/_jsx("div", {
+          }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
             style: {
               fontWeight: 800,
               fontSize: 13,
               margin: "3px 0 1px"
             },
             children: l.n
-          }), /*#__PURE__*/_jsx("div", {
+          }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
             style: {
               fontSize: 11.5,
               color: T.sub
             },
             children: l.d
-          })]
-        }, l.id))
-      })]
-    }), /*#__PURE__*/_jsxs("section", {
+          }, void 0, false)]
+        }, l.id, true))
+      }, void 0, false)]
+    }, void 0, true), /*#__PURE__*/_jsxDEV("section", {
       style: {
         marginBottom: 18
       },
-      children: [/*#__PURE__*/_jsx("h2", {
+      children: [/*#__PURE__*/_jsxDEV("h2", {
         className: "yt-display",
         style: {
           fontSize: 16,
@@ -7120,7 +9601,7 @@ function Perfil({
           margin: "0 0 8px"
         },
         children: "Tus gustos"
-      }), nVal === 0 ? /*#__PURE__*/_jsx("p", {
+      }, void 0, false), nVal === 0 ? /*#__PURE__*/_jsxDEV("p", {
         style: {
           color: T.sub,
           fontSize: 13.5,
@@ -7129,9 +9610,9 @@ function Perfil({
           border: `1px solid ${T.line}`,
           padding: 14
         },
-        children: "A\xFAn no has catado nada. P\xE1sate por la pesta\xF1a Descubrir y desliza unas cuantas cartas."
-      }) : /*#__PURE__*/_jsxs(_Fragment, {
-        children: [/*#__PURE__*/_jsxs("div", {
+        children: "Aún no has catado nada. Pásate por la pestaña Descubrir y desliza unas cuantas cartas."
+      }, void 0, false) : /*#__PURE__*/_jsxDEV(_Fragment, {
+        children: [/*#__PURE__*/_jsxDEV("div", {
           style: {
             display: "flex",
             alignItems: "center",
@@ -7142,13 +9623,13 @@ function Perfil({
             padding: "9px 12px",
             marginBottom: 8
           },
-          children: [/*#__PURE__*/_jsx(Search, {
+          children: [/*#__PURE__*/_jsxDEV(Search, {
             size: 16,
             color: T.sub
-          }), /*#__PURE__*/_jsx("input", {
+          }, void 0, false), /*#__PURE__*/_jsxDEV("input", {
             value: q,
             onChange: e => setQ(e.target.value),
-            placeholder: "Buscar en lo catado\u2026",
+            placeholder: "Buscar en lo catado…",
             style: {
               border: "none",
               outline: "none",
@@ -7156,8 +9637,8 @@ function Perfil({
               fontSize: 14,
               background: "transparent"
             }
-          })]
-        }), /*#__PURE__*/_jsx("div", {
+          }, void 0, false)]
+        }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
           style: {
             background: "#fff",
             borderRadius: 18,
@@ -7174,7 +9655,7 @@ function Perfil({
               no_me_gusta: ["No te va", "#9C2B3D", "#FBE6EA"],
               con_matices: ["Con matices", "#8A6A14", "#FBF3DC"]
             }[s];
-            return /*#__PURE__*/_jsxs("button", {
+            return /*#__PURE__*/_jsxDEV("button", {
               onClick: () => editarIng(i),
               style: {
                 display: "flex",
@@ -7185,41 +9666,41 @@ function Perfil({
                 borderTop: idx ? `1px solid ${T.line}` : "none",
                 textAlign: "left"
               },
-              children: [/*#__PURE__*/_jsx(IngImg, {
+              children: [/*#__PURE__*/_jsxDEV(IngImg, {
                 ing: i,
                 size: 36,
                 round: 11
-              }), /*#__PURE__*/_jsx("span", {
+              }, void 0, false), /*#__PURE__*/_jsxDEV("span", {
                 style: {
                   flex: 1,
                   fontWeight: 600,
                   fontSize: 13.5
                 },
                 children: i.n
-              }), /*#__PURE__*/_jsx(Chip, {
+              }, void 0, false), /*#__PURE__*/_jsxDEV(Chip, {
                 color: lbl[1],
                 bg: lbl[2],
                 style: {
                   fontSize: 11
                 },
                 children: lbl[0]
-              })]
-            }, i.id);
+              }, void 0, false)]
+            }, i.id, true);
           })
-        }), /*#__PURE__*/_jsx("p", {
+        }, void 0, false), /*#__PURE__*/_jsxDEV("p", {
           style: {
             fontSize: 12,
             color: T.sub,
             margin: "6px 2px 0"
           },
-          children: "Toca cualquiera para cambiar de opini\xF3n o afinar matices."
-        })]
-      })]
-    }), /*#__PURE__*/_jsx("section", {
+          children: "Toca cualquiera para cambiar de opinión o afinar matices."
+        }, void 0, false)]
+      }, void 0, true)]
+    }, void 0, true), /*#__PURE__*/_jsxDEV("section", {
       style: {
         paddingBottom: 20
       },
-      children: !confirmReset ? /*#__PURE__*/_jsx("button", {
+      children: !confirmReset ? /*#__PURE__*/_jsxDEV("button", {
         onClick: () => setConfirmReset(true),
         style: {
           width: "100%",
@@ -7232,26 +9713,26 @@ function Perfil({
           color: T.bad
         },
         children: "Empezar de cero"
-      }) : /*#__PURE__*/_jsxs("div", {
+      }, void 0, false) : /*#__PURE__*/_jsxDEV("div", {
         style: {
           background: "#FBE6EA",
           borderRadius: 16,
           padding: 14
         },
-        children: [/*#__PURE__*/_jsx("p", {
+        children: [/*#__PURE__*/_jsxDEV("p", {
           style: {
             margin: "0 0 10px",
             fontSize: 13.5,
             fontWeight: 600,
             color: "#9C2B3D"
           },
-          children: "Se borrar\xE1n gustos, plan, compra, favoritas y probadas. \xBFSeguro?"
-        }), /*#__PURE__*/_jsxs("div", {
+          children: "Se borrarán gustos, plan, compra, favoritas y probadas. ¿Seguro?"
+        }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
           style: {
             display: "flex",
             gap: 8
           },
-          children: [/*#__PURE__*/_jsx("button", {
+          children: [/*#__PURE__*/_jsxDEV("button", {
             onClick: () => {
               setSt(estadoInicial());
               setConfirmReset(false);
@@ -7265,8 +9746,8 @@ function Perfil({
               fontWeight: 700,
               fontSize: 13.5
             },
-            children: "S\xED, borrar todo"
-          }), /*#__PURE__*/_jsx("button", {
+            children: "Sí, borrar todo"
+          }, void 0, false), /*#__PURE__*/_jsxDEV("button", {
             onClick: () => setConfirmReset(false),
             style: {
               flex: 1,
@@ -7277,11 +9758,11 @@ function Perfil({
               fontSize: 13.5
             },
             children: "Cancelar"
-          })]
-        })]
-      })
-    })]
-  });
+          }, void 0, false)]
+        }, void 0, true)]
+      }, void 0, true)
+    }, void 0, false)]
+  }, void 0, true);
 }
 
 /* ---------------- APP ---------------- */
@@ -7454,7 +9935,7 @@ export default function App() {
     avisar(`«${r.n}» al ${COMIDAS_PLAN.find(c => c.id === comida).l.toLowerCase()} del ${DIAS[dia].toLowerCase()} 🗓️`);
   };
   if (!cargado) {
-    return /*#__PURE__*/_jsxs("div", {
+    return /*#__PURE__*/_jsxDEV("div", {
       className: "yt-app",
       style: {
         height: "100vh",
@@ -7463,19 +9944,19 @@ export default function App() {
         justifyContent: "center",
         background: T.bg
       },
-      children: [/*#__PURE__*/_jsx("style", {
+      children: [/*#__PURE__*/_jsxDEV("style", {
         children: GLOBAL_CSS
-      }), /*#__PURE__*/_jsxs("div", {
+      }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
         className: "yt-pop",
         style: {
           textAlign: "center"
         },
-        children: [/*#__PURE__*/_jsx("div", {
+        children: [/*#__PURE__*/_jsxDEV("div", {
           style: {
             fontSize: 44
           },
-          children: "\uD83C\uDF73"
-        }), /*#__PURE__*/_jsx("div", {
+          children: "🍳"
+        }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
           className: "yt-display",
           style: {
             fontWeight: 800,
@@ -7483,11 +9964,11 @@ export default function App() {
             marginTop: 6
           },
           children: "EatyBlinders"
-        })]
-      })]
-    });
+        }, void 0, false)]
+      }, void 0, true)]
+    }, void 0, true);
   }
-  return /*#__PURE__*/_jsxs("div", {
+  return /*#__PURE__*/_jsxDEV("div", {
     className: "yt-app",
     style: {
       height: "100vh",
@@ -7495,9 +9976,9 @@ export default function App() {
       display: "flex",
       justifyContent: "center"
     },
-    children: [/*#__PURE__*/_jsx("style", {
+    children: [/*#__PURE__*/_jsxDEV("style", {
       children: GLOBAL_CSS
-    }), /*#__PURE__*/_jsxs("div", {
+    }, void 0, false), /*#__PURE__*/_jsxDEV("div", {
       style: {
         width: "100%",
         maxWidth: 430,
@@ -7507,14 +9988,14 @@ export default function App() {
         position: "relative",
         overflow: "hidden"
       },
-      children: [/*#__PURE__*/_jsxs("header", {
+      children: [/*#__PURE__*/_jsxDEV("header", {
         style: {
           display: "flex",
           alignItems: "center",
           gap: 8,
           padding: "14px 20px 6px"
         },
-        children: [/*#__PURE__*/_jsx("div", {
+        children: [/*#__PURE__*/_jsxDEV("div", {
           style: {
             width: 34,
             height: 34,
@@ -7525,11 +10006,11 @@ export default function App() {
             justifyContent: "center",
             boxShadow: "0 4px 10px rgba(232,83,44,0.35)"
           },
-          children: /*#__PURE__*/_jsx(Utensils, {
+          children: /*#__PURE__*/_jsxDEV(Utensils, {
             size: 17,
             color: "#fff"
-          })
-        }), /*#__PURE__*/_jsx("span", {
+          }, void 0, false)
+        }, void 0, false), /*#__PURE__*/_jsxDEV("span", {
           className: "yt-display",
           style: {
             fontWeight: 800,
@@ -7537,14 +10018,14 @@ export default function App() {
             letterSpacing: -0.3
           },
           children: "EatyBlinders"
-        })]
-      }), /*#__PURE__*/_jsxs("main", {
+        }, void 0, false)]
+      }, void 0, true), /*#__PURE__*/_jsxDEV("main", {
         style: {
           flex: 1,
           minHeight: 0,
           position: "relative"
         },
-        children: [tab === "descubrir" && /*#__PURE__*/_jsx(Descubrir, {
+        children: [tab === "descubrir" && /*#__PURE__*/_jsxDEV(Descubrir, {
           st: st,
           setSt: setSt,
           onOpenFormas: (ing, like) => setFormas({
@@ -7552,20 +10033,20 @@ export default function App() {
             like
           }),
           onUnlock: avisar
-        }), tab === "recetas" && /*#__PURE__*/_jsx(Recetas, {
+        }, void 0, false), tab === "recetas" && /*#__PURE__*/_jsxDEV(Recetas, {
           st: st,
           setSt: setSt,
           abrir: setDetalle,
           sorprender: sorprender
-        }), tab === "plan" && /*#__PURE__*/_jsx(Plan, {
+        }, void 0, false), tab === "plan" && /*#__PURE__*/_jsxDEV(Plan, {
           st: st,
           setSt: setSt,
           abrirReceta: setDetalle,
           addSemanaCompra: addSemanaCompra
-        }), tab === "compra" && /*#__PURE__*/_jsx(Compra, {
+        }, void 0, false), tab === "compra" && /*#__PURE__*/_jsxDEV(Compra, {
           st: st,
           setSt: setSt
-        }), tab === "perfil" && /*#__PURE__*/_jsx(Perfil, {
+        }, void 0, false), tab === "perfil" && /*#__PURE__*/_jsxDEV(Perfil, {
           st: st,
           setSt: setSt,
           editarIng: ing => setFormas({
@@ -7576,8 +10057,8 @@ export default function App() {
             like: st.prefs[ing.id]?.like ?? true,
             editar: true
           })
-        })]
-      }), /*#__PURE__*/_jsx("nav", {
+        }, void 0, false)]
+      }, void 0, true), /*#__PURE__*/_jsxDEV("nav", {
         style: {
           display: "flex",
           background: "#fff",
@@ -7590,7 +10071,7 @@ export default function App() {
           I
         }) => {
           const act = tab === id;
-          return /*#__PURE__*/_jsxs("button", {
+          return /*#__PURE__*/_jsxDEV("button", {
             onClick: () => {
               setTab(id);
               setDetalle(null);
@@ -7605,19 +10086,19 @@ export default function App() {
               padding: "5px 0",
               color: act ? T.brand : "#A29D93"
             },
-            children: [/*#__PURE__*/_jsx(I, {
+            children: [/*#__PURE__*/_jsxDEV(I, {
               size: 21,
               strokeWidth: act ? 2.4 : 2
-            }), /*#__PURE__*/_jsx("span", {
+            }, void 0, false), /*#__PURE__*/_jsxDEV("span", {
               style: {
                 fontSize: 10.5,
                 fontWeight: act ? 800 : 600
               },
               children: l
-            })]
-          }, id);
+            }, void 0, false)]
+          }, id, true);
         })
-      }), detalle && !cocina && /*#__PURE__*/_jsx(RecetaDetalle, {
+      }, void 0, false), detalle && !cocina && /*#__PURE__*/_jsxDEV(RecetaDetalle, {
         recId: detalle,
         st: st,
         setSt: setSt,
@@ -7625,15 +10106,15 @@ export default function App() {
         cocinar: setCocina,
         addCompra: addCompra,
         addPlan: setPlanPicker
-      }), cocina && /*#__PURE__*/_jsx(ModoCocina, {
+      }, void 0, false), cocina && /*#__PURE__*/_jsxDEV(ModoCocina, {
         recId: cocina,
         cerrar: () => setCocina(null),
         marcarProbada: marcarProbada
-      }), formas && !formas.editar && /*#__PURE__*/_jsx(FormasSheet, {
+      }, void 0, false), formas && !formas.editar && /*#__PURE__*/_jsxDEV(FormasSheet, {
         data: formas,
         onClose: () => setFormas(null),
         onSave: guardarFormas
-      }), formas && formas.editar && /*#__PURE__*/_jsx(EditarGusto, {
+      }, void 0, false), formas && formas.editar && /*#__PURE__*/_jsxDEV(EditarGusto, {
         data: formas,
         st: st,
         onClose: () => setFormas(null),
@@ -7650,22 +10131,22 @@ export default function App() {
           }));
           setFormas(null);
         }
-      }), planPicker && /*#__PURE__*/_jsxs(Sheet, {
+      }, void 0, false), planPicker && /*#__PURE__*/_jsxDEV(Sheet, {
         onClose: () => setPlanPicker(null),
-        title: "\xBFPara cu\xE1ndo lo planificamos?",
-        children: [/*#__PURE__*/_jsx("div", {
+        title: "¿Para cuándo lo planificamos?",
+        children: [/*#__PURE__*/_jsxDEV("div", {
           style: {
             display: "flex",
             flexDirection: "column",
             gap: 8
           },
-          children: DIAS.map((d, di) => /*#__PURE__*/_jsxs("div", {
+          children: DIAS.map((d, di) => /*#__PURE__*/_jsxDEV("div", {
             style: {
               display: "flex",
               alignItems: "center",
               gap: 8
             },
-            children: [/*#__PURE__*/_jsx("span", {
+            children: [/*#__PURE__*/_jsxDEV("span", {
               className: "yt-display",
               style: {
                 width: 44,
@@ -7673,9 +10154,9 @@ export default function App() {
                 fontSize: 14
               },
               children: d
-            }), COMIDAS_PLAN.map(c => {
+            }, void 0, false), COMIDAS_PLAN.map(c => {
               const ocupado = st.plan[`${di}-${c.id}`];
-              return /*#__PURE__*/_jsxs("button", {
+              return /*#__PURE__*/_jsxDEV("button", {
                 onClick: () => colocarEnPlan(di, c.id),
                 style: {
                   flex: 1,
@@ -7688,18 +10169,18 @@ export default function App() {
                   border: `1.5px solid ${ocupado ? T.line : "#F5C9B8"}`
                 },
                 children: [c.l, ocupado ? " ·↺" : ""]
-              }, c.id);
+              }, c.id, true);
             })]
-          }, d))
-        }), /*#__PURE__*/_jsx("p", {
+          }, d, true))
+        }, void 0, false), /*#__PURE__*/_jsxDEV("p", {
           style: {
             fontSize: 12,
             color: T.sub,
             margin: "10px 2px 0"
           },
-          children: "Los huecos con \u21BA ya tienen plato: si los eliges, se sustituye."
-        })]
-      }), toast && /*#__PURE__*/_jsx("div", {
+          children: "Los huecos con ↺ ya tienen plato: si los eliges, se sustituye."
+        }, void 0, false)]
+      }, void 0, true), toast && /*#__PURE__*/_jsxDEV("div", {
         className: "yt-up",
         role: "status",
         style: {
@@ -7718,9 +10199,9 @@ export default function App() {
           zIndex: 80
         },
         children: toast
-      })]
-    })]
-  });
+      }, void 0, false)]
+    }, void 0, true)]
+  }, void 0, true);
 }
 
 /* Editor de un gusto ya catado (desde Perfil) */
@@ -7744,16 +10225,16 @@ function EditarGusto({
   useEffect(() => {
     if (tieneFormas) setSel(s => Object.fromEntries(Object.keys(s).map(f => [f, pref.formas?.[f] ?? like])));
   }, [like]); // eslint-disable-line
-  return /*#__PURE__*/_jsxs(Sheet, {
+  return /*#__PURE__*/_jsxDEV(Sheet, {
     onClose: onClose,
     title: ing.n,
-    children: [/*#__PURE__*/_jsxs("div", {
+    children: [/*#__PURE__*/_jsxDEV("div", {
       style: {
         display: "flex",
         gap: 8,
         marginBottom: 14
       },
-      children: [/*#__PURE__*/_jsx("button", {
+      children: [/*#__PURE__*/_jsxDEV("button", {
         onClick: () => setLike(true),
         style: {
           flex: 1,
@@ -7765,8 +10246,8 @@ function EditarGusto({
           color: like ? "#14603D" : T.sub,
           border: `1.5px solid ${like ? T.ok : T.line}`
         },
-        children: "\uD83D\uDC9A Me gusta"
-      }), /*#__PURE__*/_jsx("button", {
+        children: "💚 Me gusta"
+      }, void 0, false), /*#__PURE__*/_jsxDEV("button", {
         onClick: () => setLike(false),
         style: {
           flex: 1,
@@ -7778,16 +10259,16 @@ function EditarGusto({
           color: !like ? "#9C2B3D" : T.sub,
           border: `1.5px solid ${!like ? T.bad : T.line}`
         },
-        children: "\u270B No me va"
-      })]
-    }), tieneFormas && /*#__PURE__*/_jsx("div", {
+        children: "✋ No me va"
+      }, void 0, false)]
+    }, void 0, true), tieneFormas && /*#__PURE__*/_jsxDEV("div", {
       style: {
         display: "flex",
         flexDirection: "column",
         gap: 8,
         marginBottom: 16
       },
-      children: ing.f.map(f => /*#__PURE__*/_jsxs("button", {
+      children: ing.f.map(f => /*#__PURE__*/_jsxDEV("button", {
         onClick: () => setSel(s => ({
           ...s,
           [f]: !s[f]
@@ -7805,19 +10286,19 @@ function EditarGusto({
           color: sel[f] ? "#14603D" : T.sub,
           textAlign: "left"
         },
-        children: [/*#__PURE__*/_jsx("span", {
+        children: [/*#__PURE__*/_jsxDEV("span", {
           children: f
-        }), sel[f] ? /*#__PURE__*/_jsx(Check, {
+        }, void 0, false), sel[f] ? /*#__PURE__*/_jsxDEV(Check, {
           size: 17,
           color: T.ok
-        }) : /*#__PURE__*/_jsx(X, {
+        }, void 0, false) : /*#__PURE__*/_jsxDEV(X, {
           size: 17,
           color: "#B7B2A9"
-        })]
-      }, f))
-    }), /*#__PURE__*/_jsx(BtnPrimario, {
+        }, void 0, false)]
+      }, f, true))
+    }, void 0, false), /*#__PURE__*/_jsxDEV(BtnPrimario, {
       onClick: () => onSave(ing.id, like, tieneFormas ? sel : {}),
       children: "Guardar"
-    })]
-  });
+    }, void 0, false)]
+  }, void 0, true);
 }

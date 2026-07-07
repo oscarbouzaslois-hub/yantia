@@ -248,6 +248,38 @@ const INGS = [
   { id:"leche_condensada", n:"Leche condensada", c:"dulce", img:"sweetened-condensed-milk.jpg", e:"🥛", kcal:321,p:8,cb:54,g:9 },
   { id:"levadura", n:"Levadura química", c:"dulce", img:"baking-powder.jpg", e:"🌾", kcal:53,p:0,cb:28,g:0 },
   { id:"sirope_arce", n:"Sirope de arce", c:"dulce", img:"maple-syrup.png", e:"🍁", kcal:260,p:0,cb:67,g:0.1 },
+  // ---- NUEVOS PARA AIR FRYER ----
+  { id:"salsa_bbq", n:"Salsa BBQ", c:"condimento", img:"bbq-sauce.jpg", e:"🍯", kcal:141,p:0,cb:35,g:0.5 },
+  { id:"salsa_buffalo", n:"Salsa Buffalo", c:"condimento", img:"hot-sauce.jpg", e:"🌶️", kcal:45,p:0,cb:4,g:1.5 },
+  { id:"mayonesa", n:"Mayonesa", c:"condimento", img:"mayonnaise.jpg", e:"🟡", kcal:717,p:1,cb:0.6,g:80 },
+  { id:"mostaza", n:"Mostaza", c:"condimento", img:"mustard.jpg", e:"🟡", kcal:66,p:4,cb:3,g:3.3, f:["suave (en salsas)","fuerte","amarilla"] },
+  { id:"panko", n:"Pan rallado Panko", c:"cereal", img:"panko-breadcrumbs.jpg", e:"🍞", kcal:350,p:10,cb:75,g:1 },
+  { id:"pan_rallado", n:"Pan rallado", c:"cereal", img:"breadcrumbs.jpg", e:"🍞", kcal:330,p:11,cb:70,g:2 },
+  { id:"wontons", n:"Hojas wonton", c:"cereal", img:"wonton-wrappers.jpg", e:"🟩", kcal:180,p:5,cb:35,g:1 },
+  { id:"pollo_alitas", n:"Alitas de pollo", c:"carne", img:"chicken-wings.jpg", e:"🍗", kcal:290,p:28,cb:0,g:19 },
+  { id:"salmon_filetes", n:"Filetes de salmón", c:"pescado", img:"salmon-fillet.jpg", e:"🐟", kcal:208,p:20,cb:0,g:13 },
+  { id:"atun_filetes", n:"Filetes de atún", c:"pescado", img:"tuna-fillet.jpg", e:"🐟", kcal:132,p:30,cb:0,g:1 },
+  { id:"cangrejo", n:"Carne de cangrejo", c:"pescado", img:"crab-meat.jpg", e:"🦀", kcal:79,p:17,cb:0.3,g:1.1 },
+  { id:"tilapia", n:"Tilapia filetes", c:"pescado", img:"tilapia-fillet.jpg", e:"🐟", kcal:96,p:20,cb:0,g:1.7 },
+  { id:"bacalao", n:"Bacalao filetes", c:"pescado", img:"cod-fillet.jpg", e:"🐟", kcal:82,p:18,cb:0,g:0.7 },
+  { id:"cebolla_morada", n:"Cebolla morada", c:"verdura", img:"red-onion.jpg", e:"🧅", kcal:40,p:1.1,cb:9,g:0.1 },
+  { id:"trucha", n:"Trucha filetes", c:"pescado", img:"trout-fillet.jpg", e:"🐟", kcal:165,p:23,cb:0,g:7.5 },
+  { id:"calamar", n:"Calamar/Sepia", c:"pescado", img:"squid.jpg", e:"🦑", kcal:92,p:16,cb:3,g:1.4 },
+  { id:"espinaca_congelada", n:"Espinaca congelada", c:"verdura", img:"frozen-spinach.jpg", e:"🥬", kcal:23,p:2.9,cb:3.6,g:0.4 },
+  /* Extras para air fryer */
+  { id:"spray_aceite", n:"Spray de aceite", c:"condimento", img:"cooking-spray.jpg", e:"💨", kcal:120,p:0,cb:0,g:14 },
+  { id:"ajo_polvo", n:"Ajo en polvo", c:"hierba", img:"garlic-powder.jpg", e:"🧄", kcal:331,p:13,cb:73,g:0.7 },
+  { id:"pimienta_cayena", n:"Pimienta de cayena", c:"hierba", img:"cayenne-pepper.jpg", e:"🌶️", kcal:318,p:12,cb:56,g:17 },
+  { id:"harina_garbanzo", n:"Harina de garbanzo", c:"cereal", img:"chickpea-flour.jpg", e:"🟡", kcal:364,p:20,cb:58,g:6.5 },
+  { id:"jalapeno", n:"Jalapeño", c:"verdura", img:"jalapeno-pepper.jpg", e:"🌶️", kcal:29,p:0.9,cb:7,g:0.4 },
+  { id:"hojas_filo", n:"Hojas de filo", c:"cereal", img:"phyllo-sheets.jpg", e:"📄", kcal:263,p:8,cb:50,g:4.5 },
+  { id:"tortillas_maiz", n:"Tortillas de maíz", c:"cereal", img:"corn-tortillas.jpg", e:"🌽", kcal:155,p:4.2,cb:30,g:2 },
+  { id:"tortillas_trigo", n:"Tortillas de trigo", c:"cereal", img:"wheat-tortillas.jpg", e:"🌾", kcal:180,p:6,cb:32,g:3.8 },
+  { id:"maizena", n:"Maicena", c:"cereal", img:"cornstarch.jpg", e:"🟡", kcal:381,p:0.3,cb:91,g:0.1 },
+  { id:"cerdo_filete", n:"Filete de cerdo", c:"carne", img:"pork-fillet.jpg", e:"🥩", kcal:157,p:27,cb:0,g:5 },
+  { id:"cerdo_chuleta", n:"Chuleta de cerdo", c:"carne", img:"pork-chop.jpg", e:"🥩", kcal:180,p:26,cb:0,g:8 },
+  { id:"camaron_grande", n:"Camarones grandes", c:"pescado", img:"large-shrimp.jpg", e:"🦐", kcal:99,p:24,cb:0,g:0.3 },
+  { id:"costillas_cortas", n:"Costillas cortas", c:"carne", img:"short-ribs.jpg", e:"🍖", kcal:290,p:25,cb:0,g:21 }
 ];
 
 /* Recetario. dif: 1 fácil · 2 media · 3 elaborada. min: tiempo total.
@@ -332,7 +364,8 @@ const RECETAS = [
       {t:"Trocea el pollo, salpimienta y rocía con spray de aceite."},
       {t:"Asa a 200 °C, 20 min, removiendo a media cocción.",s:1200},
       {t:"Aparte, dora ajos laminados en una sartén con aceite, con vino, laurel y romero."},
-      {t:"Vierte la salsa sobre el pollo asado y sirve."}]},
+      {t:"Vierte la salsa sobre el pollo asado y sirve."}],
+    airFryerTemp:360, airFryerTime:20},
   { id:"arroz_cubana", n:"Arroz a la cubana", cat:"comida", dif:1, min:25, rac:2,
     desc:"Arroz blanco, tomate, huevo frito y, si te va, plátano. Placer sencillo.",
     e:"🍚", nut:{kcal:560,p:16,cb:75,g:21}, tags:["rápida","apta para niños"],
@@ -387,7 +420,8 @@ const RECETAS = [
       {t:"Corta verduras en tiras finas. Pásalas por spray de aceite y sazónalas."},
       {t:"Asa en airfryer a 200 °C, 10 min.",s:600},
       {t:"Añade los lomos de salmón con limón y eneldo. Asa 8-10 min más.",s:540},
-      {t:"Sirve con un chorrito de limón fresco."}]},
+      {t:"Sirve con un chorrito de limón fresco."}],
+    airFryerTemp:360, airFryerTime:16},
   { id:"merluza_verde", n:"Merluza en salsa verde", cat:"comida", dif:2, min:30, rac:4,
     desc:"Cazuela vasca de toda la vida: merluza, perejil y unas almejas.",
     e:"🐟", nut:{kcal:310,p:35,cb:6,g:15}, tags:["sin lactosa","clásico español"],
@@ -412,7 +446,8 @@ const RECETAS = [
       {t:"Forma las albóndigas. Sin rebozar, pásalas por spray de aceite ligero."},
       {t:"Hornea en airfryer a 200 °C, 12-14 min, removiendo a media cocción.",s:800},
       {t:"Mientras, prepara la salsa de tomate en una cazuela con cebolla pochada."},
-      {t:"Sirve las albóndigas sobre la salsa de tomate con pan o arroz."}]},
+      {t:"Sirve las albóndigas sobre la salsa de tomate con pan o arroz."}],
+    airFryerTemp:340, airFryerTime:12},
   { id:"pisto", n:"Pisto manchego con huevo", cat:"cena", dif:2, min:45, rac:4,
     desc:"Verduras confitadas a fuego lento coronadas con huevo.",
     e:"🍳", nut:{kcal:280,p:10,cb:16,g:19}, tags:["vegetariana","sin gluten","de aprovechamiento"],
@@ -422,7 +457,8 @@ const RECETAS = [
       {t:"Pocha la cebolla y los pimientos a fuego medio-bajo.",s:600},
       {t:"Añade berenjena y calabacín y cocina hasta que estén tiernos.",s:600},
       {t:"Agrega el tomate con una pizca de azúcar y sal; reduce a fuego lento.",s:900},
-      {t:"Sirve con un huevo frito (o escalfado) por persona encima."}]},
+      {t:"Sirve con un huevo frito (o escalfado) por persona encima."}],
+    airFryerTemp:340, airFryerTime:20},
   { id:"fajitas", n:"Fajitas de pollo", cat:"cena", dif:1, min:30, rac:4,
     desc:"Sartenada colorida para montar en la mesa. Éxito familiar asegurado.",
     e:"🌮", nut:{kcal:520,p:32,cb:50,g:20}, tags:["tex-mex","apta para niños","para compartir","airfryer"],
@@ -543,7 +579,8 @@ const RECETAS = [
       {t:"Precalienta el horno a máximo con la bandeja dentro."},
       {t:"Estira la masa fina, cúbrela con tomate salado y un hilo de aceite."},
       {t:"Hornea 8 min, añade la mozzarella y hornea 4-5 min más.",s:780},
-      {t:"Termina con albahaca fresca y aceite en crudo."}]},
+      {t:"Termina con albahaca fresca y aceite en crudo."}],
+    airFryerTemp:380, airFryerTime:12},
   { id:"bizcocho", n:"Bizcocho de yogur", cat:"postre", dif:1, min:55, rac:8,
     desc:"El 1-2-3 de toda la vida, midiendo con el vasito del yogur. Infalible.",
     e:"🍰", nut:{kcal:330,p:6,cb:45,g:14}, tags:["vegetariana","apta para niños","merienda"],
@@ -600,7 +637,8 @@ const RECETAS = [
       {t:"Corta las berenjenas a lo largo, haz cortes en la carne y hornéalas a 200 °C.",s:1500},
       {t:"Vacíalas con cuidado y pica la pulpa. Reserva las barcas."},
       {t:"Sofríe la cebolla, añade la carne y dórala; agrega pulpa, tomate y orégano.",s:600},
-      {t:"Rellena las barcas, cubre con mozzarella y gratina hasta dorar.",s:420}]},
+      {t:"Rellena las barcas, cubre con mozzarella y gratina hasta dorar.",s:420}],
+    airFryerTemp:340, airFryerTime:20},
   { id:"salteado_ternera", n:"Salteado de ternera con verduras", cat:"comida", dif:1, min:20, rac:2,
     desc:"Tiras de ternera al wok con soja: rápido, jugoso y con mucho fondo.",
     e:"🥩", nut:{kcal:420,p:34,cb:16,g:24}, tags:["rápida","alta en proteína","asiática"],
@@ -610,7 +648,416 @@ const RECETAS = [
       {t:"Saltea cebolla y pimiento en tiras hasta que estén al dente.",s:240},
       {t:"Devuelve la carne, añade ajo y soja, y saltea 1 min más.",s:60},
       {t:"Sirve con sésamo y pimienta recién molida."}]},
+  /* ============== 50 AIR FRYER RECIPES ============== */
+  /* CARNES (15) */
+  { id:"pollo_wings_crispy", n:"Alas de pollo crispy", cat:"comida", dif:1, min:20, rac:4,
+    desc:"Alitas jugosas por dentro, crujientes por fuera. Lisas o con especias.",
+    e:"🍗", nut:{kcal:280,p:35,cb:2,g:14}, tags:["airfryer","rápida","crispy","pollo"],
+    ing:[{id:"pollo_alitas",q:"1 kg"},{id:"sal",q:"al gusto"},{id:"pimienta",q:"al gusto"},{id:"pimenton",q:"1 cda"},{id:"ajo_polvo",q:"1 cdta"},{id:"spray_aceite",q:"2 veces"}],
+    pasos:[
+      {t:"Seca bien las alitas con papel absorbente."},
+      {t:"Mezcla sal, pimienta, pimentón y ajo en polvo. Espolvorea sobre las alitas."},
+      {t:"Pásalas por spray de aceite. Coloca en el airfryer a 200 °C.",s:1200},
+      {t:"Remueve a media cocción. Fríe 20 min total hasta que estén doradas y crujientes."}],
+    airFryerTemp:400, airFryerTime:20},
+  { id:"pechuga_empanada", n:"Pechuga de pollo empanada", cat:"comida", dif:2, min:25, rac:2,
+    desc:"Filete tierno dentro, panko dorado fuera. Ideal con limón.",
+    e:"🍗", nut:{kcal:320,p:38,cb:15,g:12}, tags:["airfryer","empanado","pollo"],
+    ing:[{id:"pollo_pechuga",q:"2 filetes"},{id:"huevo",q:"1 ud"},{id:"panko",q:"100 g"},{id:"harina",q:"50 g"},{id:"sal",q:"al gusto"},{id:"pimienta",q:"al gusto"},{id:"limon",q:"1 ud"},{id:"spray_aceite",q:"3 veces"}],
+    pasos:[
+      {t:"Golpea los filetes para que queden del mismo grosor. Salpimienta."},
+      {t:"Pasa por harina, luego por huevo batido, y finalmente por panko."},
+      {t:"Rocía con spray de aceite. Coloca en airfryer a 180 °C.",s:1500},
+      {t:"Fríe 15 min dándole vuelta a los 8 min. Sirve con limón."}],
+    airFryerTemp:360, airFryerTime:15},
+  { id:"muslos_rellenos_queso", n:"Muslos de pollo rellenos de queso", cat:"comida", dif:2, min:30, rac:4,
+    desc:"Queso fundido dentro, piel crujiente fuera. Adictivo.",
+    e:"🧀", nut:{kcal:380,p:40,cb:1,g:22}, tags:["airfryer","relleno","pollo"],
+    ing:[{id:"pollo_muslo",q:"4 muslos"},{id:"queso_fresco",q:"150 g"},{id:"sal",q:"al gusto"},{id:"pimienta",q:"al gusto"},{id:"romero",q:"2 ramas"},{id:"aove",q:"2 cdas"}],
+    pasos:[
+      {t:"Haz un corte profundo en cada muslo sin atravesarlo. Introduce queso y romero."},
+      {t:"Salpimienta. Rocía con aceite. Coloca en airfryer a 200 °C.",s:1800},
+      {t:"Fríe 25-30 min hasta que la piel esté dorada y crujiente."}],
+    airFryerTemp:400, airFryerTime:28},
+  { id:"pollo_teriyaki", n:"Pollo teriyaki en dados", cat:"comida", dif:1, min:20, rac:4,
+    desc:"Trozos de pollo glaseados con salsa agridulce asiática.",
+    e:"🍗", nut:{kcal:290,p:34,cb:12,g:10}, tags:["airfryer","asiática","rápida"],
+    ing:[{id:"pollo_pechuga",q:"600 g"},{id:"salsa_soja",q:"3 cdas"},{id:"miel",q:"2 cdas"},{id:"vinagre",q:"1 cda"},{id:"jengibre",q:"1 cdta",forma:"en polvo"},{id:"ajo",q:"2 dientes",forma:"crudo"},{id:"agua",q:"50 ml"},{id:"maizena",q:"1 cdta"}],
+    pasos:[
+      {t:"Corta el pollo en dados. Mezcla soja, miel, vinagre, jengibre y ajo."},
+      {t:"Marida el pollo 10 min. Coloca en airfryer a 200 °C.",s:1200},
+      {t:"Fríe 15 min. Mientras, calienta la marinada con maicena para espesar."},
+      {t:"Vierte la salsa sobre el pollo cocido y sirve."}],
+    airFryerTemp:400, airFryerTime:15},
+  { id:"chorizo_asado", n:"Chorizo asado en rodajas", cat:"aperitivo", dif:1, min:15, rac:4,
+    desc:"Rodajas caramelizadas de chorizo. Perfecto para acompañar o picar.",
+    e:"🌶️", nut:{kcal:280,p:18,cb:2,g:23}, tags:["airfryer","rápida","aperitivo"],
+    ing:[{id:"chorizo",q:"250 g"},{id:"sal",q:"al gusto"}],
+    pasos:[
+      {t:"Corta el chorizo en rodajas gruesas."},
+      {t:"Coloca en airfryer a 200 °C. Fríe 10 min removiendo a los 5."},
+      {t:"Sirve caliente como aperitivo o acompañamiento."}],
+    airFryerTemp:400, airFryerTime:10},
+  { id:"albondigas_bbq", n:"Albóndigas BBQ pequeñas", cat:"aperitivo", dif:2, min:25, rac:6,
+    desc:"Mini albóndigas glaseadas con salsa barbecue. Ideal para picar.",
+    e:"🧆", nut:{kcal:240,p:20,cb:10,g:13}, tags:["airfryer","aperitivo","bbq"],
+    ing:[{id:"carne_picada",q:"400 g"},{id:"pan_rallado",q:"50 g"},{id:"huevo",q:"1 ud"},{id:"salsa_bbq",q:"100 ml"},{id:"ajo_polvo",q:"1 cdta"},{id:"cebolla",q:"1 ud",forma:"pochada"},{id:"sal",q:"al gusto"}],
+    pasos:[
+      {t:"Mezcla carne, pan, huevo, ajo y cebolla. Forma bolitas pequeñas."},
+      {t:"Coloca en airfryer a 180 °C. Fríe 12 min removiendo a los 6."},
+      {t:"Calienta la salsa BBQ. Vierte sobre las albóndigas y sirve."}],
+    airFryerTemp:360, airFryerTime:12},
+  { id:"filete_cerdo_especias", n:"Filete de cerdo con especias", cat:"comida", dif:1, min:20, rac:2,
+    desc:"Filete jugoso con costra de especias aromáticas.",
+    e:"🥩", nut:{kcal:320,p:38,cb:2,g:17}, tags:["airfryer","rápida","cerdo"],
+    ing:[{id:"cerdo_filete",q:"2 filetes de 200g"},{id:"pimenton",q:"1 cdta"},{id:"comino",q:"1 cdta"},{id:"ajo_polvo",q:"1 cdta"},{id:"sal",q:"al gusto"},{id:"pimienta",q:"al gusto"},{id:"aove",q:"1 cda"},{id:"limon",q:"1 ud"}],
+    pasos:[
+      {t:"Mezcla especias, sal y pimienta. Frota los filetes."},
+      {t:"Rocía con aceite. Coloca en airfryer a 200 °C.",s:1200},
+      {t:"Fríe 15 min. Sirve con limón y ensalada."}],
+    airFryerTemp:400, airFryerTime:15},
+  { id:"chuletas_cerdo", n:"Chuletas de cerdo glaseadas", cat:"comida", dif:2, min:25, rac:2,
+    desc:"Chuletas tiernas con glaseado miel-mostaza.",
+    e:"🥩", nut:{kcal:350,p:40,cb:8,g:18}, tags:["airfryer","glaseada","cerdo"],
+    ing:[{id:"cerdo_chuleta",q:"2 ud de 250g"},{id:"miel",q:"2 cdas"},{id:"mostaza",q:"1 cda"},{id:"romero",q:"2 ramas"},{id:"aove",q:"1 cda"},{id:"sal",q:"al gusto"},{id:"pimienta",q:"al gusto"}],
+    pasos:[
+      {t:"Salpimienta las chuletas. Rocía con aceite. Coloca en airfryer a 200 °C.",s:1500},
+      {t:"Fríe 15 min. Mezcla miel y mostaza. Pinta las chuletas."},
+      {t:"Fríe 5 min más hasta que brille y esté pegajoso."}],
+    airFryerTemp:400, airFryerTime:20},
+  { id:"ternera_rebozada", n:"Ternera rebozada crujiente", cat:"comida", dif:1, min:20, rac:2,
+    desc:"Filetes empanados que crujen al morder. Milanesa de lujo.",
+    e:"🥩", nut:{kcal:310,p:36,cb:12,g:13}, tags:["airfryer","empanada","ternera"],
+    ing:[{id:"ternera_filete",q:"2 filetes de 200g"},{id:"huevo",q:"1 ud"},{id:"pan_rallado",q:"100 g"},{id:"harina",q:"50 g"},{id:"sal",q:"al gusto"},{id:"pimienta",q:"al gusto"},{id:"limon",q:"1 ud"},{id:"spray_aceite",q:"3 veces"}],
+    pasos:[
+      {t:"Golpea los filetes. Pasa por harina, huevo y pan rallado."},
+      {t:"Rocía con spray. Coloca en airfryer a 200 °C.",s:1200},
+      {t:"Fríe 12 min dándole vuelta a los 6 min. Sirve con limón."}],
+    airFryerTemp:400, airFryerTime:12},
+  { id:"solomillo_medallones", n:"Solomillo en medallones", cat:"comida", dif:1, min:18, rac:2,
+    desc:"Carne roja tierna y sabrosa con poco tiempo de cocción.",
+    e:"🥩", nut:{kcal:280,p:40,cb:0,g:12}, tags:["airfryer","rápida","elegante"],
+    ing:[{id:"solomillo",q:"400 g"},{id:"romero",q:"2 ramas"},{id:"aove",q:"1 cda"},{id:"sal",q:"al gusto"},{id:"pimienta",q:"al gusto"},{id:"ajo",q:"2 dientes"}],
+    pasos:[
+      {t:"Corta el solomillo en medallones gruesos. Salpimienta."},
+      {t:"Coloca en airfryer a 200 °C con ajo y romero.",s:1080},
+      {t:"Fríe 12-15 min según el punto deseado. Descansa antes de servir."}],
+    airFryerTemp:400, airFryerTime:14},
+  { id:"carne_molida_especiada", n:"Carne molida con especias", cat:"comida", dif:1, min:20, rac:4,
+    desc:"Pequeñas porciones de carne molida con crocante exterior.",
+    e:"🍖", nut:{kcal:280,p:32,cb:4,g:15}, tags:["airfryer","rápida","base versátil"],
+    ing:[{id:"carne_picada",q:"500 g"},{id:"cebolla",q:"1 ud",forma:"pochada"},{id:"ajo",q:"2 dientes"},{id:"comino",q:"1 cdta"},{id:"pimenton",q:"1 cdta"},{id:"pan_rallado",q:"50 g"},{id:"huevo",q:"1 ud"},{id:"sal",q:"al gusto"}],
+    pasos:[
+      {t:"Mezcla carne, cebolla, ajo, especias, pan y huevo."},
+      {t:"Forma pequeñas hamburguesas o albóndigas aplastadas."},
+      {t:"Coloca en airfryer a 200 °C. Fríe 12 min removiendo a los 6."}],
+    airFryerTemp:400, airFryerTime:12},
+  { id:"nuggets_pollo_caseros", n:"Nuggets de pollo caseros", cat:"comida", dif:2, min:20, rac:4,
+    desc:"Trocitos de pollo crujientes. Apto para niños (y no tan niños).",
+    e:"🍗", nut:{kcal:260,p:32,cb:10,g:11}, tags:["airfryer","niños","crispy"],
+    ing:[{id:"pollo_pechuga",q:"500 g"},{id:"huevo",q:"1 ud"},{id:"panko",q:"100 g"},{id:"harina",q:"50 g"},{id:"sal",q:"al gusto"},{id:"pimienta",q:"al gusto"},{id:"spray_aceite",q:"3 veces"}],
+    pasos:[
+      {t:"Corta el pollo en trozos uniformes."},
+      {t:"Pasa por harina, huevo batido y panko. Rocía con spray."},
+      {t:"Coloca en airfryer a 200 °C. Fríe 15 min."}],
+    airFryerTemp:400, airFryerTime:15},
+  { id:"alitas_buffalo", n:"Alitas Buffalo picantes", cat:"aperitivo", dif:1, min:20, rac:4,
+    desc:"Alitas bañadas en salsa picante. Para los que no le tienen miedo al picante.",
+    e:"🌶️", nut:{kcal:260,p:33,cb:3,g:12}, tags:["airfryer","picante","alitas"],
+    ing:[{id:"pollo_alitas",q:"800 g"},{id:"salsa_buffalo",q:"100 ml"},{id:"mantequilla",q:"2 cdas"},{id:"pimienta_cayena",q:"1 cdta"},{id:"ajo_polvo",q:"1 cdta"},{id:"sal",q:"al gusto"},{id:"spray_aceite",q:"2 veces"}],
+    pasos:[
+      {t:"Seca las alitas. Rocía con spray. Coloca en airfryer a 200 °C.",s:1200},
+      {t:"Fríe 18 min removiendo a los 9. Calienta salsa con mantequilla."},
+      {t:"Vierte la salsa sobre las alitas. Sirve con apio o zanahoria."}],
+    airFryerTemp:400, airFryerTime:18},
+  { id:"costillas_glazeadas", n:"Costillas cortas glaseadas", cat:"comida", dif:2, min:35, rac:4,
+    desc:"Costillas tiernas dentro, glaseadas afuera. Mesón sin horno.",
+    e:"🍖", nut:{kcal:420,p:35,cb:15,g:23}, tags:["airfryer","glazeada","costillas"],
+    ing:[{id:"costillas_cortas",q:"800 g"},{id:"salsa_bbq",q:"150 ml"},{id:"miel",q:"2 cdas"},{id:"mostaza",q:"1 cda"},{id:"ajo",q:"2 dientes"},{id:"pimienta",q:"al gusto"},{id:"sal",q:"al gusto"}],
+    pasos:[
+      {t:"Salpimienta las costillas. Coloca en airfryer a 180 °C.",s:1800},
+      {t:"Fríe 25 min. Mezcla salsa BBQ, miel, mostaza y ajo."},
+      {t:"Pinta las costillas. Fríe 8 min más hasta que brille."}],
+    airFryerTemp:360, airFryerTime:33},
+  /* PESCADOS (8) */
+  { id:"bacalao_filetes", n:"Filetes de bacalao crujientes", cat:"cena", dif:1, min:15, rac:2,
+    desc:"Bacalao empanado que cruje. Clásico reinventado.",
+    e:"🐟", nut:{kcal:220,p:32,cb:10,g:6}, tags:["airfryer","pescado","crispy"],
+    ing:[{id:"bacalao",q:"2 filetes de 180g"},{id:"huevo",q:"1 ud"},{id:"panko",q:"80 g"},{id:"harina",q:"40 g"},{id:"sal",q:"al gusto"},{id:"pimienta",q:"al gusto"},{id:"limon",q:"1 ud"},{id:"spray_aceite",q:"3 veces"}],
+    pasos:[
+      {t:"Pasa los filetes por harina, huevo y panko. Rocía con spray."},
+      {t:"Coloca en airfryer a 200 °C. Fríe 12 min."},
+      {t:"Sirve con limón y ensalada."}],
+    airFryerTemp:400, airFryerTime:12},
+  { id:"salmon_filetes_limón", n:"Salmón a la mantequilla y limón", cat:"cena", dif:1, min:15, rac:2,
+    desc:"Salmón jugoso con toque de cítrico.",
+    e:"🐟", nut:{kcal:280,p:32,cb:1,g:15}, tags:["airfryer","omega3","rápida"],
+    ing:[{id:"salmon_filetes",q:"2 filetes de 180g"},{id:"mantequilla",q:"2 cdas"},{id:"limon",q:"1 ud"},{id:"eneldo",q:"1 cdta"},{id:"sal",q:"al gusto"},{id:"pimienta",q:"al gusto"}],
+    pasos:[
+      {t:"Coloca los filetes en airfryer con puntitas de mantequilla."},
+      {t:"Fríe a 180 °C durante 12 min.",s:720},
+      {t:"Exprime limón, espolvorea eneldo y sirve."}],
+    airFryerTemp:360, airFryerTime:12},
+  { id:"camarones_crujientes", n:"Camarones empanados crujientes", cat:"cena", dif:1, min:12, rac:2,
+    desc:"Camarones rebozados. Rápido y adictivo.",
+    e:"🦐", nut:{kcal:200,p:24,cb:8,g:8}, tags:["airfryer","rápida","marisco"],
+    ing:[{id:"camaron_grande",q:"300 g"},{id:"huevo",q:"1 ud"},{id:"panko",q:"80 g"},{id:"harina",q:"40 g"},{id:"sal",q:"al gusto"},{id:"pimienta",q:"al gusto"},{id:"limon",q:"1 ud"},{id:"spray_aceite",q:"3 veces"}],
+    pasos:[
+      {t:"Seca bien los camarones. Pasa por harina, huevo y panko."},
+      {t:"Rocía con spray. Coloca en airfryer a 200 °C.",s:720},
+      {t:"Fríe 10 min. Sirve con limón y salsa tártara."}],
+    airFryerTemp:400, airFryerTime:10},
+  { id:"tilapia_especiada", n:"Tilapia con especias tostadas", cat:"cena", dif:1, min:15, rac:2,
+    desc:"Pescado blanco delicado con especias que le dan sabor.",
+    e:"🐟", nut:{kcal:180,p:30,cb:2,g:6}, tags:["airfryer","pescado blanco","ligera"],
+    ing:[{id:"tilapia",q:"2 filetes"},{id:"oregano",q:"1 cdta"},{id:"comino",q:"1 cdta"},{id:"paprika",q:"1 cdta"},{id:"limon",q:"1 ud"},{id:"aove",q:"1 cda"},{id:"sal",q:"al gusto"}],
+    pasos:[
+      {t:"Mezcla especias. Frota los filetes."},
+      {t:"Coloca en airfryer a 180 °C.",s:900},
+      {t:"Fríe 12 min. Sirve con limón."}],
+    airFryerTemp:360, airFryerTime:12},
+  { id:"calamar_rebozado", n:"Calamar rebozado crujiente", cat:"cena", dif:1, min:12, rac:2,
+    desc:"Anillas de calamar crujientes por fuera, tiernas por dentro.",
+    e:"🦑", nut:{kcal:210,p:22,cb:12,g:8}, tags:["airfryer","marisco","crispy"],
+    ing:[{id:"calamar",q:"300 g"},{id:"harina",q:"50 g"},{id:"huevo",q:"1 ud"},{id:"pan_rallado",q:"80 g"},{id:"sal",q:"al gusto"},{id:"pimienta",q:"al gusto"},{id:"limon",q:"1 ud"},{id:"spray_aceite",q:"3 veces"}],
+    pasos:[
+      {t:"Limpia y corta el calamar en anillas. Pasa por harina, huevo y pan."},
+      {t:"Rocía con spray. Coloca en airfryer a 200 °C.",s:720},
+      {t:"Fríe 10 min. Sirve con limón."}],
+    airFryerTemp:400, airFryerTime:10},
+  { id:"crab_cakes", n:"Crab cakes caseras", cat:"aperitivo", dif:2, min:20, rac:4,
+    desc:"Galletas de cangrejo. Lujo hecho fácil.",
+    e:"🦀", nut:{kcal:280,p:20,cb:12,g:16}, tags:["airfryer","marisco","aperitivo"],
+    ing:[{id:"cangrejo",q:"300 g"},{id:"pan_molde",q:"2 rebanadas"},{id:"huevo",q:"1 ud"},{id:"mayonesa",q:"3 cdas"},{id:"cebolleta",q:"2 tallos"},{id:"sal",q:"al gusto"},{id:"pimienta",q:"al gusto"},{id:"spray_aceite",q:"3 veces"}],
+    pasos:[
+      {t:"Mezcla cangrejo, pan remojado en leche, huevo, mayonesa y cebolleta."},
+      {t:"Forma hamburguesas pequeñas. Rocía con spray."},
+      {t:"Coloca en airfryer a 180 °C. Fríe 15 min."}],
+    airFryerTemp:360, airFryerTime:15},
+  { id:"trucha_horno", n:"Trucha al horno con hierbas", cat:"cena", dif:1, min:18, rac:2,
+    desc:"Trucha entera jugosa con aromáticos dentro.",
+    e:"🐟", nut:{kcal:240,p:28,cb:0,g:13}, tags:["airfryer","pescado entero","hierbas"],
+    ing:[{id:"trucha",q:"1 ud de 400g"},{id:"limon",q:"1 ud"},{id:"romero",q:"2 ramas"},{id:"tomillo",q:"2 ramas"},{id:"aove",q:"2 cdas"},{id:"sal",q:"al gusto"},{id:"pimienta",q:"al gusto"}],
+    pasos:[
+      {t:"Limpia la trucha. Rellena con limón y hierbas."},
+      {t:"Rocía con aceite. Coloca en airfryer a 180 °C.",s:1080},
+      {t:"Fríe 15 min. La piel debe estar crujiente."}],
+    airFryerTemp:360, airFryerTime:15},
+  { id:"atun_sellado", n:"Atún sellado en dados", cat:"cena", dif:1, min:8, rac:2,
+    desc:"Atún rojo poco hecho en el centro, sellado afuera. Para amantes del atún.",
+    e:"🐟", nut:{kcal:200,p:35,cb:0,g:6}, tags:["airfryer","atún rojo","rápida"],
+    ing:[{id:"atun_filetes",q:"2 filetes de 150g"},{id:"sal",q:"al gusto"},{id:"pimienta",q:"al gusto"},{id:"sesamo",q:"1 cda"},{id:"aove",q:"1 cda"}],
+    pasos:[
+      {t:"Salpimienta los filetes. Espolvorea sésamo."},
+      {t:"Coloca en airfryer a 200 °C.",s:480},
+      {t:"Fríe 5-6 min. Debe estar rosado en el centro. Sirve con limón."}],
+    airFryerTemp:400, airFryerTime:6},
+  /* VEGETALES (15) */
+  { id:"patatas_chips", n:"Patatas chips caseras", cat:"aperitivo", dif:1, min:25, rac:4,
+    desc:"Chips crujientes y saladas. Adictivas y sin conservantes.",
+    e:"🥔", nut:{kcal:180,p:2,cb:22,g:9}, tags:["airfryer","aperitivo","crips"],
+    ing:[{id:"patata",q:"400 g"},{id:"spray_aceite",q:"3 veces"},{id:"sal",q:"al gusto"},{id:"pimienta",q:"al gusto"}],
+    pasos:[
+      {t:"Corta las patatas en láminas muy finas con mandolina."},
+      {t:"Remoja en agua fría 30 min. Seca bien."},
+      {t:"Rocía con spray. Coloca en airfryer a 190 °C.",s:1500},
+      {t:"Fríe 20 min removiendo cada 5 min hasta que estén crujientes."}],
+    airFryerTemp:380, airFryerTime:20},
+  { id:"batatas_fritas", n:"Batatas fritas wedges", cat:"aperitivo", dif:1, min:20, rac:4,
+    desc:"Batatas caramelizadas por fuera, tiernas por dentro.",
+    e:"🍠", nut:{kcal:140,p:2,cb:22,g:5}, tags:["airfryer","aperitivo","batata"],
+    ing:[{id:"boniato",q:"500 g"},{id:"comino",q:"1 cdta"},{id:"pimenton",q:"1 cdta"},{id:"spray_aceite",q:"3 veces"},{id:"sal",q:"al gusto"}],
+    pasos:[
+      {t:"Corta las batatas en wedges. Rocía con spray y especias."},
+      {t:"Coloca en airfryer a 200 °C.",s:1200},
+      {t:"Fríe 15 min removiendo a los 8 min."}],
+    airFryerTemp:400, airFryerTime:15},
+  { id:"vegetales_asados", n:"Vegetales mixtos asados", cat:"cena", dif:1, min:20, rac:4,
+    desc:"Mix de verduras caramelizadas. Acompañamiento versátil.",
+    e:"🥦", nut:{kcal:120,p:4,cb:16,g:5}, tags:["airfryer","vegetales","asados"],
+    ing:[{id:"brocoli",q:"200 g"},{id:"coliflor",q:"200 g"},{id:"calabacin",q:"1 ud"},{id:"pimiento_rojo",q:"1 ud"},{id:"aove",q:"2 cdas"},{id:"ajo",q:"2 dientes"},{id:"sal",q:"al gusto"},{id:"pimienta",q:"al gusto"}],
+    pasos:[
+      {t:"Corta todos los vegetales en trozos uniformes."},
+      {t:"Mezcla con aceite, ajo, sal y pimienta."},
+      {t:"Coloca en airfryer a 200 °C. Fríe 18 min removiendo cada 6 min."}],
+    airFryerTemp:400, airFryerTime:18},
+  { id:"champiñones_rellenos", n:"Champiñones rellenos de queso", cat:"aperitivo", dif:2, min:20, rac:4,
+    desc:"Sombreretes de champiñón rellenos y gratinados.",
+    e:"🍄", nut:{kcal:160,p:10,cb:6,g:11}, tags:["airfryer","relleno","champiñones"],
+    ing:[{id:"champinon",q:"8 uds grandes"},{id:"queso_fresco",q:"150 g"},{id:"pan_rallado",q:"50 g"},{id:"perejil",q:"2 cdas"},{id:"ajo",q:"2 dientes"},{id:"aove",q:"2 cdas"},{id:"sal",q:"al gusto"}],
+    pasos:[
+      {t:"Limpia los champiñones. Retira los tallos."},
+      {t:"Mezcla queso, pan, perejil y ajo. Rellena."},
+      {t:"Coloca en airfryer a 180 °C. Fríe 15 min."}],
+    airFryerTemp:360, airFryerTime:15},
+  { id:"coliflor_crujiente", n:"Coliflor crujiente especiada", cat:"cena", dif:1, min:20, rac:4,
+    desc:"Floretes de coliflor crujientes con especias.",
+    e:"🥦", nut:{kcal:140,p:8,cb:14,g:6}, tags:["airfryer","coliflor","crispy"],
+    ing:[{id:"coliflor",q:"500 g"},{id:"harina_garbanzo",q:"50 g"},{id:"agua",q:"100 ml"},{id:"pimenton",q:"1 cda"},{id:"ajo_polvo",q:"1 cdta"},{id:"sal",q:"al gusto"},{id:"spray_aceite",q:"3 veces"}],
+    pasos:[
+      {t:"Mezcla harina de garbanzos con agua, especias. Haz una pasta ligera."},
+      {t:"Pasa los floretes por la mezcla. Rocía con spray."},
+      {t:"Coloca en airfryer a 200 °C. Fríe 15 min."}],
+    airFryerTemp:400, airFryerTime:15},
+  { id:"brocoli_crujiente", n:"Brócoli crujiente al ajo", cat:"cena", dif:1, min:18, rac:4,
+    desc:"Floretes crujientes con sabor a ajo tostado.",
+    e:"🥦", nut:{kcal:120,p:8,cb:14,g:5}, tags:["airfryer","brócoli","ajo"],
+    ing:[{id:"brocoli",q:"600 g"},{id:"ajo",q:"4 dientes"},{id:"aove",q:"3 cdas"},{id:"sal",q:"al gusto"},{id:"pimienta",q:"al gusto"},{id:"limon",q:"1 ud"}],
+    pasos:[
+      {t:"Corta el brócoli en floretes. Mezcla con aceite y ajo laminado."},
+      {t:"Coloca en airfryer a 200 °C.",s:1080},
+      {t:"Fríe 15 min removiendo a los 8. Exprime limón al final."}],
+    airFryerTemp:400, airFryerTime:15},
+  { id:"berenjenas_fritas", n:"Berenjenas fritas crujientes", cat:"aperitivo", dif:1, min:20, rac:4,
+    desc:"Rodajas de berenjena rebozadas. Crispy y sabrosas.",
+    e:"🍆", nut:{kcal:180,p:5,cb:14,g:11}, tags:["airfryer","berenjena","crispy"],
+    ing:[{id:"berenjena",q:"2 uds"},{id:"huevo",q:"1 ud"},{id:"panko",q:"100 g"},{id:"harina",q:"50 g"},{id:"sal",q:"al gusto"},{id:"pimienta",q:"al gusto"},{id:"spray_aceite",q:"3 veces"},{id:"tomate_frito",q:"50 g"}],
+    pasos:[
+      {t:"Corta la berenjena en rodajas. Salpimienta."},
+      {t:"Pasa por harina, huevo y panko. Rocía con spray."},
+      {t:"Coloca en airfryer a 200 °C. Fríe 15 min. Sirve con tomate frito."}],
+    airFryerTemp:400, airFryerTime:15},
+  { id:"huevos_rellenos", n:"Huevos rellenos caseros", cat:"aperitivo", dif:2, min:20, rac:4,
+    desc:"Mitades de huevo con relleno cremoso. Clásico irresistible.",
+    e:"🥚", nut:{kcal:160,p:12,cb:3,g:12}, tags:["airfryer","aperitivo","huevo"],
+    ing:[{id:"huevo",q:"6 uds"},{id:"mayonesa",q:"4 cdas"},{id:"mostaza",q:"1 cda"},{id:"cebolleta",q:"1 tallo"},{id:"pimenton",q:"1 cdta"},{id:"sal",q:"al gusto"},{id:"pimienta",q:"al gusto"}],
+    pasos:[
+      {t:"Hierve los huevos 10 min. Pela y corta por la mitad."},
+      {t:"Extrae las yemas. Mezcla con mayonesa, mostaza y cebolleta."},
+      {t:"Rellena las mitades. Sirve frío con pimentón."}],
+    airFryerTemp:0, airFryerTime:0},
+  { id:"croquetas_verduras", n:"Croquetas de verduras", cat:"aperitivo", dif:2, min:30, rac:6,
+    desc:"Croquetas cremosas dentro, crujientes fuera. Versión ligera.",
+    e:"🍗", nut:{kcal:200,p:8,cb:18,g:11}, tags:["airfryer","croquetas","verduras"],
+    ing:[{id:"brocoli",q:"200 g"},{id:"calabacin",q:"150 g"},{id:"zanahoria",q:"100 g"},{id:"harina",q:"50 g"},{id:"leche",q:"200 ml"},{id:"queso_fresco",q:"100 g"},{id:"huevo",q:"2 uds"},{id:"pan_rallado",q:"100 g"},{id:"sal",q:"al gusto"},{id:"spray_aceite",q:"3 veces"}],
+    pasos:[
+      {t:"Cuece y pica las verduras. Haz béchamel. Mezcla."},
+      {t:"Enfrían. Forma cilindros. Pasa por huevo y pan."},
+      {t:"Coloca en airfryer a 200 °C. Fríe 15 min."}],
+    airFryerTemp:400, airFryerTime:15},
+  { id:"calabacin_frito", n:"Calabacín frito al limón", cat:"aperitivo", dif:1, min:15, rac:4,
+    desc:"Rodajas crujientes con acidez cítrica.",
+    e:"🥒", nut:{kcal:120,p:3,cb:12,g:6}, tags:["airfryer","calabacín","crispy"],
+    ing:[{id:"calabacin",q:"3 uds"},{id:"harina",q:"50 g"},{id:"huevo",q:"1 ud"},{id:"pan_rallado",q:"80 g"},{id:"limon",q:"1 ud"},{id:"sal",q:"al gusto"},{id:"spray_aceite",q:"3 veces"}],
+    pasos:[
+      {t:"Corta el calabacín en rodajas. Pasa por harina, huevo y pan."},
+      {t:"Rocía con spray. Coloca en airfryer a 200 °C.",s:900},
+      {t:"Fríe 12 min. Sirve con limón exprimido."}],
+    airFryerTemp:400, airFryerTime:12},
+  { id:"esparragos_crujientes", n:"Espárragos crujientes", cat:"cena", dif:1, min:12, rac:2,
+    desc:"Espárragos verdes sellados con punta crujiente.",
+    e:"🌿", nut:{kcal:80,p:6,cb:8,g:4}, tags:["airfryer","espárrago","ligera"],
+    ing:[{id:"esparrago_verde",q:"300 g"},{id:"aove",q:"1 cda"},{id:"ajo",q:"2 dientes"},{id:"sal",q:"al gusto"},{id:"pimienta",q:"al gusto"}],
+    pasos:[
+      {t:"Limpia los espárragos. Mezcla con aceite y ajo laminado."},
+      {t:"Coloca en airfryer a 190 °C.",s:720},
+      {t:"Fríe 10 min. Sirve caliente."}],
+    airFryerTemp:380, airFryerTime:10},
+  { id:"croquetas_queso", n:"Croquetas de queso", cat:"aperitivo", dif:2, min:30, rac:6,
+    desc:"Croquetas 100% queso fundido. Para los queseros.",
+    e:"🧀", nut:{kcal:240,p:10,cb:16,g:14}, tags:["airfryer","queso","croquetas"],
+    ing:[{id:"queso_fresco",q:"250 g"},{id:"harina",q:"60 g"},{id:"leche",q:"200 ml"},{id:"huevo",q:"2 uds"},{id:"pan_rallado",q:"100 g"},{id:"sal",q:"al gusto"},{id:"pimienta",q:"al gusto"},{id:"spray_aceite",q:"3 veces"}],
+    pasos:[
+      {t:"Haz béchamel. Añade queso rallado. Enfrían bien."},
+      {t:"Forma cilindros. Pasa por huevo y pan."},
+      {t:"Coloca en airfryer a 200 °C. Fríe 14 min."}],
+    airFryerTemp:400, airFryerTime:14},
+  { id:"palitos_queso", n:"Palitos de queso frito", cat:"aperitivo", dif:1, min:15, rac:4,
+    desc:"Tiras de queso fundido dentro, crujiente fuera.",
+    e:"🧀", nut:{kcal:220,p:12,cb:10,g:14}, tags:["airfryer","queso","rápida"],
+    ing:[{id:"queso_fresco",q:"200 g"},{id:"harina",q:"50 g"},{id:"huevo",q:"1 ud"},{id:"pan_rallado",q:"80 g"},{id:"sal",q:"al gusto"},{id:"spray_aceite",q:"3 veces"}],
+    pasos:[
+      {t:"Corta el queso en palitos gruesos. Pasa por harina, huevo y pan."},
+      {t:"Rocía con spray. Coloca en airfryer a 200 °C.",s:900},
+      {t:"Fríe 8 min. Sirve caliente."}],
+    airFryerTemp:400, airFryerTime:8},
+  /* APERITIVOS (12) */
+  { id:"dedos_mozzarella", n:"Dedos de mozzarella frito", cat:"aperitivo", dif:1, min:15, rac:4,
+    desc:"Queso fundido dentro, rebozado crujiente fuera.",
+    e:"🧀", nut:{kcal:240,p:14,cb:12,g:14}, tags:["airfryer","queso","rápida"],
+    ing:[{id:"mozzarella",q:"200 g"},{id:"harina",q:"50 g"},{id:"huevo",q:"1 ud"},{id:"panko",q:"80 g"},{id:"sal",q:"al gusto"},{id:"spray_aceite",q:"3 veces"}],
+    pasos:[
+      {t:"Corta la mozzarella en dedos. Congela 1 hora."},
+      {t:"Pasa por harina, huevo y panko. Rocía con spray."},
+      {t:"Coloca en airfryer a 200 °C. Fríe 6 min."}],
+    airFryerTemp:400, airFryerTime:6},
+  { id:"wontons_crujientes", n:"Wontons crujientes", cat:"aperitivo", dif:2, min:20, rac:4,
+    desc:"Hojas wonton fritas. Versátiles: rellena como quieras.",
+    e:"🟩", nut:{kcal:180,p:6,cb:18,g:9}, tags:["airfryer","wonton","asiática"],
+    ing:[{id:"wontons",q:"20 hojas"},{id:"carne_picada",q:"200 g"},{id:"cebolleta",q:"2 tallos"},{id:"salsa_soja",q:"2 cdas"},{id:"spray_aceite",q:"3 veces"},{id:"sal",q:"al gusto"}],
+    pasos:[
+      {t:"Rellena cada hoja con carne y cebolleta. Dobla en triángulo."},
+      {t:"Rocía con spray. Coloca en airfryer a 200 °C.",s:1200},
+      {t:"Fríe 10 min hasta que doren. Sirve con salsa de soja."}],
+    airFryerTemp:400, airFryerTime:10},
+  { id:"empanadas_carne", n:"Empanadas de carne", cat:"aperitivo", dif:2, min:30, rac:6,
+    desc:"Empanadas caseras crujientes rellenas de carne.",
+    e:"🥟", nut:{kcal:260,p:12,cb:24,g:12}, tags:["airfryer","empanada","carne"],
+    ing:[{id:"harina",q:"300 g"},{id:"carne_picada",q:"300 g"},{id:"cebolla",q:"1 ud"},{id:"ajo",q:"2 dientes"},{id:"huevo",q:"1 ud"},{id:"sal",q:"al gusto"},{id:"agua",q:"100 ml"},{id:"spray_aceite",q:"3 veces"}],
+    pasos:[
+      {t:"Masa: mezcla harina, sal, agua y 1 huevo. Reposa 30 min."},
+      {t:"Relleno: sofríe cebolla y ajo, añade carne. Cocina 10 min."},
+      {t:"Estira masa, corta círculos, rellena, dobla. Rocía con spray."},
+      {t:"Coloca en airfryer a 180 °C. Fríe 15 min."}],
+    airFryerTemp:360, airFryerTime:15},
+  { id:"samosas_vegetales", n:"Samosas vegetales", cat:"aperitivo", dif:2, min:25, rac:6,
+    desc:"Triángulos crujientes con relleno de verdura especiada.",
+    e:"🟩", nut:{kcal:200,p:6,cb:20,g:10}, tags:["airfryer","samosa","vegetariana"],
+    ing:[{id:"hojas_filo",q:"12 hojas"},{id:"papa_cocida",q:"200 g"},{id:"guisantes",q:"100 g"},{id:"cebolla",q:"1 ud"},{id:"comino",q:"1 cdta"},{id:"cilantro",q:"2 cdas"},{id:"spray_aceite",q:"3 veces"},{id:"sal",q:"al gusto"}],
+    pasos:[
+      {t:"Relleno: mezcla papa, guisantes, cebolla salteada, comino y cilantro."},
+      {t:"Coloca 1 hoja de filo, rellena, dobla en triángulo."},
+      {t:"Rocía con spray. Coloca en airfryer a 190 °C.",s:1200},
+      {t:"Fríe 12 min hasta dorar."}],
+    airFryerTemp:380, airFryerTime:12},
+  { id:"tostadas_crujientes", n:"Tostadas caseras crujientes", cat:"aperitivo", dif:1, min:15, rac:4,
+    desc:"Base crujiente para toppings. Hecha sin horno.",
+    e:"🍞", nut:{kcal:140,p:4,cb:20,g:4}, tags:["airfryer","tostada","base"],
+    ing:[{id:"pan_molde",q:"6 rebanadas"},{id:"aove",q:"1 cda"},{id:"sal",q:"al gusto"},{id:"ajo",q:"1 diente"}],
+    pasos:[
+      {t:"Corta el pan en tiras. Mezcla aceite con ajo machacado."},
+      {t:"Pinta las tiras. Coloca en airfryer a 190 °C.",s:900},
+      {t:"Fríe 8 min hasta que estén crujientes."}],
+    airFryerTemp:380, airFryerTime:8},
+  { id:"palitas_jamon", n:"Palitas de jamón crujiente", cat:"aperitivo", dif:1, min:12, rac:4,
+    desc:"Tiras de jamón caramelizadas. Aperitivo proteico.",
+    e:"🥓", nut:{kcal:150,p:20,cb:0,g:7}, tags:["airfryer","jamón","rápida"],
+    ing:[{id:"jamon_serrano",q:"200 g"},{id:"pimienta",q:"al gusto"}],
+    pasos:[
+      {t:"Corta el jamón en palitas gruesas."},
+      {t:"Coloca en airfryer a 200 °C.",s:720},
+      {t:"Fríe 8 min. Sirve crujiente."}],
+    airFryerTemp:400, airFryerTime:8},
+  { id:"aros_calamar", n:"Aros de calamar rebozados", cat:"aperitivo", dif:1, min:15, rac:4,
+    desc:"Anillas de calamar crujientes. Clásico mejorado.",
+    e:"🦑", nut:{kcal:210,p:22,cb:12,g:8}, tags:["airfryer","calamar","crispy"],
+    ing:[{id:"calamar",q:"300 g"},{id:"harina",q:"50 g"},{id:"huevo",q:"1 ud"},{id:"pan_rallado",q:"80 g"},{id:"sal",q:"al gusto"},{id:"pimienta",q:"al gusto"},{id:"limon",q:"1 ud"},{id:"spray_aceite",q:"3 veces"}],
+    pasos:[
+      {t:"Corta el calamar en aros. Pasa por harina, huevo y pan."},
+      {t:"Rocía con spray. Coloca en airfryer a 200 °C.",s:720},
+      {t:"Fríe 10 min. Sirve con limón."}],
+    airFryerTemp:400, airFryerTime:10},
+  { id:"huevos_bbq", n:"Huevos rellenos BBQ", cat:"aperitivo", dif:2, min:20, rac:4,
+    desc:"Huevos rellenos con toque ahumado BBQ.",
+    e:"🥚", nut:{kcal:170,p:12,cb:4,g:12}, tags:["airfryer","huevo","bbq"],
+    ing:[{id:"huevo",q:"6 uds"},{id:"mayonesa",q:"4 cdas"},{id:"salsa_bbq",q:"2 cdas"},{id:"cebolleta",q:"1 tallo"},{id:"pimenton_ahumado",q:"1 cdta"},{id:"sal",q:"al gusto"}],
+    pasos:[
+      {t:"Hierve los huevos 10 min. Pela y corta por la mitad."},
+      {t:"Extrae las yemas. Mezcla con mayonesa, BBQ y cebolleta."},
+      {t:"Rellena. Sirve frío con pimentón ahumado."}],
+    airFryerTemp:0, airFryerTime:0},
+  { id:"nachos_queso", n:"Nachos caseros con queso", cat:"aperitivo", dif:1, min:15, rac:4,
+    desc:"Tortillas crujientes con cobertura fundida.",
+    e:"🧀", nut:{kcal:280,p:12,cb:20,g:16}, tags:["airfryer","nachos","queso"],
+    ing:[{id:"tortillas_maiz",q:"100 g"},{id:"queso_fresco",q:"150 g"},{id:"jalapeno",q:"2 uds"},{id:"sal",q:"al gusto"},{id:"spray_aceite",q:"2 veces"}],
+    pasos:[
+      {t:"Corta las tortillas en triángulos. Rocía con spray."},
+      {t:"Coloca en airfryer a 190 °C.",s:900},
+      {t:"Fríe 6 min. Cubre con queso rallado. Fríe 3 min más."},
+      {t:"Sirve con jalapeños frescos y salsa."}],
+    airFryerTemp:380, airFryerTime:9},
 ];
+
 
 /* ---------- Lógica pura (preferencias, matching, lista de la compra) ---------- */
 
@@ -1000,6 +1447,7 @@ function Recetas({ st, setSt, abrir, sorprender }) {
   const [fTiempo, setFTiempo] = useState(0); // 0 todas, 20, 35
   const [fCat, setFCat] = useState("todas");
   const [soloFavs, setSoloFavs] = useState(false);
+  const [soloAirfryer, setSoloAirfryer] = useState(false);
 
   const lista = useMemo(() => {
     let l = RECETAS.map(r => ({ r, m: matchReceta(r, st.prefs) }));
@@ -1008,9 +1456,10 @@ function Recetas({ st, setSt, abrir, sorprender }) {
     if (fTiempo) l = l.filter(({ r }) => r.min <= fTiempo);
     if (fCat !== "todas") l = l.filter(({ r }) => r.cat === fCat);
     if (soloFavs) l = l.filter(({ r }) => st.favs.includes(r.id));
+    if (soloAirfryer) l = l.filter(({ r }) => r.airFryerTemp);
     l.sort((a, b) => (b.m.score ?? -1) - (a.m.score ?? -1));
     return l;
-  }, [q, fDif, fTiempo, fCat, soloFavs, st.prefs, st.favs]);
+  }, [q, fDif, fTiempo, fCat, soloFavs, soloAirfryer, st.prefs, st.favs]);
 
   const selChip = (act) => ({ background: act ? T.ink : "#fff", color: act ? "#fff" : T.sub, border: `1.5px solid ${act ? T.ink : T.line}`, borderRadius: 999, padding: "7px 13px", fontSize: 13, fontWeight: 600, whiteSpace: "nowrap" });
 
@@ -1034,6 +1483,7 @@ function Recetas({ st, setSt, abrir, sorprender }) {
 
       <div className="yt-scroll" style={{ display: "flex", gap: 8, overflowX: "auto", padding: "4px 20px 10px" }}>
         <button style={selChip(soloFavs)} onClick={() => setSoloFavs(v => !v)}>♥ Favoritas</button>
+        <button style={selChip(soloAirfryer)} onClick={() => setSoloAirfryer(v => !v)}>🍟 Air Fryer</button>
         {[["todas","Todo"],["desayuno","Desayuno"],["comida","Comida"],["cena","Cena"],["postre","Postre"],["aperitivo","Aperitivo"]].map(([v,l]) =>
           <button key={v} style={selChip(fCat === v)} onClick={() => setFCat(v)}>{l}</button>)}
         {[1,2,3].map(d => <button key={d} style={selChip(fDif === d)} onClick={() => setFDif(x => x === d ? 0 : d)}>{DIF[d].l}</button>)}
@@ -1165,6 +1615,24 @@ function RecetaDetalle({ recId, st, setSt, cerrar, cocinar, addCompra, addPlan }
                     💨 Airfryer
                   </button>
                 )}
+              </div>
+            </section>
+          )}
+
+          {r.airFryerTemp && (
+            <section>
+              <h2 className="yt-display" style={{ fontSize: 16, fontWeight: 800, margin: "0 0 8px" }}>📊 Conversor: Horno ↔ Air Fryer</h2>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+                <div style={{ background: "linear-gradient(135deg, #FCEAE3, #FFF8F2)", borderRadius: 14, padding: 14, textAlign: "center", border: `1.5px solid ${T.line}` }}>
+                  <div style={{ fontSize: 12, color: T.sub, fontWeight: 600, marginBottom: 8 }}>🔥 Horno tradición.</div>
+                  <div className="yt-display" style={{ fontSize: 20, fontWeight: 800, color: T.ink }}>200°C</div>
+                  <div style={{ fontSize: 12, color: T.sub, fontWeight: 600, marginTop: 6 }}>~{r.min} minutos</div>
+                </div>
+                <div style={{ background: "linear-gradient(135deg, #F0F9FC, #F8FCFE)", borderRadius: 14, padding: 14, textAlign: "center", border: `1.5px solid ${T.line}` }}>
+                  <div style={{ fontSize: 12, color: T.sub, fontWeight: 600, marginBottom: 8 }}>💨 Air Fryer</div>
+                  <div className="yt-display" style={{ fontSize: 20, fontWeight: 800, color: "#3E7FD6" }}>{r.airFryerTemp}°C</div>
+                  <div style={{ fontSize: 12, color: T.sub, fontWeight: 600, marginTop: 6 }}>{r.airFryerTime} minutos</div>
+                </div>
               </div>
             </section>
           )}
