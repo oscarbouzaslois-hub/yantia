@@ -38,7 +38,7 @@
         console.log("Step 2: React imported");
         const { createRoot } = await import("react-dom/client");
         console.log("Step 3: ReactDOM imported");
-        const mod = await import("./app.js");
+        const mod = await import("./app.js?v=" + Date.now());
         console.log("Step 4: app.js imported", mod);
         const App = mod.default;
         console.log("Step 5: App component:", App);
