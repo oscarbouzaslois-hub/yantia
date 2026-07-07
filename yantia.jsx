@@ -293,7 +293,11 @@ const RECETAS = [
       {t:"Añade el pimentón, remueve 30 segundos y agrega el tomate triturado.",s:120},
       {t:"Incorpora lentejas, patata en trozos, laurel y agua que cubra dos dedos."},
       {t:"Cuece a fuego suave hasta que la lenteja esté tierna. Remueve de vez en cuando.",s:1800},
-      {t:"Rectifica de sal y deja reposar 5 minutos antes de servir.",s:300}]},
+      {t:"Rectifica de sal y deja reposar 5 minutos antes de servir.",s:300}],
+    thermomix:[
+      {t:"Tritúralo 5 seg, velocidad 5. Raspa los laterales."},
+      {t:"Añade lentejas, patata, laurel, tomate y caldo. Cuece 40 min, 100°C, velocidad cuchara.",s:2400},
+      {t:"Rectifica de sal y sirve."}]},
   { id:"crema_calabacin", n:"Crema de calabacín", cat:"cena", dif:1, min:30, rac:4,
     desc:"Sedosa, ligera y lista en media hora. Cena comodín donde las haya.",
     e:"🥣", nut:{kcal:150,p:5,cb:12,g:9}, tags:["vegetariana","ligera","apta para niños","congelable"],
@@ -303,7 +307,11 @@ const RECETAS = [
       {t:"Añade calabacín y patata troceados y rehoga 5 minutos.",s:300},
       {t:"Cubre con el caldo y cuece hasta que la patata esté tierna.",s:900},
       {t:"Tritura con el queso crema hasta que quede fina. Salpimienta."},
-      {t:"Sirve con un hilo de aceite y, si quieres, picatostes."}]},
+      {t:"Sirve con un hilo de aceite y, si quieres, picatostes."}],
+    thermomix:[
+      {t:"Pon calabacín, patata, cebolla y caldo. Cuece 20 min, 100°C, velocidad cuchara.",s:1200},
+      {t:"Añade queso crema y tritura 20 seg, velocidad 7. Salpimienta."},
+      {t:"Sirve con un hilo de aceite."}]},
   { id:"pollo_ajillo", n:"Pollo al ajillo", cat:"comida", dif:2, min:35, rac:4,
     desc:"Dorado, con su ajito frito y un golpe de vino blanco. Pan obligatorio.",
     e:"🍗", nut:{kcal:420,p:38,cb:3,g:26}, tags:["sin gluten","clásico español"],
@@ -617,7 +625,12 @@ function matchReceta(receta, prefs) {
   }
   if (valorables === 0) return { score: null, conflictos, aciertos, valorables };
   const raw = (gusta - noGusta * 1.4) / valorables;
-  return { score: Math.max(0, Math.round(raw * 100)), conflictos, aciertos, valorables };
+  let score = Math.max(0, Math.round(raw * 100));
+  // Desbloqueo exponencial: a más ingredientes con "like", más se multiplica el score
+  const totalLikeados = Object.values(prefs).filter(p => p && p.like === true).length;
+  const exponentialBoost = Math.pow(1 + totalLikeados / 50, 0.8);
+  score = Math.round(score * exponentialBoost);
+  return { score: Math.max(0, score), conflictos, aciertos, valorables };
 }
 
 // Suma de cantidades: intenta agrupar "300 g" + "1 kg" etc.; si no puede, las lista.
@@ -1047,6 +1060,7 @@ function RecetaDetalle({ recId, st, setSt, cerrar, cocinar, addCompra, addPlan }
   const probada = st.probadas[r.id];
   const b = badgeMatch(m.score);
   const [porciones, setPorciones] = useState(r.rac || 4);
+  const [usaThermomix, setUsaThermomix] = useState(false);
 
   const toggleFav = () => setSt(s => ({ ...s, favs: fav ? s.favs.filter(x => x !== r.id) : [...s.favs, r.id] }));
   const setRating = (n) => setSt(s => ({ ...s, probadas: { ...s.probadas, [r.id]: { fecha: Date.now(), rating: n } } }));
@@ -1097,6 +1111,26 @@ function RecetaDetalle({ recId, st, setSt, cerrar, cocinar, addCompra, addPlan }
             </div>
           </section>
 
+          {r.thermomix && (
+            <section>
+              <h2 className="yt-display" style={{ fontSize: 16, fontWeight: 800, margin: "0 0 8px" }}>Instrucciones</h2>
+              <div style={{ display: "flex", gap: 8 }}>
+                <button onClick={() => setUsaThermomix(false)}
+                  style={{ flex: 1, padding: "12px 14px", borderRadius: 14, fontWeight: 700, fontSize: 14,
+                    background: !usaThermomix ? T.brandSoft : "#fff", color: !usaThermomix ? T.brand : "#A29D93",
+                    border: `1.5px solid ${!usaThermomix ? T.brand : T.line}` }}>
+                  🍳 Receta clásica
+                </button>
+                <button onClick={() => setUsaThermomix(true)}
+                  style={{ flex: 1, padding: "12px 14px", borderRadius: 14, fontWeight: 700, fontSize: 14,
+                    background: usaThermomix ? T.brandSoft : "#fff", color: usaThermomix ? T.brand : "#A29D93",
+                    border: `1.5px solid ${usaThermomix ? T.brand : T.line}` }}>
+                  ⚙️ Thermomix
+                </button>
+              </div>
+            </section>
+          )}
+
           <section>
             <h2 className="yt-display" style={{ fontSize: 16, fontWeight: 800, margin: "0 0 8px" }}>Por ración</h2>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 8 }}>
@@ -1140,7 +1174,7 @@ function RecetaDetalle({ recId, st, setSt, cerrar, cocinar, addCompra, addPlan }
           <section>
             <h2 className="yt-display" style={{ fontSize: 16, fontWeight: 800, margin: "0 0 8px" }}>Pasos</h2>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-              {r.pasos.map((p, i) => (
+              {(usaThermomix && r.thermomix ? r.thermomix : r.pasos).map((p, i) => (
                 <div key={i} style={{ display: "flex", gap: 10, background: "#fff", borderRadius: 16, border: `1px solid ${T.line}`, padding: "12px 14px" }}>
                   <div className="yt-display" style={{ fontWeight: 800, color: T.brand, minWidth: 22 }}>{i + 1}</div>
                   <div style={{ fontSize: 14, lineHeight: 1.45 }}>

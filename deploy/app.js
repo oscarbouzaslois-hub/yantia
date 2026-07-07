@@ -2443,6 +2443,14 @@ const RECETAS = [{
   }, {
     t: "Rectifica de sal y deja reposar 5 minutos antes de servir.",
     s: 300
+  }],
+  thermomix: [{
+    t: "Tritúralo 5 seg, velocidad 5. Raspa los laterales."
+  }, {
+    t: "Añade lentejas, patata, laurel, tomate y caldo. Cuece 40 min, 100°C, velocidad cuchara.",
+    s: 2400
+  }, {
+    t: "Rectifica de sal y sirve."
   }]
 }, {
   id: "crema_calabacin",
@@ -2501,6 +2509,14 @@ const RECETAS = [{
     t: "Tritura con el queso crema hasta que quede fina. Salpimienta."
   }, {
     t: "Sirve con un hilo de aceite y, si quieres, picatostes."
+  }],
+  thermomix: [{
+    t: "Pon calabacín, patata, cebolla y caldo. Cuece 20 min, 100°C, velocidad cuchara.",
+    s: 1200
+  }, {
+    t: "Añade queso crema y tritura 20 seg, velocidad 7. Salpimienta."
+  }, {
+    t: "Sirve con un hilo de aceite."
   }]
 }, {
   id: "pollo_ajillo",
@@ -4177,8 +4193,13 @@ function matchReceta(receta, prefs) {
     valorables
   };
   const raw = (gusta - noGusta * 1.4) / valorables;
+  let score = Math.max(0, Math.round(raw * 100));
+  // Desbloqueo exponencial: a más ingredientes con "like", más se multiplica el score
+  const totalLikeados = Object.values(prefs).filter(p => p && p.like === true).length;
+  const exponentialBoost = Math.pow(1 + totalLikeados / 50, 0.8);
+  score = Math.round(score * exponentialBoost);
   return {
-    score: Math.max(0, Math.round(raw * 100)),
+    score: Math.max(0, score),
     conflictos,
     aciertos,
     valorables
@@ -5364,6 +5385,7 @@ function RecetaDetalle({
   const probada = st.probadas[r.id];
   const b = badgeMatch(m.score);
   const [porciones, setPorciones] = useState(r.rac || 4);
+  const [usaThermomix, setUsaThermomix] = useState(false);
   const toggleFav = () => setSt(s => ({
     ...s,
     favs: fav ? s.favs.filter(x => x !== r.id) : [...s.favs, r.id]
@@ -5557,6 +5579,48 @@ function RecetaDetalle({
               children: n === 1 ? "1️⃣ Una" : n === 2 ? "2️⃣ Dos" : "4️⃣ Cuatro"
             }, n))
           })]
+        }), r.thermomix && /*#__PURE__*/_jsxs("section", {
+          children: [/*#__PURE__*/_jsx("h2", {
+            className: "yt-display",
+            style: {
+              fontSize: 16,
+              fontWeight: 800,
+              margin: "0 0 8px"
+            },
+            children: "Instrucciones"
+          }), /*#__PURE__*/_jsxs("div", {
+            style: {
+              display: "flex",
+              gap: 8
+            },
+            children: [/*#__PURE__*/_jsx("button", {
+              onClick: () => setUsaThermomix(false),
+              style: {
+                flex: 1,
+                padding: "12px 14px",
+                borderRadius: 14,
+                fontWeight: 700,
+                fontSize: 14,
+                background: !usaThermomix ? T.brandSoft : "#fff",
+                color: !usaThermomix ? T.brand : "#A29D93",
+                border: `1.5px solid ${!usaThermomix ? T.brand : T.line}`
+              },
+              children: "\uD83C\uDF73 Receta cl\xE1sica"
+            }), /*#__PURE__*/_jsx("button", {
+              onClick: () => setUsaThermomix(true),
+              style: {
+                flex: 1,
+                padding: "12px 14px",
+                borderRadius: 14,
+                fontWeight: 700,
+                fontSize: 14,
+                background: usaThermomix ? T.brandSoft : "#fff",
+                color: usaThermomix ? T.brand : "#A29D93",
+                border: `1.5px solid ${usaThermomix ? T.brand : T.line}`
+              },
+              children: "\u2699\uFE0F Thermomix"
+            })]
+          })]
         }), /*#__PURE__*/_jsxs("section", {
           children: [/*#__PURE__*/_jsx("h2", {
             className: "yt-display",
@@ -5708,7 +5772,7 @@ function RecetaDetalle({
               flexDirection: "column",
               gap: 8
             },
-            children: r.pasos.map((p, i) => /*#__PURE__*/_jsxs("div", {
+            children: (usaThermomix && r.thermomix ? r.thermomix : r.pasos).map((p, i) => /*#__PURE__*/_jsxs("div", {
               style: {
                 display: "flex",
                 gap: 10,
