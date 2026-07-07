@@ -7527,6 +7527,7 @@ function Recetas({
   const [fCat, setFCat] = useState("todas");
   const [soloFavs, setSoloFavs] = useState(false);
   const [soloAirfryer, setSoloAirfryer] = useState(false);
+  const [soloCongelables, setSoloCongelables] = useState(false);
   const lista = useMemo(() => {
     let l = RECETAS.map(r => ({
       r,
@@ -7553,9 +7554,12 @@ function Recetas({
     if (soloAirfryer) l = l.filter(({
       r
     }) => r.airFryerTemp);
+    if (soloCongelables) l = l.filter(({
+      r
+    }) => r.tags.includes("congelable") || r.tags.includes("batch cooking"));
     l.sort((a, b) => (b.m.score ?? -1) - (a.m.score ?? -1));
     return l;
-  }, [q, fDif, fTiempo, fCat, soloFavs, soloAirfryer, st.prefs, st.favs]);
+  }, [q, fDif, fTiempo, fCat, soloFavs, soloAirfryer, soloCongelables, st.prefs, st.favs]);
   const selChip = act => ({
     background: act ? T.ink : "#fff",
     color: act ? "#fff" : T.sub,
@@ -7655,11 +7659,7 @@ function Recetas({
         style: selChip(soloFavs),
         onClick: () => setSoloFavs(v => !v),
         children: "♥ Favoritas"
-      }, void 0, false), /*#__PURE__*/_jsxDEV("button", {
-        style: selChip(soloAirfryer),
-        onClick: () => setSoloAirfryer(v => !v),
-        children: "🍟 Air Fryer"
-      }, void 0, false), [["todas", "Todo"], ["desayuno", "Desayuno"], ["comida", "Comida"], ["cena", "Cena"], ["postre", "Postre"], ["aperitivo", "Aperitivo"]].map(([v, l]) => /*#__PURE__*/_jsxDEV("button", {
+      }, void 0, false), [["todas", "Todas las categorías"], ["desayuno", "Desayuno"], ["comida", "Comida"], ["cena", "Cena"], ["postre", "Postre"], ["aperitivo", "Aperitivo"]].map(([v, l]) => /*#__PURE__*/_jsxDEV("button", {
         style: selChip(fCat === v),
         onClick: () => setFCat(v),
         children: l
@@ -7671,7 +7671,15 @@ function Recetas({
         style: selChip(fTiempo === v),
         onClick: () => setFTiempo(x => x === v ? 0 : v),
         children: l
-      }, v, false))]
+      }, v, false)), /*#__PURE__*/_jsxDEV("button", {
+        style: selChip(soloAirfryer),
+        onClick: () => setSoloAirfryer(v => !v),
+        children: "🍟 Air Fryer"
+      }, void 0, false), /*#__PURE__*/_jsxDEV("button", {
+        style: selChip(soloCongelables),
+        onClick: () => setSoloCongelables(v => !v),
+        children: "❄️ Congelables"
+      }, void 0, false)]
     }, void 0, true), /*#__PURE__*/_jsxDEV("div", {
       className: "yt-scroll",
       style: {

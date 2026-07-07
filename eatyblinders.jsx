@@ -1448,6 +1448,7 @@ function Recetas({ st, setSt, abrir, sorprender }) {
   const [fCat, setFCat] = useState("todas");
   const [soloFavs, setSoloFavs] = useState(false);
   const [soloAirfryer, setSoloAirfryer] = useState(false);
+  const [soloCongelables, setSoloCongelables] = useState(false);
 
   const lista = useMemo(() => {
     let l = RECETAS.map(r => ({ r, m: matchReceta(r, st.prefs) }));
@@ -1457,9 +1458,10 @@ function Recetas({ st, setSt, abrir, sorprender }) {
     if (fCat !== "todas") l = l.filter(({ r }) => r.cat === fCat);
     if (soloFavs) l = l.filter(({ r }) => st.favs.includes(r.id));
     if (soloAirfryer) l = l.filter(({ r }) => r.airFryerTemp);
+    if (soloCongelables) l = l.filter(({ r }) => r.tags.includes("congelable") || r.tags.includes("batch cooking"));
     l.sort((a, b) => (b.m.score ?? -1) - (a.m.score ?? -1));
     return l;
-  }, [q, fDif, fTiempo, fCat, soloFavs, soloAirfryer, st.prefs, st.favs]);
+  }, [q, fDif, fTiempo, fCat, soloFavs, soloAirfryer, soloCongelables, st.prefs, st.favs]);
 
   const selChip = (act) => ({ background: act ? T.ink : "#fff", color: act ? "#fff" : T.sub, border: `1.5px solid ${act ? T.ink : T.line}`, borderRadius: 999, padding: "7px 13px", fontSize: 13, fontWeight: 600, whiteSpace: "nowrap" });
 
@@ -1483,12 +1485,13 @@ function Recetas({ st, setSt, abrir, sorprender }) {
 
       <div className="yt-scroll" style={{ display: "flex", gap: 8, overflowX: "auto", padding: "4px 20px 10px" }}>
         <button style={selChip(soloFavs)} onClick={() => setSoloFavs(v => !v)}>♥ Favoritas</button>
-        <button style={selChip(soloAirfryer)} onClick={() => setSoloAirfryer(v => !v)}>🍟 Air Fryer</button>
-        {[["todas","Todo"],["desayuno","Desayuno"],["comida","Comida"],["cena","Cena"],["postre","Postre"],["aperitivo","Aperitivo"]].map(([v,l]) =>
+        {[["todas","Todas las categorías"],["desayuno","Desayuno"],["comida","Comida"],["cena","Cena"],["postre","Postre"],["aperitivo","Aperitivo"]].map(([v,l]) =>
           <button key={v} style={selChip(fCat === v)} onClick={() => setFCat(v)}>{l}</button>)}
         {[1,2,3].map(d => <button key={d} style={selChip(fDif === d)} onClick={() => setFDif(x => x === d ? 0 : d)}>{DIF[d].l}</button>)}
         {[[20,"≤ 20 min"],[35,"≤ 35 min"]].map(([v,l]) =>
           <button key={v} style={selChip(fTiempo === v)} onClick={() => setFTiempo(x => x === v ? 0 : v)}>{l}</button>)}
+        <button style={selChip(soloAirfryer)} onClick={() => setSoloAirfryer(v => !v)}>🍟 Air Fryer</button>
+        <button style={selChip(soloCongelables)} onClick={() => setSoloCongelables(v => !v)}>❄️ Congelables</button>
       </div>
 
       <div className="yt-scroll" style={{ flex: 1, overflowY: "auto", padding: "2px 20px 10px", display: "flex", flexDirection: "column", gap: 10 }}>
