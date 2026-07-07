@@ -286,7 +286,7 @@ const RECETAS = [
       {t:"Sirve bien frío con huevo picado y virutas de jamón por encima."}]},
   { id:"lentejas", n:"Lentejas con verduras", cat:"comida", dif:2, min:50, rac:4,
     desc:"Guiso de cuchara de toda la vida, en versión ligera con verduras.",
-    e:"🍲", nut:{kcal:380,p:20,cb:55,g:8}, tags:["alta en fibra","de cuchara","batch cooking","congelable"],
+    e:"🍲", nut:{kcal:380,p:20,cb:55,g:8}, tags:["alta en fibra","de cuchara","batch cooking"],
     ing:[{id:"lentejas",q:"320 g"},{id:"cebolla",q:"1 ud",forma:"pochada"},{id:"zanahoria",q:"2 uds",forma:"cocida en guiso"},{id:"pimiento_verde",q:"1 ud",forma:"en sofrito"},{id:"ajo",q:"2 dientes",forma:"dorado en aceite"},{id:"patata",q:"1 ud",forma:"cocida"},{id:"tomate_triturado",q:"100 g"},{id:"pimenton",q:"1 cdta"},{id:"laurel",q:"1 hoja"},{id:"aove",q:"3 cdas"},{id:"sal",q:"al gusto"}],
     pasos:[
       {t:"Sofríe cebolla, ajo, pimiento y zanahoria picados en el aceite.",s:480},
@@ -296,7 +296,7 @@ const RECETAS = [
       {t:"Rectifica de sal y deja reposar 5 minutos antes de servir.",s:300}]},
   { id:"crema_calabacin", n:"Crema de calabacín", cat:"cena", dif:1, min:30, rac:4,
     desc:"Sedosa, ligera y lista en media hora. Cena comodín donde las haya.",
-    e:"🥣", nut:{kcal:150,p:5,cb:12,g:9}, tags:["vegetariana","ligera","apta para niños","congelable"],
+    e:"🥣", nut:{kcal:150,p:5,cb:12,g:9}, tags:["vegetariana","ligera","apta para niños"],
     ing:[{id:"calabacin",q:"2 uds",forma:"en crema"},{id:"cebolla",q:"1 ud",forma:"pochada"},{id:"patata",q:"1 ud",forma:"cocida"},{id:"queso_crema",q:"2 cdas"},{id:"caldo_verduras",q:"500 ml"},{id:"aove",q:"2 cdas"},{id:"sal",q:"al gusto"},{id:"pimienta",q:"al gusto"}],
     pasos:[
       {t:"Pocha la cebolla en el aceite hasta que esté transparente.",s:300},
@@ -765,14 +765,12 @@ function BtnPrimario({ children, onClick, style, disabled }) {
 
 /* ---------------- DESCUBRIR: la cata de mercado ---------------- */
 function orderDeck(prefs) {
-  const pendientes = INGS.filter(i => !prefs[i.id] || prefs[i.id].like === undefined);
-  // Shuffle determinístico pero con verdadera aleatoriedad basado en Object.keys (orden de objetos)
-  const seed = Object.keys(prefs).length % 1000;
-  return pendientes.map((i, idx) => ({ i, k: ((idx + seed) * 2654435761) % 233280 }))
+  return INGS.filter(i => !prefs[i.id] || prefs[i.id].like === undefined)
+    .map((i, idx) => ({ i, k: (idx * 2654435761) % 233280 }))
     .sort((a, b) => a.k - b.k).map(x => x.i);
 }
 
-function Descubrir({ st, setSt, onOpenFormas, onUnlock }) {
+function Descubrir({ st, setSt, onOpenFormas }) {
   const deck = useMemo(() => orderDeck(st.prefs), [st.prefs]);
   const total = INGS.length;
   const valorados = total - deck.length;
@@ -782,18 +780,11 @@ function Descubrir({ st, setSt, onOpenFormas, onUnlock }) {
 
   const decidir = useCallback((like) => {
     if (!ing) return;
-    const recetasAntes = RECETAS.filter(r => matchReceta(r, st.prefs).score !== null && matchReceta(r, st.prefs).score >= 40).length;
-    const newPrefs = { ...st.prefs, [ing.id]: { like, formas: st.prefs[ing.id]?.formas || {} } };
-    const recetasDespues = RECETAS.filter(r => matchReceta(r, newPrefs).score !== null && matchReceta(r, newPrefs).score >= 40).length;
-
-    setSt(s => ({ ...s, prefs: newPrefs, historial: [...(s.historial || []), ing.id].slice(-30) }));
+    setSt(s => ({ ...s, prefs: { ...s.prefs, [ing.id]: { like, formas: s.prefs[ing.id]?.formas || {} } },
+      historial: [...(s.historial || []), ing.id].slice(-30) }));
     setDrag(null);
-
-    if (recetasDespues > recetasAntes && onUnlock) {
-      onUnlock(`✨ Desbloqueadas ${recetasDespues - recetasAntes} nueva${recetasDespues - recetasAntes > 1 ? 's receta' : ' receta'}`);
-    }
     if (ing.f && ing.f.length) onOpenFormas(ing, like);
-  }, [ing, setSt, st.prefs, onOpenFormas, onUnlock]);
+  }, [ing, setSt, onOpenFormas]);
 
   const deshacer = () => setSt(s => {
     const h = [...(s.historial || [])];
@@ -1046,7 +1037,6 @@ function RecetaDetalle({ recId, st, setSt, cerrar, cocinar, addCompra, addPlan }
   const fav = st.favs.includes(r.id);
   const probada = st.probadas[r.id];
   const b = badgeMatch(m.score);
-  const [porciones, setPorciones] = useState(r.rac || 4);
 
   const toggleFav = () => setSt(s => ({ ...s, favs: fav ? s.favs.filter(x => x !== r.id) : [...s.favs, r.id] }));
   const setRating = (n) => setSt(s => ({ ...s, probadas: { ...s.probadas, [r.id]: { fecha: Date.now(), rating: n } } }));
@@ -1079,23 +1069,9 @@ function RecetaDetalle({ recId, st, setSt, cerrar, cocinar, addCompra, addPlan }
           <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
             <Chip><Clock size={13} /> {r.min} min</Chip>
             <Chip color={DIF[r.dif].c} bg="#fff" style={{ border: `1.5px solid ${DIF[r.dif].c}44` }}>{DIF[r.dif].l}</Chip>
-            {r.tags.includes("batch cooking") && <Chip color="#E8B93B" bg="#FFF9E6">❄️ Congelable</Chip>}
+            <Chip><Utensils size={13} /> {r.rac} raciones</Chip>
             {r.tags.map(t => <Chip key={t}>{t}</Chip>)}
           </div>
-
-          <section>
-            <h2 className="yt-display" style={{ fontSize: 16, fontWeight: 800, margin: "0 0 8px" }}>Porciones</h2>
-            <div style={{ display: "flex", gap: 8 }}>
-              {[1, 2, 4].map(n => (
-                <button key={n} onClick={() => setPorciones(n)}
-                  style={{ flex: 1, padding: "12px 14px", borderRadius: 14, fontWeight: 700, fontSize: 14,
-                    background: porciones === n ? T.brandSoft : "#fff", color: porciones === n ? T.brand : "#A29D93",
-                    border: `1.5px solid ${porciones === n ? T.brand : T.line}` }}>
-                  {n === 1 ? "1️⃣ Una" : n === 2 ? "2️⃣ Dos" : "4️⃣ Cuatro"}
-                </button>
-              ))}
-            </div>
-          </section>
 
           <section>
             <h2 className="yt-display" style={{ fontSize: 16, fontWeight: 800, margin: "0 0 8px" }}>Por ración</h2>
@@ -1117,15 +1093,12 @@ function RecetaDetalle({ recId, st, setSt, cerrar, cocinar, addCompra, addPlan }
                 const ing = ING_MAP[it.id];
                 const v = BASICOS.has(it.id) ? undefined : likesInForm(st.prefs[it.id], it.forma);
                 const st2 = ingStatus(st.prefs[it.id]);
-                // Multiplicar cantidad según porciones (porciones / raciones originales)
-                const factor = porciones / (r.rac || 4);
-                const cantidadAjustada = it.q.replace(/\d+(?:\.\d+)?/g, n => (parseFloat(n) * factor).toFixed(n.includes('.') ? 1 : 0));
                 return (
                   <div key={i} style={{ display: "flex", alignItems: "center", gap: 10, padding: "10px 14px", borderTop: i ? `1px solid ${T.line}` : "none" }}>
                     <IngImg ing={ing} size={40} round={12} />
                     <div style={{ flex: 1, minWidth: 0 }}>
                       <div style={{ fontWeight: 600, fontSize: 14 }}>{ing.n}</div>
-                      <div style={{ fontSize: 12.5, color: T.sub }}>{cantidadAjustada}{it.forma ? ` · ${it.forma}` : ""}</div>
+                      <div style={{ fontSize: 12.5, color: T.sub }}>{it.q}{it.forma ? ` · ${it.forma}` : ""}</div>
                     </div>
                     {v === true && st2 === "con_matices" && it.forma && <Chip color="#14603D" bg="#E4F5EC" style={{ fontSize: 11 }}>en esta forma, sí ✓</Chip>}
                     {v === true && !(st2 === "con_matices" && it.forma) && <span title="Te gusta" style={{ width: 10, height: 10, borderRadius: 5, background: T.ok, flexShrink: 0 }} />}
@@ -1704,7 +1677,7 @@ export default function App() {
         </header>
 
         <main style={{ flex: 1, minHeight: 0, position: "relative" }}>
-          {tab === "descubrir" && <Descubrir st={st} setSt={setSt} onOpenFormas={(ing, like) => setFormas({ ing, like })} onUnlock={avisar} />}
+          {tab === "descubrir" && <Descubrir st={st} setSt={setSt} onOpenFormas={(ing, like) => setFormas({ ing, like })} />}
           {tab === "recetas" && <Recetas st={st} setSt={setSt} abrir={setDetalle} sorprender={sorprender} />}
           {tab === "plan" && <Plan st={st} setSt={setSt} abrirReceta={setDetalle} addSemanaCompra={addSemanaCompra} />}
           {tab === "compra" && <Compra st={st} setSt={setSt} />}

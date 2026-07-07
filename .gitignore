@@ -3,3 +3,5 @@ files/
 .claude/
 node_modules/
 *.local.json
+
+.vercel
