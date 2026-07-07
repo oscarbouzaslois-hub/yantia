@@ -33,13 +33,23 @@
     };
     (async () => {
       try {
+        const React = await import("react");
         const { createRoot } = await import("react-dom/client");
-        const App = (await import("./app.js")).default;
+        const { default: App } = await import("./app.js");
         const root = createRoot(document.getElementById("root"));
-        root.render(App ? App() : null);
+        if (App) {
+          const element = React.createElement(App);
+          root.render(element);
+          console.log("App rendered successfully");
+        } else {
+          throw new Error("App component not found");
+        }
       } catch (e) {
         console.error("App error:", e);
-        document.getElementById("root").innerHTML = `<div style="padding:20px;color:red;font-family:monospace;white-space:pre-wrap">${e.message}\n\n${e.stack}</div>`;
+        const errDiv = document.createElement("div");
+        errDiv.style.cssText = "padding:20px;color:red;font-family:monospace;white-space:pre-wrap";
+        errDiv.textContent = `${e.message}\n\n${e.stack}`;
+        document.getElementById("root").appendChild(errDiv);
       }
     })();
     if ("serviceWorker" in navigator) {
